@@ -22,7 +22,7 @@ The original extension, while functional, contains several behaviors that may co
 ## 🚀 Installation
 
 ### Using the ZIP file (Recommended)
-1. Download the [Allow-Copy-Origin.zip](./Allow-Copy-Origin.zip) from this repository.
+1. Download the latest **Allow-Copy-Origin.zip** from the [Releases](https://github.com/scuba3198/allow-copy-plus-origin/releases) page.
 2. Extract the ZIP file to a folder on your computer.
 3. Open your Chromium-based browser (Chrome, Edge, Brave, etc.) and navigate to `chrome://extensions`.
 4. Enable **"Developer mode"** in the top right corner.
