@@ -19,8 +19,8 @@ This is a sanitized version of the popular "Allow Copy +" extension. While the o
 - **Localized Only:** Operations are strictly local using `chrome.storage.local`.
 
 ## Enhancements in Origin Version
-- **Paste Protection Bypass:** Intercepts `input` events and uses `requestAnimationFrame` to prevent sites from instantly reverting pasted text (defeats Method 14).
-- **Selection Visibility Fix:** Overrides aggressive CSS that tries to hide text selection by forcing selection highlights to be visible (defeats Method 12).
+- **Paste Protection Bypass:** Intercepts `input` events and uses `requestAnimationFrame` to prevent sites from instantly reverting pasted text.
+- **Selection Visibility Fix:** Overrides aggressive CSS that tries to hide text selection by forcing selection highlights to be visible.
 - **Context Menu Paste:** Paste operations are now supported via the extension's bypass context menu.
 
 ## Installation (Chromium Browsers)
