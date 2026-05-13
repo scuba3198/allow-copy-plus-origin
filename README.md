@@ -1,43 +1,41 @@
-# 🔓 Allow Copy+ Origin
+# Allow Copy+ Origin 🛡️
 
-**Allow Copy+ Origin** is a privacy-focused, sanitized fork of the popular "Allow Copy +" Chrome extension. This version is designed for users who want the powerful bypass capabilities of the original extension without any of the telemetry, data collection, or promotional bloat.
+A privacy-first, ultra-lightweight fork of the "Allow Copy +" extension.
 
-## 🌟 Why this fork?
+## What is this?
+This is a sanitized version of the popular "Allow Copy +" extension. While the original tool is excellent at bypassing copy restrictions on websites, it contained several "features" that compromised user privacy and added unnecessary bloat:
+- **Telemetry & Tracking:** Constant communication with the developer's servers.
+- **Promotional Injections:** Banners and context menu items promoting other products.
+- **OCR/Beta Features:** Sending image data to external servers for text extraction.
+- **Forced Redirects:** Intrusive welcome/donate/uninstall pages.
 
-The original extension, while functional, contains several behaviors that may concern privacy-conscious users:
-- **Telemetry:** Shares usage statistics and visited domain lists with the developer's server.
-- **OCR Privacy:** Transmits image data to an external server when using the text detection feature.
-- **Promotional Bloat:** Injects context menus for other products and displays large banners in the settings.
-- **Forced Redirects:** Automatically opens tabs for welcome/update pages and donation requests.
+**Allow Copy+ Origin** removes all of the above, leaving only the core functionality in a strictly local, offline-capable package.
 
-**Allow Copy+ Origin** removes all of these behaviors while keeping the core bypass engine 100% intact.
+## Key Sanitization Features
+- **Zero Network Dependency:** All telemetry endpoints redirected to `127.0.0.1`.
+- **Privacy Hardened:** OCR (Text-from-image) and Support modules neutralized.
+- **No Promotion:** All banners, cross-promotions, and holiday "gifts" stripped.
+- **No Background Redirects:** `setUninstallURL` and `onInstalled` redirects removed.
+- **Localized Only:** Operations are strictly local using `chrome.storage.local`.
 
-## ✨ Key Differences
-
-- **🔒 Privacy First:** All external tracking and "phone home" mechanisms have been neutralized.
-- **🚫 Zero Bloat:** No promotional context menus, banners, or forced redirects.
-- **📉 Lightweight:** Reduced background activity by disabling non-essential data processing.
-- **🛠️ Air-Gapped:** All hardcoded server URLs have been redirected to `127.0.0.1`, ensuring no data ever leaves your device.
-
-## 🚀 Installation
-
-### Using the ZIP file (Recommended)
-1. Download the latest **Allow-Copy-Origin.zip** from the [Releases](https://github.com/scuba3198/allow-copy-plus-origin/releases) page.
+## Installation (Chromium Browsers)
+1. Download the `allow-copy-plus-origin.zip` from the [Latest Release](https://github.com/scuba3198/allow-copy-plus-origin/releases).
 2. Extract the ZIP file to a folder on your computer.
-3. Open your Chromium-based browser (Chrome, Edge, Brave, etc.) and navigate to `chrome://extensions`.
-4. Enable **"Developer mode"** in the top right corner.
-5. Click **"Load unpacked"** and select the folder you extracted.
+3. Open your browser and navigate to `chrome://extensions/`.
+4. Enable **"Developer mode"** (toggle in the top right).
+5. Click **"Load unpacked"** and select the extracted folder.
 
-### Manual Installation
-1. Clone this repository: `git clone https://github.com/[USER]/allow-copy-plus-origin.git`
-2. Follow steps 3-5 above.
+## Differences from Original
+| Feature | Original Extension | Origin Version |
+| :--- | :--- | :--- |
+| Core Copy Bypass | ✅ Included | ✅ Included |
+| Telemetry/Tracking | ❌ Active | ✅ Removed |
+| Promotional Banners | ❌ Present | ✅ Stripped |
+| OCR Image Sending | ❌ Active | ✅ Neutralized |
+| Uninstall Surveys | ❌ Forced | ✅ Removed |
 
-## 🛠️ Technical Modifications
-- **Background Script (`285.js`):** Neutralized all fetch/XHR calls to developer domains. Stubbed tracking functions (`updateActivateStat`, `Ke`, `Ge`).
-- **Content Script Bridge (`974.js`):** Replaced with a no-op to prevent domain leakages.
-- **Options Page:** Injected CSS to hide promotional banners and non-essential settings.
-- **Manifest:** Renamed to "Allow Copy+ Origin" and removed update URLs to prevent auto-overwriting by the original version.
+## Credits
+Original code by Petr Dev. This fork is maintained for those who value privacy and a distraction-free browsing experience.
 
 ---
-
-*Original code and assets belong to the original author (PiDevEx). This fork is for personal use and privacy preservation.*
+*Built with ❤️ for a cleaner web.*

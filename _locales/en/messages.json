@@ -4,259 +4,44 @@
     "message": "Allow copying. Remove copy protection. Free, easy. Enable text copying, context menu, right mouse button. Turn on selection.",
     "description": "The description of app."
   },
-  "thankYou": { "message": "Thank you", "description": "Thank You" },
-  "done": { "message": "done", "description": "Done" },
-  "donate": { "message": "Donate", "description": "Donate" },
-  "featureRequests": {
-    "message": "Feature Request",
-    "description": "Feature Requests"
-  },
-  "rateUs": { "message": "Rate us", "description": "Rate Us" },
-  "send": { "message": "Send", "description": "Send" },
-  "email": { "message": "E-mail", "description": "Email" },
-  "emailFieldDescription": {
-    "message": "Fill in if you want to receive a response from the support team.",
-    "description": "Not required. Fill in an email if you want to get answer from support."
-  },
-  "details": { "message": "Details", "description": "details" },
-  "detailsFieldDescription": {
-    "message": "Describe in detail. Then we can better understand your problem.",
-    "description": "Not required. Describe the problem for a better understanding."
-  },
-  "website": { "message": "Web site", "description": "web site" },
-  "close": { "message": "close", "description": "close" },
-  "goToDetailsPage": {
-    "message": "Go to product page",
-    "description": "Go to details page."
-  },
-  "welcome": {
-    "message": "Hey Superman!!!",
-    "description": "Not required. Fill in an email if you want to get answer from support."
-  },
-  "domainProblemDescription": {
-    "message": "🙄 \"Allow Copy +\" couldn't help you? You have activated it, but copying on the webpage doesn't work...😥 Don't worry. Submit a request. We will try to fix it as soon as possible!😜",
-    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
-  },
-  "invalidEmailFormat": {
-    "message": "Invalid email format.",
-    "description": "Invalid email format!"
-  },
-  "rateThisExtension": {
-    "message": "Rate this extension",
-    "description": "Rate this extension"
-  },
-  "alreadyDone": {
-    "message": "I have already rated",
-    "description": "I've already done"
-  },
-  "pleaseRateUs": {
-    "message": "Please rate us",
-    "description": "Please, rate us"
-  },
-  "bad": { "message": "Badly", "description": "Bad" },
-  "okay": { "message": "Okay", "description": "Okay" },
-  "good": { "message": "Good", "description": "Good" },
-  "great": { "message": "Excellent!", "description": "Excellent!" },
-  "lovedIt": { "message": "Loved It!", "description": "Loved It!" },
-  "copy": { "message": "Copy", "description": "Copy" },
-
-  "somethingWrongDuringGrapping": {
-    "message": "Aw, snap!\n Something went wrong while grapping the text.",
-    "description": "Aw, snap!\n Something went wrong while grapping the text."
-  },
-  "grabLimitExceeded": {
-    "message": "Sorry, but \"the text grapping\" feature is limited now. \n Usage limit for this month has been exceeded.",
-    "description": "Sorry, but \"the text grapping\" feature is limited now. \n Usage limit for this month has been exceeded."
-  },
-  "grabTextTtl": {
-    "message": "Grab Text",
-    "description": "Grab Text"
-  },
-  "copyTextToClipboardTtl": {
-    "message": "Copy full text to clipboard",
-    "description": "Copy full text to clipboard"
-  },
-  "copiedTtl": {
-    "message": "Copied!",
-    "description": "Copied!"
-  },
-  "clearTextTtl": {
-    "message": "Clear Text",
-    "description": "Clear Text"
-  },
-  "maximizeTtl": {
-    "message": "Maximize",
-    "description": "Maximize"
-  },
-  "minimizeTtl": {
-    "message": "Minimize",
-    "description": "Minimize"
-  },
-  "sorryForBetaFuncsMsg": {
-    "message": "Sorry :( \nIt is beta functionality.\nIt can works incorrectly.\nTurn off in setting if you dislike it.",
-    "description": "Sorry :( \nIt is beta functionality.\nIt can works incorrectly.\nTurn off in setting if you dislike it."
-  },
-  "beta": {
-    "message": "Beta",
-    "description": "Beta"
-  },
-  "betaFeature": {
-    "message": "Beta feature",
-    "description": "Beta feature"
-  },
-  "settings": { "message": "settings", "description": "settings" },
+  "settings": { "message": "Settings", "description": "settings" },
   "enableProtectedTextToCopyLbl": {
     "message": "Enable protected text to copy",
     "description": "Enable protected text to copy"
   },
   "enableProtectedTextToCopyDscr": {
-    "message": "This is the main feature that adds the ability to select/copy/paste text on websites with copy protection. However, it may disrupt the default functionality of the website. If you do not require this main functionality, you can turn it off.",
-    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+    "message": "This is the main feature that adds the ability to select/copy/paste text on websites with copy protection.",
+    "description": "Main functionality description."
   },
   "showSupportHelpIconLbl": {
-    "message": "Show support/help icon",
+    "message": "Show support icon (Deprecated)",
     "description": "Show support/help icon"
   },
   "showSupportHelpIconDscr": {
-    "message": "This setting is show bounced icon in bottom/left position of your screen. It can use as indicator active/inactive status of Allow Copy +. Also you can write to support quickly by using this icon. Turn it off if you want to hide this icon.",
-    "description": "showSupportHelpIconDscr"
+    "message": "This feature is deprecated in the Origin version to ensure privacy and reduce bloat.",
+    "description": "Support icon description."
   },
   "showDetectTextOverlayLbl": {
-    "message": "Show detection text from image overlay",
+    "message": "Show OCR text detection (Deprecated)",
     "description": "Show detection text from image overlay"
   },
   "showDetectTextOverlayDscr": {
-    "message": "This setting enables the display of an overlay on images that contain the functionality to extract text from the image. To hide the overlay, turn off this setting.",
-    "description": "show Detect Text Overlay Dscr"
+    "message": "This feature is deprecated in the Origin version as it requires external server processing.",
+    "description": "OCR description."
   },
   "successSaveMsg": {
-    "message": "Setting was successfully updated",
+    "message": "Settings were successfully updated",
     "description": "Setting was successfully updated"
   },
-
-  "ppItemName": {
-    "message": "Gift for Allow Copy + developer",
-    "description": "Gift for Allow Copy + developer"
-  },
-  "maryChristmas": {
-    "message": "Merry Christmas and Happy New Year!",
-    "description": "Merry Christmas and Happy New Year!"
-  },
-  "hiHero": {
-    "message": "Hi, Hero!",
-    "description": "Hi, Hero!"
-  },
-  "pidevexGoodBoy": {
-    "message": "PiDevEx has been a good boy throughout the entire year of 2023!",
-    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
-  },
-  "heWorkHard": {
-    "message": "He worked hard for FREE to make Allow Copy+ better and better!",
-    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
-  },
-  "letsPlaySanta": {
-    "message": "Let's play Secret Santa today and give PiDevEx a small Christmas present!",
-    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
-  },
-  "makeaGift": {
-    "message": "Make a Gift",
-    "description": "Make a Gift"
-  },
-  "alreadyDone2": {
-    "message": "I've already done",
-    "description": "I've already done"
-  },
-
-  "heySuperhero": {
-    "message": "Hey, Superhero!!!",
-    "description": "Hey, Superhero!!!"
-  },
-  "try": {
-    "message": "Try",
-    "description": "Try"
-  },
-  "ourNewFREEChromeExtension": {
-    "message": "Our new FREE chrome extension!",
-    "description": "our new FREE chrome extension!"
-  },
-  "forget": {
-    "message": "Forget",
-    "description": "Forget"
-  },
-  "doEasy": {
-    "message": "Do Easy",
-    "description": "Do Easy"
-  },
-  "iWantTry": {
-    "message": "I want to Try",
-    "description": "I want Try"
-  },
-  "gptPageBnrTry": {
-    "message": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease.",
-    "description": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease."
-  },
-  "gptPageBnrMore": {
-    "message": "Learn more and install now!",
-    "description": "Learn more and install now!"
-  },
-
-  "donateMsgKey": {
-    "message": "Has \"Allow Copy +\" been helpful to you this year? Be our Secret Santa 🎅 — make a small holiday gift to support our work ✨❤️."
-  },
-  "sendGiftKey": {
-    "message": "Send Gift"
-  },
-  "beOurSecretSanta": {
-    "message": "Be Our Secret Santa"
-  },
-  "itemTangerineName": {
-    "message": "Tangerine"
-  },
-  "itemTangerineSub": {
-    "message": "Vitamin C boost"
-  },
-  "itemHotCocoaName": {
-    "message": "Hot Cocoa"
-  },
-  "itemHotCocoaSub": {
-    "message": "Keep me warm"
-  },
-  "itemPresentName": {
-    "message": "Present"
-  },
-  "itemPresentSub": {
-    "message": "Under the tree"
-  },
-  "itemChampagneName": {
-    "message": "Champagne"
-  },
-  "itemChampagneSub": {
-    "message": "Fuel for 2026"
-  },
-
-  "recommendedApps": {
-    "message": "Recommended Apps from Our Team"
-  },
-  "testBroDes": {
-    "message": "Online test solver that helps you quickly find answers and complete tests faster."
-  },
-  "shortcutAiDes": {
-    "message": "Rewrite, rephrase, translate, correct text with short commands in text box — each command triggers your custom AI prompt."
-  },
-  "copyHistoryDes": {
-    "message": "Clipboard Manager - automatically saves your copied items and makes them easy to search, manage and paste."
-  },
-  "textFromProDes": {
-    "message": "Extract and copy text from anywhere on a web page — images, videos, and canvas elements."
-  },
-  "aiNBarDes": {
-    "message": "Native AI Chats in Side Panel. ChatGPT, Gemini, Claude, Copilot, DeepSeek and Qwen in one place. No API, no wrapper, just pure AI power."
-  },
-
+  "copy": { "message": "Copy", "description": "Copy" },
   "showContextMenuLbl": {
-    "message": "Show Extra Context Menu"
+    "message": "Enable Context Menu"
   },
   "showContextMenuDscr": {
-    "message": "This setting adds an item to the right-click menu. It may contain additional text-copying tools or suggestions for our other text-related products, such as AiNBar"
-  }
+    "message": "Adds a 'Copy' item to the right-click menu when text is selected."
+  },
+  "thankYou": { "message": "Origin Version", "description": "Thank You" },
+  "done": { "message": "Done", "description": "Done" },
+  "close": { "message": "Close", "description": "close" },
+  "copiedTtl": { "message": "Copied!", "description": "Copied!" }
 }
