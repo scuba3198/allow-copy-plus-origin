@@ -1,0 +1,1 @@
+(() => { "use strict"; /* Allow Copy + Bridge Disabled */ })();

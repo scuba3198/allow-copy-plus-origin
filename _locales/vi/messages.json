@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Cho phép sao chép +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Cho phép sao chép. Loại bỏ bảo vệ bản sao. Miễn phí, dễ dàng. Cho phép sao chép văn bản, menu ngữ cảnh, nút chuột phải. Bật lựa chọn.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Cảm ơn", "description": "Thank You" },
+  "done": { "message": "xong", "description": "Done" },
+  "donate": { "message": "Ủng hộ", "description": "Donate" },
+  "featureRequests": {
+    "message": "Yêu cầu tính năng",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Đánh giá chúng tôi", "description": "Rate Us" },
+  "send": { "message": "Gửi", "description": "Send" },
+  "email": { "message": "E-mail", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Điền vào nếu bạn muốn nhận phản hồi từ nhóm hỗ trợ.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Chi tiết", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Miêu tả chi tiết. Sau đó, chúng tôi có thể hiểu rõ hơn vấn đề của bạn.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Trang mạng", "description": "web site" },
+  "close": { "message": "Đóng", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Tới trang sản phẩm",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Này Siêu Nhân!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Cho phép sao chép +\" không giúp được gì cho bạn? Bạn đã kích hoạt rồi nhưng copy trên web không được...😥 Đừng lo. Gửi yêu cầu. Chúng tôi sẽ cố gắng khắc phục trong thời gian sớm nhất!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Định dạng email không hợp lệ.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Xếp hạng tiện ích mở rộng này",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "tôi đã đánh giá rồi",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Vui lòng đánh giá chúng tôi",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Tệ", "description": "Bad" },
+  "okay": { "message": "Khỏe", "description": "Okay" },
+  "good": { "message": "Khỏe", "description": "Good" },
+  "great": { "message": "Tuyệt vời!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Tôi thích nó rất nhiều!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Hiển thị menu ngữ cảnh phụ"
+  },
+  "showContextMenuDscr": {
+    "message": "Cài đặt này thêm một mục vào menu chuột phải. Nó có thể chứa các công cụ sao chép văn bản bổ sung hoặc đề xuất cho các sản phẩm liên quan đến văn bản khác của chúng tôi, chẳng hạn như AiNBar"
+  }
+}

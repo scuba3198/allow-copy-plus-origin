@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "+ நகலை அனுமதிக்கவும்",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "நகலெடுக்க அனுமதிக்கவும். நகல் பாதுகாப்பை அகற்று. இலவசம், எளிதானது. உரை நகலெடுப்பு, சூழல் மெனு, வலது சுட்டி பொத்தான் ஆகியவற்றை இயக்கவும். தேர்வை இயக்கவும்.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "நன்றி", "description": "Thank You" },
+  "done": { "message": "முடிந்தது", "description": "Done" },
+  "donate": { "message": "ஆதரவு", "description": "Donate" },
+  "featureRequests": {
+    "message": "சிறப்பு விண்ணப்பம்",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "எங்களை மதிப்பிடு", "description": "Rate Us" },
+  "send": { "message": "அனுப்பு", "description": "Send" },
+  "email": { "message": "மின்னஞ்சல்", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "ஆதரவுக் குழுவிடமிருந்து பதிலைப் பெற விரும்பினால் நிரப்பவும்.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "விவரங்கள்", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "விரிவாக விவரிக்கவும். அப்போது உங்கள் பிரச்சனையை நாங்கள் நன்றாக புரிந்து கொள்ள முடியும்.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "இணையதளம்", "description": "web site" },
+  "close": { "message": "நெருக்கமான", "description": "close" },
+  "goToDetailsPage": {
+    "message": "தயாரிப்பு பக்கத்திற்குச் செல்லவும்",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "ஏய் சூப்பர்மேன்!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"நகலை அனுமதி +\" உங்களுக்கு உதவ முடியவில்லையா? நீங்கள் அதை இயக்கியுள்ளீர்கள், ஆனால் வலைப்பக்கத்தில் நகலெடுப்பது வேலை செய்யாது...😥 கவலைப்பட வேண்டாம். கோரிக்கையைச் சமர்ப்பிக்கவும். கூடிய விரைவில் சரி செய்ய முயற்சிப்போம்!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "தவறான மின்னஞ்சல் வடிவம்.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "இந்த நீட்டிப்பை மதிப்பிடவும்",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "நான் ஏற்கனவே மதிப்பிட்டுள்ளேன்",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "தயவுசெய்து எங்களை மதிப்பிடவும்",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "மோசமாக", "description": "Bad" },
+  "okay": { "message": "நன்றாக", "description": "Okay" },
+  "good": { "message": "நன்றாக", "description": "Good" },
+  "great": { "message": "அற்புதமான!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "எனக்கு மிகவும் பிடித்திருந்தது!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "கூடுதல் சூழல் மெனுவைக் காட்டு"
+  },
+  "showContextMenuDscr": {
+    "message": "இந்த அமைப்பு வலது கிளிக் மெனுவில் ஒரு உருப்படியைச் சேர்க்கிறது. இதில் கூடுதல் உரை-நகலெடுக்கும் கருவிகள் அல்லது AiNBar போன்ற எங்களின் உரை தொடர்பான பிற தயாரிப்புகளுக்கான பரிந்துரைகள் இருக்கலாம்"
+  }
+}

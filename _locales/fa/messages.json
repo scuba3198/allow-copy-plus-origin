@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "اجازه کپی +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "اجازه کپی کردن حفاظت از کپی را بردارید رایگان، آسان. کپی متن، منوی زمینه، دکمه سمت راست ماوس را فعال کنید. انتخاب را روشن کنید.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "متشکرم", "description": "Thank You" },
+  "done": { "message": "انجام شده", "description": "Done" },
+  "donate": { "message": "حمایت کردن", "description": "Donate" },
+  "featureRequests": {
+    "message": "درخواست ویژگی",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "به ما رای دهید", "description": "Rate Us" },
+  "send": { "message": "ارسال", "description": "Send" },
+  "email": { "message": "پست الکترونیک", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "اگر می خواهید پاسخی از تیم پشتیبانی دریافت کنید، آن را پر کنید.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "جزئیات", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "با جزئیات توضیح دهید. آن وقت می توانیم مشکل شما را بهتر درک کنیم.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "سایت اینترنتی", "description": "web site" },
+  "close": { "message": "بستن", "description": "close" },
+  "goToDetailsPage": {
+    "message": "به صفحه محصول بروید",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "هی سوپرمن!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Allow Copy +\" نمی تواند به شما کمک کند؟ شما آن را فعال کرده اید، اما کپی کردن در صفحه وب کار نمی کند...😥 نگران نباشید. ارسال درخواست. سعی می کنیم در اسرع وقت رفعش کنیم!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "قالب ایمیل نامعتبر است.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "به این افزونه امتیاز دهید",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "من قبلاً امتیاز داده ام",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "لطفا به ما امتیاز دهید",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "بدجوری", "description": "Bad" },
+  "okay": { "message": "خوب", "description": "Okay" },
+  "good": { "message": "خوب", "description": "Good" },
+  "great": { "message": "شگفت آور!", "description": "Excellent!" },
+  "lovedIt": { "message": "خیلی خوشم اومد!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "نمایش منوی کلیک راست اضافی"
+  },
+  "showContextMenuDscr": {
+    "message": "این تنظیم یک مورد را به منوی کلیک راست اضافه می کند. ممکن است حاوی ابزارهای اضافی کپی متن یا پیشنهاداتی برای سایر محصولات مرتبط با متن ما، مانند AiNBar باشد"
+  }
+}

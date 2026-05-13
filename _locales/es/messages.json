@@ -1,0 +1,256 @@
+{
+  "ext_name": {
+    "message": "Permitir copiar +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Permitir copiar. Eliminar la protección contra copia. Gratis, fácil. Habilitar copia de texto, menú contextual, botón derecho del mouse. Activar selección.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Gracias", "description": "Thank You" },
+  "done": { "message": "hecho", "description": "Done" },
+  "donate": { "message": "Apoyo", "description": "Donate" },
+  "featureRequests": {
+    "message": "Solicitud de función",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Nos califica", "description": "Rate Us" },
+  "send": { "message": "Enviar", "description": "Send" },
+  "email": { "message": "Correo electrónico", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Complete si desea recibir una respuesta del equipo de soporte.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detalles", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Describe detalladamente. Entonces podremos entender mejor su problema.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Sitio web", "description": "web site" },
+  "close": { "message": "Cerca", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Ir a la página del producto",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hola superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 ¿\"Permitir copiar +\" no pudo ayudarte? Lo tienes activado, pero la copia en la página web no funciona...😥 No te preocupes. Presentar una solicitud. ¡Intentaremos solucionarlo lo antes posible!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Formato de correo inválido.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Valora esta extensión",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "ya he calificado",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Por favor califícanos",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Gravemente", "description": "Bad" },
+  "okay": { "message": "Bien", "description": "Okay" },
+  "good": { "message": "Bien", "description": "Good" },
+  "great": { "message": "¡Fabuloso!", "description": "Excellent!" },
+  "lovedIt": { "message": "¡Me gusto mucho!", "description": "Loved It!" },
+
+  "somethingWrongDuringGrapping": {
+    "message": "¡Ups! \nAlgo salió mal al capturar el texto.",
+    "description": "Oops! \nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "Lo siento, la función \"capturar texto\" está limitada. \nSe ha alcanzado el límite de uso para este mes.",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "Capturar texto",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "Copiar todo el texto al portapapeles",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "¡Copiado!",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "Borrar texto",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "Maximizar",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "Minimizar",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "Lo siento :( \nEsto es una función beta.\nPuede que funcione de manera incorrecta.\nDesactívela en la configuración si no le gusta.",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "Beta",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "Función beta",
+    "description": "Beta feature"
+  },
+  "settings": { "message": "Configuración", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "Habilitar copia de texto protegido",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "Esta es la característica principal que agrega la capacidad de seleccionar/copiar/pegar texto en sitios web con protección de copia. Sin embargo, puede interrumpir la funcionalidad predeterminada del sitio web. Si no necesita esta funcionalidad principal, puede desactivarla.",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "Mostrar ícono de soporte/ayuda",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "Esta configuración muestra un icono en rebote en la posición inferior/izquierda de su pantalla. Puede usarse como indicador del estado activo/inactivo de Allow Copy +. También puede escribir al soporte rápidamente usando este icono. Desactívelo si desea ocultar este icono.",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "Mostrar superposición de detección de texto de la imagen",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "Esta configuración permite la visualización de una superposición en las imágenes que contienen la funcionalidad para extraer texto de la imagen. Para ocultar la superposición, desactive esta configuración.",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "La configuración se actualizó correctamente",
+    "description": "Setting was successfully updated"
+  },
+
+  "ppItemName": {
+    "message": "Regalo para el desarrollador de Allow Copy +",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "¡Feliz Navidad y Próspero Año Nuevo!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "¡Hola, Héroe!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "¡PiDevEx ha sido un buen chico durante todo el año 2023!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "¡Trabajó duro GRATIS para mejorar Allow Copy+ cada vez más!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "¡Juguemos a ser el Santa secreto hoy y regalemos a PiDevEx un pequeño regalo de Navidad!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Hacer un regalo",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "Ya lo he hecho",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "¡Hola, Superhéroe!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Intentar",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "¡Nuestra nueva extensión GRATUITA para Chrome!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Olvidar",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Hacer Fácil",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Quiero intentarlo",
+    "description": "I want Try"
+  },
+
+  "donateMsgKey": {
+    "message": "¿Te ha sido útil \"Allow Copy +\" este año? Sé nuestro Papá Noel secreto 🎅 — haz un pequeño regalo navideño para apoyar nuestro trabajo ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Enviar regalo"
+  },
+  "beOurSecretSanta": {
+    "message": "Sé nuestro Papá Noel secreto"
+  },
+  "itemTangerineName": {
+    "message": "Mandarina"
+  },
+  "itemTangerineSub": {
+    "message": "Impulso de vitamina C"
+  },
+  "itemHotCocoaName": {
+    "message": "Chocolate caliente"
+  },
+  "itemHotCocoaSub": {
+    "message": "Mantenme caliente"
+  },
+  "itemPresentName": {
+    "message": "Regalo"
+  },
+  "itemPresentSub": {
+    "message": "Debajo del árbol"
+  },
+  "itemChampagneName": {
+    "message": "Champaña"
+  },
+  "itemChampagneSub": {
+    "message": "Energía para 2026"
+  },
+
+  "recommendedApps": {
+    "message": "Aplicaciones recomendadas de nuestro equipo"
+  },
+  "testBroDes": {
+    "message": "Solucionador de tests online que te ayuda a encontrar respuestas rápidamente y completar tests más rápido."
+  },
+  "shortcutAiDes": {
+    "message": "Reescribe, reformula, traduce, corrige texto con comandos cortos en el cuadro de texto — cada comando activa tu prompt personalizado de IA."
+  },
+  "copyHistoryDes": {
+    "message": "Administrador del portapapeles — guarda automáticamente tus elementos copiados y facilita buscarlos, gestionarlos e insertarlos."
+  },
+  "textFromProDes": {
+    "message": "Extrae y copia texto de cualquier lugar de una página web — imágenes, vídeos y elementos canvas."
+  },
+  "aiNBarDes": {
+    "message": "Chats de IA nativos en el panel lateral. ChatGPT, Gemini, Claude, Copilot, DeepSeek y Qwen en un solo lugar. Sin API, sin intermediarios, puro poder de IA."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Mostrar menú contextual adicional"
+  },
+  "showContextMenuDscr": {
+    "message": "Esta configuración agrega un elemento al menú del botón derecho. Puede contener herramientas de copia de texto adicionales o sugerencias para nuestros otros productos relacionados con el texto, como AiNBar"
+  }
+}

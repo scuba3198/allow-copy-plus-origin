@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Ruhusu Nakala +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Ruhusu kunakili. Ondoa ulinzi wa nakala. Bure, rahisi. Washa kunakili maandishi, menyu ya muktadha, kitufe cha kulia cha kipanya. Washa uteuzi.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Asante", "description": "Thank You" },
+  "done": { "message": "kufanyika", "description": "Done" },
+  "donate": { "message": "Msaada", "description": "Donate" },
+  "featureRequests": {
+    "message": "Ombi la Kipengele",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Tukadirie", "description": "Rate Us" },
+  "send": { "message": "Tuma", "description": "Send" },
+  "email": { "message": "Barua pepe", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Jaza ikiwa ungependa kupokea jibu kutoka kwa timu ya usaidizi.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Maelezo", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Eleza kwa undani. Kisha tunaweza kuelewa tatizo lako vyema.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Tovuti", "description": "web site" },
+  "close": { "message": "Funga", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Nenda kwenye ukurasa wa bidhaa",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Habari Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Ruhusu Kunakili +\" imeshindwa kukusaidia? Umeiwasha, lakini kunakili kwenye ukurasa wa tovuti hakufanyi kazi...😥 Usijali. Peana ombi. Tutajaribu kurekebisha haraka iwezekanavyo!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Umbizo la barua pepe si sahihi.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Kadiria kiendelezi hiki",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Tayari nimekadiria",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Tafadhali tukadirie",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Vibaya", "description": "Bad" },
+  "okay": { "message": "Sawa", "description": "Okay" },
+  "good": { "message": "Sawa", "description": "Good" },
+  "great": { "message": "Fabulous!", "description": "Excellent!" },
+  "lovedIt": { "message": "Niliipenda sana!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Onyesha Menyu ya Muktadha ya Ziada"
+  },
+  "showContextMenuDscr": {
+    "message": "Mipangilio hii huongeza kipengee kwenye menyu ya kubofya kulia. Inaweza kuwa na zana za ziada za kunakili maandishi au mapendekezo kwa bidhaa zetu zingine zinazohusiana na maandishi, kama vile AiNBar"
+  }
+}

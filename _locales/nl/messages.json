@@ -1,0 +1,122 @@
+{
+  "ext_name": {
+    "message": "Kopiëren + toestaan",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Kopiëren toestaan. Kopieerbeveiliging verwijderen. Gratis, makkelijk. Tekst kopiëren inschakelen, contextmenu, rechtermuisknop. Schakel selectie in.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Bedankt", "description": "Thank You" },
+  "done": { "message": "klaar", "description": "Done" },
+  "donate": { "message": "Steun", "description": "Donate" },
+  "featureRequests": {
+    "message": "Functieverzoek",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Beoordeel ons", "description": "Rate Us" },
+  "send": { "message": "Versturen", "description": "Send" },
+  "email": { "message": "E-mailen", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Vul in als u een reactie van het ondersteuningsteam wilt ontvangen.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Details", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Beschrijf in detail. Dan kunnen we uw probleem beter begrijpen.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "website", "description": "web site" },
+  "close": { "message": "Dichtbij", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Ga naar productpagina",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hé Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Kopiëren toestaan +\" kon je niet helpen? Je hebt het geactiveerd, maar kopiëren op de webpagina werkt niet...😥 Maak je geen zorgen. Dien een verzoek in. We zullen proberen het zo snel mogelijk te repareren!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Ongeldige email formaat.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Beoordeel deze extensie",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Ik heb al beoordeeld",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Beoordeel ons alstublieft",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Slecht", "description": "Bad" },
+  "okay": { "message": "Prima", "description": "Okay" },
+  "good": { "message": "Prima", "description": "Good" },
+  "great": { "message": "Geweldig!", "description": "Excellent!" },
+  "lovedIt": { "message": "Ik vond het erg leuk!", "description": "Loved It!" },
+
+  "donateMsgKey": {
+    "message": "Is \"Allow Copy +\" dit jaar nuttig voor je geweest? Word onze geheime Kerstman 🎅 — geef een klein cadeau om ons werk te steunen ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Cadeau versturen"
+  },
+  "beOurSecretSanta": {
+    "message": "Word onze geheime Kerstman"
+  },
+  "itemTangerineName": {
+    "message": "Mandarijn"
+  },
+  "itemTangerineSub": {
+    "message": "Vitamine C boost"
+  },
+  "itemHotCocoaName": {
+    "message": "Warme chocolademelk"
+  },
+  "itemHotCocoaSub": {
+    "message": "Houd me warm"
+  },
+  "itemPresentName": {
+    "message": "Cadeau"
+  },
+  "itemPresentSub": {
+    "message": "Onder de boom"
+  },
+  "itemChampagneName": {
+    "message": "Champagne"
+  },
+  "itemChampagneSub": {
+    "message": "Brandstof voor 2026"
+  },
+
+  "recommendedApps": { "message": "Aanbevolen apps van ons team" },
+  "testBroDes": {
+    "message": "Online testoplosser die je helpt snel antwoorden te vinden en tests sneller te voltooien."
+  },
+  "shortcutAiDes": {
+    "message": "Herschrijf, parafraseer, vertaal, corrigeer tekst met korte opdrachten in het tekstvak — elke opdracht activeert je aangepaste AI-prompt."
+  },
+  "copyHistoryDes": {
+    "message": "Klembordbeheerder — slaat automatisch gekopieerde items op en maakt ze gemakkelijk te zoeken, beheren en plakken."
+  },
+  "textFromProDes": {
+    "message": "Extrait en kopieer tekst van overal op een webpagina — afbeeldingen, video's en canvas-elementen."
+  },
+  "aiNBarDes": {
+    "message": "Native AI-chats in het zijpaneel. ChatGPT, Gemini, Claude, Copilot, DeepSeek en Qwen op één plek. Geen API, geen wrapper, gewoon pure AI-kracht."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Extra contextmenu weergeven"
+  },
+  "showContextMenuDscr": {
+    "message": "Deze instelling voegt een item toe aan het rechtsklikmenu. Het kan extra tekstkopieertools of suggesties bevatten voor onze andere tekstgerelateerde producten, zoals AiNBar"
+  }
+}

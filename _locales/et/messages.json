@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Luba kopeerida +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Luba kopeerimine. Eemaldage kopeerimiskaitse. Tasuta, lihtne. Teksti kopeerimise lubamine, kontekstimenüü, hiire parem nupp. Lülitage valik sisse.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Aitäh", "description": "Thank You" },
+  "done": { "message": "tehtud", "description": "Done" },
+  "donate": { "message": "Toetus", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funktsiooni taotlus",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Hinda meid", "description": "Rate Us" },
+  "send": { "message": "Saada", "description": "Send" },
+  "email": { "message": "E-post", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Täitke, kui soovite tugimeeskonnalt vastust saada.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Üksikasjad", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Kirjeldage üksikasjalikult. Siis saame teie probleemist paremini aru.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "veebisait", "description": "web site" },
+  "close": { "message": "Sulge", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Mine toote lehele",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hei Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 Kas \"Luba kopeerimine +\" ei saanud teid aidata? Oled selle aktiveerinud, aga veebilehel kopeerimine ei tööta...😥 Ära muretse. Saada päring. Püüame selle esimesel võimalusel parandada!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Kehtetu meilivorming.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Hinda seda laiendust",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Olen juba hinnanud",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Palun hinnake meid",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Halvasti", "description": "Bad" },
+  "okay": { "message": "Hästi", "description": "Okay" },
+  "good": { "message": "Hästi", "description": "Good" },
+  "great": { "message": "Vapustav!", "description": "Excellent!" },
+  "lovedIt": { "message": "Mulle väga meeldis!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Näita lisakontekstimenüüd"
+  },
+  "showContextMenuDscr": {
+    "message": "See seade lisab üksuse paremklõpsu menüüsse. See võib sisaldada täiendavaid teksti kopeerimise tööriistu või soovitusi meie teiste tekstiga seotud toodete, näiteks AiNBar, kohta"
+  }
+}

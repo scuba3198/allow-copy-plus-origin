@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Povolit kopírování +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Povolit kopírování. Odstraňte ochranu proti kopírování. Zdarma, snadné. Povolit kopírování textu, kontextové menu, pravé tlačítko myši. Zapněte výběr.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Děkuji", "description": "Thank You" },
+  "done": { "message": "Hotovo", "description": "Done" },
+  "donate": { "message": "Podpěra, podpora", "description": "Donate" },
+  "featureRequests": {
+    "message": "Budoucí žádost",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Ohodnoťte nás", "description": "Rate Us" },
+  "send": { "message": "Poslat", "description": "Send" },
+  "email": { "message": "E-mailem", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Vyplňte, pokud chcete obdržet odpověď od týmu podpory.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Podrobnosti", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Popište podrobně. Pak lépe pochopíme váš problém.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Webová stránka", "description": "web site" },
+  "close": { "message": "Zavřít", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Přejděte na stránku produktu",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Čau Supermane!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Povolit kopírování +\" vám nemohlo pomoci? Aktivovali jste to, ale kopírování na webové stránce nefunguje...😥 Nebojte se. Odeslat žádost. Pokusíme se to co nejdříve napravit!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Neplatný formát e-mailu.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Ohodnoťte toto rozšíření",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Už jsem hodnotil",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Ohodnoťte nás prosím",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Špatně", "description": "Bad" },
+  "okay": { "message": "Pokuta", "description": "Okay" },
+  "good": { "message": "Pokuta", "description": "Good" },
+  "great": { "message": "Báječný!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Velice se mi to líbilo!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Zobrazit další kontextovou nabídku"
+  },
+  "showContextMenuDscr": {
+    "message": "Toto nastavení přidá položku do nabídky po kliknutí pravým tlačítkem. Může obsahovat další nástroje pro kopírování textu nebo návrhy na naše další produkty související s textem, jako je AiNBar"
+  }
+}

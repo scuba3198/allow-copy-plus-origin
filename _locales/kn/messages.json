@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "ನಕಲು + ಅನ್ನು ಅನುಮತಿಸಿ",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "ನಕಲು ಮಾಡಲು ಅನುಮತಿಸಿ. ನಕಲು ರಕ್ಷಣೆಯನ್ನು ತೆಗೆದುಹಾಕಿ. ಉಚಿತ, ಸುಲಭ. ಪಠ್ಯ ನಕಲು, ಸಂದರ್ಭ ಮೆನು, ಬಲ ಮೌಸ್ ಬಟನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ. ಆಯ್ಕೆಯನ್ನು ಆನ್ ಮಾಡಿ.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "ಧನ್ಯವಾದ", "description": "Thank You" },
+  "done": { "message": "ಮಾಡಲಾಗಿದೆ", "description": "Done" },
+  "donate": { "message": "ಬೆಂಬಲ", "description": "Donate" },
+  "featureRequests": {
+    "message": "ವೈಶಿಷ್ಟ್ಯ ವಿನಂತಿ",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "ನಮಗೆ ರೇಟ್ ಮಾಡಿ", "description": "Rate Us" },
+  "send": { "message": "ಕಳುಹಿಸು", "description": "Send" },
+  "email": { "message": "ಇ-ಮೇಲ್", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "ನೀವು ಬೆಂಬಲ ತಂಡದಿಂದ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸ್ವೀಕರಿಸಲು ಬಯಸಿದರೆ ಭರ್ತಿ ಮಾಡಿ.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "ವಿವರಗಳು", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "ವಿವರವಾಗಿ ವಿವರಿಸಿ. ಆಗ ನಾವು ನಿಮ್ಮ ಸಮಸ್ಯೆಯನ್ನು ಚೆನ್ನಾಗಿ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಬಹುದು.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "ಜಾಲತಾಣ", "description": "web site" },
+  "close": { "message": "ಮುಚ್ಚಿ", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ಉತ್ಪನ್ನ ಪುಟಕ್ಕೆ ಹೋಗಿ",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "ಹೇ ಸೂಪರ್‌ಮ್ಯಾನ್!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"ನಕಲನ್ನು ಅನುಮತಿಸಿ +\" ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲವೇ? ನೀವು ಅದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದ್ದೀರಿ, ಆದರೆ ವೆಬ್‌ಪುಟದಲ್ಲಿ ನಕಲಿಸುವುದು ಕೆಲಸ ಮಾಡುವುದಿಲ್ಲ...😥 ಚಿಂತಿಸಬೇಡಿ. ಬೇಡಿಕೆಯನ್ನು ಸಲ್ಲಿಸು. ಆದಷ್ಟು ಬೇಗ ಸರಿಪಡಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತೇವೆ!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "ಅಮಾನ್ಯವಾದ ಇಮೇಲ್ ಸ್ವರೂಪ.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "ಈ ವಿಸ್ತರಣೆಯನ್ನು ರೇಟ್ ಮಾಡಿ",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "ನಾನು ಈಗಾಗಲೇ ರೇಟ್ ಮಾಡಿದ್ದೇನೆ",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "ದಯವಿಟ್ಟು ನಮಗೆ ರೇಟ್ ಮಾಡಿ",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "ಕೆಟ್ಟದಾಗಿ", "description": "Bad" },
+  "okay": { "message": "ಫೈನ್", "description": "Okay" },
+  "good": { "message": "ಫೈನ್", "description": "Good" },
+  "great": { "message": "ಅದ್ಭುತ!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "ನಾನು ಅದನ್ನು ತುಂಬಾ ಇಷ್ಟಪಟ್ಟೆ!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "ಹೆಚ್ಚುವರಿ ಸಂದರ್ಭ ಮೆನು ತೋರಿಸಿ"
+  },
+  "showContextMenuDscr": {
+    "message": "ಈ ಸೆಟ್ಟಿಂಗ್ ರೈಟ್-ಕ್ಲಿಕ್ ಮೆನುಗೆ ಐಟಂ ಅನ್ನು ಸೇರಿಸುತ್ತದೆ. ಇದು ಹೆಚ್ಚುವರಿ ಪಠ್ಯ-ನಕಲು ಮಾಡುವ ಪರಿಕರಗಳನ್ನು ಅಥವಾ AiNBar ನಂತಹ ನಮ್ಮ ಇತರ ಪಠ್ಯ-ಸಂಬಂಧಿತ ಉತ್ಪನ್ನಗಳಿಗೆ ಸಲಹೆಗಳನ್ನು ಒಳಗೊಂಡಿರಬಹುದು"
+  }
+}

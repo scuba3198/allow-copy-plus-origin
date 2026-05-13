@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Permet la còpia +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Permet la còpia. Elimina la protecció contra còpia. Gratuït, fàcil. Activa la còpia de text, el menú contextual, el botó dret del ratolí. Activa la selecció.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Gràcies", "description": "Thank You" },
+  "done": { "message": "fet", "description": "Done" },
+  "donate": { "message": "Suport", "description": "Donate" },
+  "featureRequests": {
+    "message": "Sol·licitud de funció",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Puntua'ns", "description": "Rate Us" },
+  "send": { "message": "Enviar", "description": "Send" },
+  "email": { "message": "Correu electrònic", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Ompliu si voleu rebre una resposta de l'equip d'assistència.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detalls", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Descriu amb detall. Aleshores podrem entendre millor el vostre problema.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Lloc web", "description": "web site" },
+  "close": { "message": "Tanca", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Aneu a la pàgina del producte",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hola Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Permetre la còpia +\" no us ha pogut ajudar? L'has activat, però copiar a la pàgina web no funciona...😥 No et preocupis. Presentar una sol · licitud. Intentarem arreglar-ho el més aviat possible!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Format de correu electrònic no vàlid.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Valoreu aquesta extensió",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Ja he puntuat",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Si us plau, valoreu-nos",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Malament", "description": "Bad" },
+  "okay": { "message": "Bé", "description": "Okay" },
+  "good": { "message": "Bé", "description": "Good" },
+  "great": { "message": "Fabulós!", "description": "Excellent!" },
+  "lovedIt": { "message": "M'ha agradat molt!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Mostra el menú contextual addicional"
+  },
+  "showContextMenuDscr": {
+    "message": "Aquesta configuració afegeix un element al menú del clic dret. Pot contenir eines de còpia de text addicionals o suggeriments per als nostres altres productes relacionats amb el text, com ara AiNBar"
+  }
+}

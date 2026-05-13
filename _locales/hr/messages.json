@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Dopusti kopiranje +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Dopusti kopiranje. Ukloni zaštitu od kopiranja. Besplatno, jednostavno. Omogući kopiranje teksta, kontekstni izbornik, desna tipka miša. Uključite odabir.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Hvala vam", "description": "Thank You" },
+  "done": { "message": "učinjeno", "description": "Done" },
+  "donate": { "message": "podrška", "description": "Donate" },
+  "featureRequests": {
+    "message": "Zahtjev za značajku",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Ocijeni nas", "description": "Rate Us" },
+  "send": { "message": "Poslati", "description": "Send" },
+  "email": { "message": "E-mail", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Ispunite ako želite dobiti odgovor od tima za podršku.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "pojedinosti", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Detaljno opišite. Tada možemo bolje razumjeti vaš problem.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Web stranica", "description": "web site" },
+  "close": { "message": "Zatvoriti", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Idi na stranicu proizvoda",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hej Supermane!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Dopusti kopiranje +\" vam ne može pomoći? Aktivirali ste ga, ali kopiranje na stranici ne radi...😥 Ne brinite. Pošaljite zahtjev. Pokušat ćemo to popraviti što je prije moguće!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Nevažeći format e-pošte.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Ocijenite ovo proširenje",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Već sam ocijenio",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Ocijenite nas",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Loše", "description": "Bad" },
+  "okay": { "message": "Fino", "description": "Okay" },
+  "good": { "message": "Fino", "description": "Good" },
+  "great": { "message": "Nevjerojatan!", "description": "Excellent!" },
+  "lovedIt": { "message": "Jako mi se svidjelo!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Prikaži dodatni kontekstni izbornik"
+  },
+  "showContextMenuDscr": {
+    "message": "Ova postavka dodaje stavku u izbornik desnog klika. Može sadržavati dodatne alate za kopiranje teksta ili prijedloge za naše druge proizvode povezane s tekstom, kao što je AiNBar"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "كۆچۈرۈشكە يول قويۇڭ",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "كۆچۈرۈشكە يول قويۇڭ. كۆپەيتىلگەن قوغداشنى ئۆچۈرۈڭ. ھەقسىز ، ئاسان. تېكىست كۆچۈرۈش ، مەزمۇن تىزىملىكى ، چاشقىنەكنىڭ ئوڭ كۇنۇپكىسىنى قوزغىتىش. تاللاشنى ئېچىڭ.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "رەھمەت سىزگە", "description": "Thank You" },
+  "done": { "message": "تاماملاندى", "description": "Done" },
+  "donate": { "message": "قوللاش", "description": "Donate" },
+  "featureRequests": {
+    "message": "ئىقتىدار تەلىپى",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "بىزگە باھا بېرىڭ", "description": "Rate Us" },
+  "send": { "message": "ئەۋەتىڭ", "description": "Send" },
+  "email": { "message": "ئېلېكترونلۇق خەت", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "قوللاش گۇرۇپپىسىنىڭ ئىنكاسىنى تاپشۇرۇۋالماقچى بولسىڭىز تولدۇرۇڭ.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "تەپسىلاتى", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "تەپسىلى بايان قىلىڭ. ئاندىن بىز مەسىلىڭىزنى تېخىمۇ ياخشى چۈشىنەلەيمىز.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "تور بېكەت", "description": "web site" },
+  "close": { "message": "تاقاش", "description": "close" },
+  "goToDetailsPage": {
+    "message": "مەھسۇلات بېتىگە بېرىڭ",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "ھەي خاسىيەتلىك ئادەم !!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "Copy «كۆچۈرۈشكە رۇخسەت قىلىش» سىزگە ياردەم قىلالمىدىمۇ؟ ئۇنى ئاكتىپلىدىڭىز ، ئەمما تور بەتتە كۆچۈرۈش كارغا كەلمەيدۇ ... worry ئەنسىرىمەڭ. تەلەپنى يوللاڭ. بىز ئۇنى تېزدىن ئوڭشاشقا تىرىشىمىز! 😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "ئېلېكترونلۇق خەت شەكلى ئىناۋەتسىز.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "بۇ كېڭەيتىلمىگە باھا بېرىڭ",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "مەن ئاللىبۇرۇن باھالىدىم",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "بىزگە باھا بېرىڭ",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "ناچار", "description": "Bad" },
+  "okay": { "message": "ياخشى", "description": "Okay" },
+  "good": { "message": "ياخشى", "description": "Good" },
+  "great": { "message": "Fabulous!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "مەن ئۇنى بەك ياقتۇردۇم!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "قوشۇمچە تىزىملىكنى كۆرسىتىش"
+  },
+  "showContextMenuDscr": {
+    "message": "بۇ تەڭشەك ئوڭ چېكىش تىزىملىكىگە بىر تۈر قوشىدۇ. ئۇنىڭدا قوشۇمچە تېكىست كۆچۈرۈش قوراللىرى ياكى AiNBar غا ئوخشاش تېكىستكە مۇناسىۋەتلىك باشقا مەھسۇلاتلىرىمىزغا تەكلىپلەر بولۇشى مۇمكىن"
+  }
+}

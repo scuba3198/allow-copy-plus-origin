@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "కాపీని అనుమతించు +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "కాపీ చేయడాన్ని అనుమతించండి. కాపీ రక్షణను తీసివేయండి. ఉచిత, సులభం. టెక్స్ట్ కాపీయింగ్, కాంటెక్స్ట్ మెను, కుడి మౌస్ బటన్‌ను ప్రారంభించండి. ఎంపికను ఆన్ చేయండి.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "ధన్యవాదాలు", "description": "Thank You" },
+  "done": { "message": "పూర్తి", "description": "Done" },
+  "donate": { "message": "మద్దతు", "description": "Donate" },
+  "featureRequests": {
+    "message": "ఫీచర్ అభ్యర్థన",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "మాకు రేట్ చేయండి", "description": "Rate Us" },
+  "send": { "message": "పంపండి", "description": "Send" },
+  "email": { "message": "ఇ-మెయిల్", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "మీరు మద్దతు బృందం నుండి ప్రతిస్పందనను స్వీకరించాలనుకుంటే పూరించండి.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "వివరాలు", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "వివరంగా వివరించండి. అప్పుడు మేము మీ సమస్యను బాగా అర్థం చేసుకోగలము.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "వెబ్ సైట్", "description": "web site" },
+  "close": { "message": "దగ్గరగా", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ఉత్పత్తి పేజీకి వెళ్లండి",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "హే సూపర్మ్యాన్!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"కాపీ +ని అనుమతించు\" మీకు సహాయం చేయలేదా? మీరు దీన్ని యాక్టివేట్ చేసారు, కానీ వెబ్‌పేజీలో కాపీ చేయడం పని చేయదు...😥 చింతించకండి. అభ్యర్థనను సమర్పించండి. వీలైనంత త్వరగా దాన్ని పరిష్కరించడానికి ప్రయత్నిస్తాము!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "చెల్లని ఇమెయిల్ ఫార్మాట్.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "ఈ పొడిగింపును రేట్ చేయండి",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "నేను ఇప్పటికే రేట్ చేసాను",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "దయచేసి మాకు రేట్ చేయండి",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "చెడుగా", "description": "Bad" },
+  "okay": { "message": "ఫైన్", "description": "Okay" },
+  "good": { "message": "ఫైన్", "description": "Good" },
+  "great": { "message": "అద్భుతం!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "నాకు అది చాలా నచ్చింది!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "అదనపు సందర్భ మెనుని చూపు"
+  },
+  "showContextMenuDscr": {
+    "message": "ఈ సెట్టింగ్ కుడి-క్లిక్ మెనుకి ఒక అంశాన్ని జోడిస్తుంది. ఇందులో అదనపు వచన-కాపీ సాధనాలు లేదా AiNBar వంటి వచనానికి సంబంధించిన మా ఇతర ఉత్పత్తుల కోసం సూచనలు ఉండవచ్చు"
+  }
+}

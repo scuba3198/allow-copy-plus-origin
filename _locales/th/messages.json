@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "อนุญาตการคัดลอก +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "อนุญาตการคัดลอก ลบการป้องกันการคัดลอก ฟรีง่าย เปิดใช้งานการคัดลอกข้อความ เมนูบริบท ปุ่มเมาส์ขวา เปิดการเลือก",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "ขอบคุณ", "description": "Thank You" },
+  "done": { "message": "เสร็จแล้ว", "description": "Done" },
+  "donate": { "message": "สนับสนุน", "description": "Donate" },
+  "featureRequests": {
+    "message": "คำขอคุณสมบัติ",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "ให้คะแนนเรา", "description": "Rate Us" },
+  "send": { "message": "ส่ง", "description": "Send" },
+  "email": { "message": "อีเมล", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "กรอกถ้าคุณต้องการได้รับการตอบกลับจากทีมสนับสนุน",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "รายละเอียด", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "อธิบายรายละเอียด จากนั้นเราจะสามารถเข้าใจปัญหาของคุณได้ดีขึ้น",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "เว็บไซต์", "description": "web site" },
+  "close": { "message": "ปิด", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ไปที่หน้าผลิตภัณฑ์",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "เฮ้ ซูเปอร์แมน!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"อนุญาตการคัดลอก +\" ช่วยคุณไม่ได้? คุณได้เปิดใช้งานแล้ว แต่การคัดลอกบนหน้าเว็บไม่ทำงาน...😥 ไม่ต้องกังวล ส่งคำขอ เราจะพยายามแก้ไขให้เร็วที่สุด!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "รูปแบบอีเมลไม่ถูกต้อง",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "ให้คะแนนส่วนขยายนี้",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "ฉันได้ให้คะแนนแล้ว",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "กรุณาให้คะแนนเรา",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "ห่วย", "description": "Bad" },
+  "okay": { "message": "ดี", "description": "Okay" },
+  "good": { "message": "ดี", "description": "Good" },
+  "great": { "message": "เลิศ!", "description": "Excellent!" },
+  "lovedIt": { "message": "ผมชอบมันมาก!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "แสดงเมนูบริบทเพิ่มเติม"
+  },
+  "showContextMenuDscr": {
+    "message": "การตั้งค่านี้จะเพิ่มรายการลงในเมนูคลิกขวา อาจมีเครื่องมือคัดลอกข้อความเพิ่มเติมหรือคำแนะนำสำหรับผลิตภัณฑ์ที่เกี่ยวข้องกับข้อความอื่นๆ ของเรา เช่น AiNBar"
+  }
+}

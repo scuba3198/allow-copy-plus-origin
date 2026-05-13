@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Να επιτρέπεται η αντιγραφή +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Να επιτρέπεται η αντιγραφή. Καταργήστε την προστασία αντιγραφής. Δωρεάν, εύκολο. Ενεργοποιήστε την αντιγραφή κειμένου, το μενού περιβάλλοντος, το δεξί κουμπί του ποντικιού. Ενεργοποιήστε την επιλογή.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Ευχαριστώ", "description": "Thank You" },
+  "done": { "message": "Έγινε", "description": "Done" },
+  "donate": { "message": "Υποστήριξη", "description": "Donate" },
+  "featureRequests": {
+    "message": "Αίτημα δυνατότητας",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Βαθμολογήστε μας", "description": "Rate Us" },
+  "send": { "message": "Στείλετε", "description": "Send" },
+  "email": { "message": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Συμπληρώστε εάν θέλετε να λάβετε απάντηση από την ομάδα υποστήριξης.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Λεπτομέριες", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Περιγράψτε αναλυτικά. Τότε μπορούμε να κατανοήσουμε καλύτερα το πρόβλημά σας.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Ιστοσελίδα", "description": "web site" },
+  "close": { "message": "Κλείσε", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Μεταβείτε στη σελίδα του προϊόντος",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Γεια σου Σούπερμαν!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 Το \"Να επιτρέπεται η αντιγραφή +\" δεν θα μπορούσε να σας βοηθήσει; Το έχετε ενεργοποιήσει, αλλά η αντιγραφή στην ιστοσελίδα δεν λειτουργεί...😥 Μην ανησυχείτε. Υποβάλετε ένα αίτημα. Θα προσπαθήσουμε να το φτιάξουμε το συντομότερο δυνατό!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Μη έγκυρη μορφή email.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Αξιολογήστε αυτήν την επέκταση",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Έχω ήδη βαθμολογήσει",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Παρακαλούμε αξιολογήστε μας",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Κακώς", "description": "Bad" },
+  "okay": { "message": "Πρόστιμο", "description": "Okay" },
+  "good": { "message": "Πρόστιμο", "description": "Good" },
+  "great": { "message": "Υπέροχο!", "description": "Excellent!" },
+  "lovedIt": { "message": "Μου αρεσε παρα πολυ!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Εμφάνιση πρόσθετου μενού περιβάλλοντος"
+  },
+  "showContextMenuDscr": {
+    "message": "Αυτή η ρύθμιση προσθέτει ένα στοιχείο στο μενού του δεξιού κλικ. Ενδέχεται να περιέχει πρόσθετα εργαλεία αντιγραφής κειμένου ή προτάσεις για άλλα προϊόντα μας που σχετίζονται με κείμενο, όπως το AiNBar"
+  }
+}

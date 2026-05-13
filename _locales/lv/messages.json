@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Atļaut kopēt +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Atļaut kopēšanu. Noņemiet aizsardzību pret kopēšanu. Bezmaksas, viegli. Iespējot teksta kopēšanu, konteksta izvēlni, peles labo pogu. Ieslēdziet atlasi.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Paldies", "description": "Thank You" },
+  "done": { "message": "darīts", "description": "Done" },
+  "donate": { "message": "Atbalsts", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funkcijas pieprasījums",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Novērtē mūs", "description": "Rate Us" },
+  "send": { "message": "Sūtīt", "description": "Send" },
+  "email": { "message": "E-pasts", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Aizpildiet, ja vēlaties saņemt atbildi no atbalsta komandas.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Sīkāka informācija", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Detalizēti aprakstiet. Tad mēs varēsim labāk izprast jūsu problēmu.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "tīmekļa vietne", "description": "web site" },
+  "close": { "message": "Aizvērt", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Dodieties uz produkta lapu",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Čau Supermen!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 Vai \"Atļaut kopēt +\" nevarēja jums palīdzēt? Jūs to esat aktivizējis, bet kopēšana tīmekļa lapā nedarbojas...😥 Neuztraucieties. Iesniedziet pieprasījumu. Mēs centīsimies to salabot pēc iespējas ātrāk!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Nederīgs e-pasta formāts.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Novērtējiet šo paplašinājumu",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Es jau novērtēju",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Lūdzu, novērtējiet mūs",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Slikti", "description": "Bad" },
+  "okay": { "message": "Labi", "description": "Okay" },
+  "good": { "message": "Labi", "description": "Good" },
+  "great": { "message": "Brīnišķīgi!", "description": "Excellent!" },
+  "lovedIt": { "message": "Man ļoti patika!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Rādīt papildu konteksta izvēlni"
+  },
+  "showContextMenuDscr": {
+    "message": "Šis iestatījums pievieno vienumu ar labo pogu noklikšķināšanas izvēlnei. Tas var ietvert papildu teksta kopēšanas rīkus vai ieteikumus citiem mūsu ar tekstu saistītiem produktiem, piemēram, AiNBar"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Күчерергә рөхсәт итегез",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Күчерергә рөхсәт итегез. Күчермә саклауны бетерегез. Ирекле, җиңел. Текстны күчереп алу, контекст меню, тычканның уң төймәсе. Сайлауны кабызыгыз.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Рәхмәт", "description": "Thank You" },
+  "done": { "message": "эшләнде", "description": "Done" },
+  "donate": { "message": "Ярдәм", "description": "Donate" },
+  "featureRequests": {
+    "message": "Функция соравы",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Безгә бәя бирегез", "description": "Rate Us" },
+  "send": { "message": "Sendибәр", "description": "Send" },
+  "email": { "message": "Электрон почта", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Ярдәм командасыннан җавап алырга теләсәгез, тутырыгыз.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Детальләр", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Төгәл сурәтләгез. Аннары без сезнең проблеманы яхшырак аңлый алабыз.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Веб-сайт", "description": "web site" },
+  "close": { "message": "Ябу", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Продукция битенә керегез",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Эй Супермен !!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "Copy \"Күчерергә рөхсәт итегез\" сезгә булыша алмады? Сез аны активлаштырдыгыз, ләкин веб-биттә күчерү эшләми ... worry Борчылмагыз. Сорау җибәрегез. Без аны тизрәк төзәтергә тырышырбыз! 😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Электрон почта форматы.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Бу киңәйтүне бәяләгез",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Мин бәяләдем инде",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Зинһар, безгә бәя бирегез",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Начар", "description": "Bad" },
+  "okay": { "message": "Яхшы", "description": "Okay" },
+  "good": { "message": "Яхшы", "description": "Good" },
+  "great": { "message": "Искиткеч!", "description": "Excellent!" },
+  "lovedIt": { "message": "Миңа бик ошады!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Өстәмә контекст менюсын күрсәтү"
+  },
+  "showContextMenuDscr": {
+    "message": "Бу көйләү уң төймә белән басу менюсына элемент өсти. Анда өстәмә текст күчерү кораллары яки AiNBar кебек текст белән бәйле башка продуктларыбыз өчен тәкъдимнәр булырга мөмкин"
+  }
+}

@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Allow Copy+ Origin",
+  "description": "__MSG_ext_desc__",
+  "version": "3.0.5",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "background": {
+    "service_worker": "285.3c74f770181d98232ef3.1778046625212.js"
+  },
+  "options_page": "/options/index.html",
+  "permissions": [
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "*://*/*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:4001/*",
+        "https://allowcopyplus.pidevex.com/*"
+      ],
+      "js": [
+        "974.3c74f770181d98232ef3.1778046625212.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "/images/32.png",
+      "32": "/images/32.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/32.png",
+    "32": "/images/32.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

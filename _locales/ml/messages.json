@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "പകർപ്പ് + അനുവദിക്കുക",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "പകർത്താൻ അനുവദിക്കുക. പകർപ്പ് പരിരക്ഷ നീക്കം ചെയ്യുക. സൗജന്യം, എളുപ്പം. ടെക്സ്റ്റ് പകർത്തൽ, സന്ദർഭ മെനു, വലത് മൗസ് ബട്ടൺ എന്നിവ പ്രവർത്തനക്ഷമമാക്കുക. തിരഞ്ഞെടുക്കൽ ഓണാക്കുക.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "നന്ദി", "description": "Thank You" },
+  "done": { "message": "ചെയ്തു", "description": "Done" },
+  "donate": { "message": "പിന്തുണ", "description": "Donate" },
+  "featureRequests": {
+    "message": "ഫീച്ചർ അഭ്യർത്ഥന",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "ഞങ്ങളെ റേറ്റുചെയ്യുക", "description": "Rate Us" },
+  "send": { "message": "അയക്കുക", "description": "Send" },
+  "email": { "message": "ഇ-മെയിൽ", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "നിങ്ങൾക്ക് പിന്തുണാ ടീമിൽ നിന്ന് ഒരു പ്രതികരണം ലഭിക്കണമെങ്കിൽ പൂരിപ്പിക്കുക.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "വിശദാംശങ്ങൾ", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "വിശദമായി വിവരിക്കുക. അപ്പോൾ ഞങ്ങൾക്ക് നിങ്ങളുടെ പ്രശ്നം നന്നായി മനസ്സിലാക്കാൻ കഴിയും.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "വെബ് സൈറ്റ്", "description": "web site" },
+  "close": { "message": "അടയ്ക്കുക", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ഉൽപ്പന്ന പേജിലേക്ക് പോകുക",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "ഹേ സൂപ്പർമാൻ!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"പകർപ്പ് അനുവദിക്കുക +\" നിങ്ങളെ സഹായിക്കാൻ കഴിഞ്ഞില്ലേ? നിങ്ങൾ ഇത് സജീവമാക്കി, പക്ഷേ വെബ്‌പേജിൽ പകർത്തുന്നത് പ്രവർത്തിക്കുന്നില്ല...😥 വിഷമിക്കേണ്ട. ഒരു അഭ്യർത്ഥന സമർപ്പിക്കുക. എത്രയും വേഗം അത് പരിഹരിക്കാൻ ശ്രമിക്കും!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "ഇമെയിൽ ഫോർമാറ്റ് അസാധുവാണ്.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "ഈ വിപുലീകരണം റേറ്റുചെയ്യുക",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "ഞാൻ ഇതിനകം റേറ്റുചെയ്തിട്ടുണ്ട്",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "ഞങ്ങളെ റേറ്റുചെയ്യൂ",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "മോശമായി", "description": "Bad" },
+  "okay": { "message": "നന്നായി", "description": "Okay" },
+  "good": { "message": "നന്നായി", "description": "Good" },
+  "great": { "message": "അതിശയകരം!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "എനിക്ക് ഇത് വളരെ ഇഷ്ടപ്പെട്ടു!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "അധിക സന്ദർഭ മെനു കാണിക്കുക"
+  },
+  "showContextMenuDscr": {
+    "message": "ഈ ക്രമീകരണം റൈറ്റ്-ക്ലിക്ക് മെനുവിലേക്ക് ഒരു ഇനം ചേർക്കുന്നു. ഇതിൽ അധിക ടെക്സ്റ്റ്-കോപ്പിംഗ് ടൂളുകളോ അല്ലെങ്കിൽ AiNBar പോലെയുള്ള ഞങ്ങളുടെ ടെക്സ്റ്റുമായി ബന്ധപ്പെട്ട മറ്റ് ഉൽപ്പന്നങ്ങൾക്കുള്ള നിർദ്ദേശങ്ങളോ അടങ്ങിയിരിക്കാം"
+  }
+}

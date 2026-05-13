@@ -1,0 +1,77 @@
+{
+  "ext_name": {
+    "message": "অনুলিপি + অনুমতি দিন",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "অনুলিপি করার অনুমতি দিন। অনুলিপি সুরক্ষা সরান. বিনামূল্যে, সহজ. পাঠ্য অনুলিপি, প্রসঙ্গ মেনু, ডান মাউস বোতাম সক্ষম করুন৷ নির্বাচন চালু করুন।",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "ধন্যবাদ", "description": "Thank You" },
+  "done": { "message": "সম্পন্ন", "description": "Done" },
+  "donate": { "message": "সমর্থন", "description": "Donate" },
+  "featureRequests": {
+    "message": "বৈশিষ্ট্য অনুরোধ",
+    "description": "Feature Requests"
+  },
+  "rateUs": {
+    "message": "আমাদের ব্যাপারে আপনার মতামত দিন",
+    "description": "Rate Us"
+  },
+  "send": { "message": "পাঠান", "description": "Send" },
+  "email": { "message": "ই-মেইল", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "আপনি সমর্থন দলের থেকে একটি প্রতিক্রিয়া পেতে চান তাহলে পূরণ করুন.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "বিস্তারিত", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "বিস্তারিত বর্ণনা করুন। তাহলে আমরা আপনার সমস্যা আরও ভালোভাবে বুঝতে পারব।",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "ওয়েব সাইট", "description": "web site" },
+  "close": { "message": "বন্ধ", "description": "close" },
+  "goToDetailsPage": {
+    "message": "পণ্য পৃষ্ঠায় যান",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "আরে সুপারম্যান!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Allow Copy +\" আপনাকে সাহায্য করতে পারেনি? আপনি এটি সক্রিয় করেছেন, কিন্তু ওয়েবপেজে অনুলিপি করা কাজ করে না...😥 চিন্তা করবেন না। একটি অনুরোধ জমা দিন. আমরা যত তাড়াতাড়ি সম্ভব এটি ঠিক করার চেষ্টা করব!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "অবৈধ ইমেল বিন্যাস.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "এই এক্সটেনশন রেট",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "আমি ইতিমধ্যে রেট",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "আমাদের রেট করুন",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "খারাপভাবে", "description": "Bad" },
+  "okay": { "message": "ফাইন", "description": "Okay" },
+  "good": { "message": "ফাইন", "description": "Good" },
+  "great": { "message": "কল্পিত!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "আমি এটা অনেক পছন্দ করেছিলাম!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "অতিরিক্ত প্রসঙ্গের মেনু দেখান"
+  },
+  "showContextMenuDscr": {
+    "message": "এই সেটিংটি রাইট-ক্লিক মেনুতে একটি আইটেম যোগ করে। এতে অতিরিক্ত টেক্সট-কপি করার টুল বা আমাদের অন্যান্য টেক্সট-সম্পর্কিত পণ্যের পরামর্শ থাকতে পারে, যেমন AiNBar"
+  }
+}

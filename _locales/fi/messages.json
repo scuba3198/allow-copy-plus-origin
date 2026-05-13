@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Salli kopiointi +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Salli kopiointi. Poista kopiosuojaus. Ilmaista, helppoa. Ota tekstin kopioiminen käyttöön, kontekstivalikko, hiiren oikea painike. Ota valinta käyttöön.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Kiitos", "description": "Thank You" },
+  "done": { "message": "tehty", "description": "Done" },
+  "donate": { "message": "Tuki", "description": "Donate" },
+  "featureRequests": {
+    "message": "Ominaisuuspyyntö",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Anna meille arvosana", "description": "Rate Us" },
+  "send": { "message": "Lähettää", "description": "Send" },
+  "email": { "message": "Sähköposti", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Täytä, jos haluat saada vastauksen tukitiimiltä.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Yksityiskohdat", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Kuvaile yksityiskohtaisesti. Silloin ymmärrämme paremmin ongelmasi.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Verkkosivusto", "description": "web site" },
+  "close": { "message": "kiinni", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Siirry tuotesivulle",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hei Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Salli kopiointi +\" ei auttanut sinua? Olet aktivoinut sen, mutta verkkosivulle kopiointi ei toimi...😥 Älä huoli. Lähetä pyyntö. Yritämme korjata sen mahdollisimman pian!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Virheellinen sähköpostin muoto.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Arvioi tämä laajennus",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Olen jo arvioinut",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Ole hyvä ja arvioi meidät",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Huonosti", "description": "Bad" },
+  "okay": { "message": "Hieno", "description": "Okay" },
+  "good": { "message": "Hieno", "description": "Good" },
+  "great": { "message": "Upeaa!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Pidin siitä erittäin paljon!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Näytä ylimääräinen pikavalikko"
+  },
+  "showContextMenuDscr": {
+    "message": "Tämä asetus lisää kohteen hiiren kakkospainikkeen valikkoon. Se voi sisältää ylimääräisiä tekstin kopiointityökaluja tai ehdotuksia muille tekstiin liittyville tuotteillemme, kuten AiNBar"
+  }
+}

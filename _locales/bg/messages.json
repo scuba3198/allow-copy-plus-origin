@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Разрешаване на копиране +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Разрешете копирането. Премахнете защитата срещу копиране. Безплатно, лесно. Активиране на копиране на текст, контекстно меню, десен бутон на мишката. Включете избора.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Благодаря ти", "description": "Thank You" },
+  "done": { "message": "Свършен", "description": "Done" },
+  "donate": { "message": "поддържа", "description": "Donate" },
+  "featureRequests": {
+    "message": "Заявка за функция",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Оцените нас", "description": "Rate Us" },
+  "send": { "message": "Изпратете", "description": "Send" },
+  "email": { "message": "Електронна поща", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Попълнете, ако искате да получите отговор от екипа за поддръжка.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Подробности", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Опишете подробно. Тогава можем да разберем по-добре вашия проблем.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Уеб сайт", "description": "web site" },
+  "close": { "message": "Близо", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Отидете на продуктовата страница",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Привет, Супермен!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 „Разрешаване на копиране +“ не можа да ви помогне? Вие сте го активирали, но копирането на уеб страницата не работи...😥 Не се притеснявайте. Изпратете заявка. Ще се опитаме да го поправим възможно най-скоро!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Невалиден имейл формат.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Оценете това разширение",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Вече съм дал оценка",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Моля, оценете ни",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Зле", "description": "Bad" },
+  "okay": { "message": "Глоба", "description": "Okay" },
+  "good": { "message": "Глоба", "description": "Good" },
+  "great": { "message": "Страхотно!", "description": "Excellent!" },
+  "lovedIt": { "message": "Това ми хареса много!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Покажи допълнително контекстно меню"
+  },
+  "showContextMenuDscr": {
+    "message": "Тази настройка добавя елемент към менюто с десен бутон. Може да съдържа допълнителни инструменти за копиране на текст или предложения за други наши продукти, свързани с текст, като AiNBar"
+  }
+}

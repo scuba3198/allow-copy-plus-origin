@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Дозволи копирање +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Дозволи копирање. Уклоните заштиту од копирања. Бесплатно, лако. Омогући копирање текста, контекстни мени, десни тастер миша. Укључите избор.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Хвала вам", "description": "Thank You" },
+  "done": { "message": "Готово", "description": "Done" },
+  "donate": { "message": "Подршка", "description": "Donate" },
+  "featureRequests": {
+    "message": "Будући захтеви",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Оцените нас", "description": "Rate Us" },
+  "send": { "message": "Пошаљи", "description": "Send" },
+  "email": { "message": "Е-маил", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Попуните ако желите да добијете одговор од тима за подршку.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Детаљи", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Опишите детаљно. Тада можемо боље разумети ваш проблем.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Веб сајт", "description": "web site" },
+  "close": { "message": "Близу", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Идите на страницу производа",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Хеј Супермене!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 „Дозволи копирање +“ вам није могло помоћи? Активирали сте га, али копирање на веб страници не ради...😥 Не брините. Пошаљите захтев. Покушаћемо да то поправимо што је пре могуће!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Неважећи формат е-поште.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Оцените ово проширење",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Већ сам оценио",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Молимо оцените нас",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Лоше", "description": "Bad" },
+  "okay": { "message": "У реду", "description": "Okay" },
+  "good": { "message": "У реду", "description": "Good" },
+  "great": { "message": "Сјајно!", "description": "Excellent!" },
+  "lovedIt": { "message": "Много ми се допало!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Прикажи додатни контекстни мени"
+  },
+  "showContextMenuDscr": {
+    "message": "Ово подешавање додаје ставку у мени који се отвара десним кликом. Може да садржи додатне алатке за копирање текста или предлоге за наше друге производе у вези са текстом, као што је AiNBar"
+  }
+}

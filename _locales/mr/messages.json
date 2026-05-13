@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "कॉपी + ला अनुमती द्या",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "कॉपी करण्याची परवानगी द्या. कॉपी संरक्षण काढा. मोफत, सोपे. मजकूर कॉपी करणे, संदर्भ मेनू, उजवे माऊस बटण सक्षम करा. निवड चालू करा.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "धन्यवाद", "description": "Thank You" },
+  "done": { "message": "पूर्ण", "description": "Done" },
+  "donate": { "message": "सपोर्ट", "description": "Donate" },
+  "featureRequests": {
+    "message": "वैशिष्ट्य विनंती",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "आम्हाला रेट करा", "description": "Rate Us" },
+  "send": { "message": "पाठवा", "description": "Send" },
+  "email": { "message": "ई-मेल", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "तुम्हाला सपोर्ट टीमकडून प्रतिसाद मिळवायचा असल्यास भरा.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "तपशील", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "तपशीलवार वर्णन करा. मग आम्ही तुमची समस्या अधिक चांगल्या प्रकारे समजू शकतो.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "संकेतस्थळ", "description": "web site" },
+  "close": { "message": "बंद", "description": "close" },
+  "goToDetailsPage": {
+    "message": "उत्पादन पृष्ठावर जा",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "अहो सुपरमॅन!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Allow Copy +\" तुम्हाला मदत करू शकत नाही? आपण ते सक्रिय केले आहे, परंतु वेबपृष्ठावर कॉपी करणे कार्य करत नाही...😥 काळजी करू नका. विनंती सबमिट करा. आम्ही ते शक्य तितक्या लवकर दुरुस्त करण्याचा प्रयत्न करू!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "अवैध ईमेल स्वरूप.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "या विस्ताराला रेट करा",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "मी आधीच रेट केले आहे",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "कृपया आम्हाला रेट करा",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "वाईटपणे", "description": "Bad" },
+  "okay": { "message": "ठीक आहे", "description": "Okay" },
+  "good": { "message": "ठीक आहे", "description": "Good" },
+  "great": { "message": "अप्रतिम!", "description": "Excellent!" },
+  "lovedIt": { "message": "मला ते खूप आवडले!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "अतिरिक्त संदर्भ मेनू दर्शवा"
+  },
+  "showContextMenuDscr": {
+    "message": "हे सेटिंग राईट-क्लिक मेनूमध्ये एक आयटम जोडते. यामध्ये अतिरिक्त मजकूर-कॉपी करणारी साधने किंवा AiNBar सारख्या आमच्या इतर मजकूर-संबंधित उत्पादनांसाठी सूचना असू शकतात"
+  }
+}

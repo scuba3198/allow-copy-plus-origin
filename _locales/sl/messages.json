@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Dovoli kopiranje +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Dovoli kopiranje. Odstranite zaščito pred kopiranjem. Brezplačno, enostavno. Omogoči kopiranje besedila, kontekstni meni, desni gumb miške. Vklopi izbiro.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Hvala vam", "description": "Thank You" },
+  "done": { "message": "Končano", "description": "Done" },
+  "donate": { "message": "Podpora", "description": "Donate" },
+  "featureRequests": {
+    "message": "Zahteva po funkciji",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Ocenite nas", "description": "Rate Us" },
+  "send": { "message": "Pošlji", "description": "Send" },
+  "email": { "message": "E-naslov", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Izpolnite, če želite prejeti odgovor skupine za podporo.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Podrobnosti", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Podrobno opišite. Potem bomo lahko bolje razumeli vaš problem.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Spletna stran", "description": "web site" },
+  "close": { "message": "Zapri", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Pojdite na stran izdelka",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hej Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 Vam »Dovoli kopiranje +« ne more pomagati? Aktivirali ste ga, vendar kopiranje na spletni strani ne deluje...😥 Ne skrbite. Oddajte zahtevo. Potrudili se bomo popraviti v najkrajšem možnem času!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Neveljavna oblika elektronske pošte.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Ocenite to razširitev",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Sem že ocenil",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Prosimo, ocenite nas",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Hudo", "description": "Bad" },
+  "okay": { "message": "Globa", "description": "Okay" },
+  "good": { "message": "Globa", "description": "Good" },
+  "great": { "message": "Čudovito!", "description": "Excellent!" },
+  "lovedIt": { "message": "Bilo mi je zelo všeč!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Prikaži dodaten kontekstni meni"
+  },
+  "showContextMenuDscr": {
+    "message": "Ta nastavitev doda element v meni ob desnem kliku. Lahko vsebuje dodatna orodja za kopiranje besedila ali predloge za naše druge izdelke, povezane z besedilom, kot je AiNBar"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Tillåt Copy +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Tillåt kopiering. Ta bort kopieringsskyddet. Gratis, enkelt. Aktivera textkopiering, snabbmeny, höger musknapp. Aktivera val.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Tack", "description": "Thank You" },
+  "done": { "message": "Gjort", "description": "Done" },
+  "donate": { "message": "Stöd", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funktionsbegäran",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Gradera oss", "description": "Rate Us" },
+  "send": { "message": "Skicka", "description": "Send" },
+  "email": { "message": "E-post", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Fyll i om du vill få svar från supportteamet.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detaljer", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Beskriv i detalj. Då kan vi bättre förstå ditt problem.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Hemsida", "description": "web site" },
+  "close": { "message": "Stänga", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Gå till produktsidan",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hej Stålmannen!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Tillåt Copy +\" kunde inte hjälpa dig? Du har aktiverat det, men kopiering på webbsidan fungerar inte...😥 Oroa dig inte. Skicka en förfrågan. Vi ska försöka fixa det så snart som möjligt!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Ogiltigt e-postformat.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Betygsätt detta tillägg",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Jag har redan betygsatt",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Vänligen betygsätt oss",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Dåligt", "description": "Bad" },
+  "okay": { "message": "Bra", "description": "Okay" },
+  "good": { "message": "Bra", "description": "Good" },
+  "great": { "message": "Fantastisk!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Jag gillade det väldigt mycket!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Visa extra snabbmeny"
+  },
+  "showContextMenuDscr": {
+    "message": "Den här inställningen lägger till ett objekt i högerklicksmenyn. Det kan innehålla ytterligare textkopieringsverktyg eller förslag på våra andra textrelaterade produkter, till exempel AiNBar"
+  }
+}

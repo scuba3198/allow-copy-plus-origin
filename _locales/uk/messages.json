@@ -1,0 +1,202 @@
+{
+  "ext_name": {
+    "message": "Дозволити копіювання +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Дозволити копіювання. Зняти захист від копіювання. Безкоштовно, легко. Увімкнути копіювання тексту, контекстне меню, праву кнопку миші. Увімкніть виділення.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Дякую", "description": "Thank You" },
+  "done": { "message": "зроблено", "description": "Done" },
+  "donate": { "message": "Підтримати", "description": "Donate" },
+  "featureRequests": {
+    "message": "Запит функціоналу",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Оцініть нас", "description": "Rate Us" },
+  "send": { "message": "Відправити", "description": "Send" },
+  "email": { "message": "Електронна пошта", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Заповніть, якщо хочете отримати відповідь від служби підтримки.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Подробиці", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Опишіть докладно. Тоді ми зможемо краще зрозуміти Вашу проблему.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Веб сайт", "description": "web site" },
+  "close": { "message": "Закрити", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Перейти на сторінку продукту",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Привіт, Супермен!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄«Allow Copy +» не змогло вам допомогти? Ви активували його, але копіювання на веб-сторінці не працює ... 😥 Не хвилюйтеся. Надішліть запит. Ми постараємося виправити це якнайшвидше!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Неправильний формат електронної пошти.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Оцініть це розширення",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Я вже оцінив",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Будь ласка, оцініть нас",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Погано", "description": "Bad" },
+  "okay": { "message": "Нормально", "description": "Okay" },
+  "good": { "message": "добре", "description": "Good" },
+  "great": { "message": "Чудово!", "description": "Excellent!" },
+  "lovedIt": { "message": "Дуже сподобалось!", "description": "Loved It!" },
+
+  "somethingWrongDuringGrapping": {
+    "message": "Упс! \nЩось пішло не так під час захоплення тексту.",
+    "description": "Oops! \nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "На жаль, функція «захоплення тексту» обмежена. \nЛіміт використання на цей місяць вичерпано.",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "Захоплення тексту",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "Скопіювати весь текст в буфер обміну",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "Скопійовано!",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "Очистити текст",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "Розгорнути",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "Згорнути",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "Вибачте :( \nЦе бета-функціональність.\nВона може працювати некоректно.\nВимкніть її в налаштуваннях, якщо вона вам не подобається.",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "Бета",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "Бета-функція",
+    "description": "Beta feature"
+  },
+  "settings": { "message": "Налаштування", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "Увімкнути захист копіювання тексту",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "Це основна функція, яка додає можливість виділяти / копіювати / вставляти текст на веб-сайтах із захистом від копіювання. Однак це може нарушити функціональність веб-сайту за замовчуванням. Якщо вам не потрібна ця основна функціональність, ви можете вимкнути її.",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "Показати значок підтримки / довідки",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "Це налаштування показує значок внизу / зліва на екрані. Його можна використовувати як індикатор активного / неактивного стану Allow Copy +. Також ви можете швидко звернутися до служби підтримки, використовуючи цей значок. Якщо ви хочете сховати цей значок, вимкніть його.",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "Показати оверлей детекції тексту з зображення",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "Це налаштування дозволяє показувати оверлей на зображеннях, які містять функціональність вилучення тексту з зображення. Щоб сховати оверлей, вимкніть це налаштування.",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "Налаштування успішно оновлено",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Подарунок для розробника Allow Copy +",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "Веселого Різдва та Щасливого Нового Року!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "Привіт, Герою!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx був хорошим хлопчиком протягом усього 2023 року!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "Він працював наполегливо БЕЗКОШТОВНО, щоб робити Allow Copy+ кращим і кращим!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "Давайте сьогодні грати в Таємного Санту і подаруємо PiDevEx невеликий різдвяний подарунок!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Зробити подарунок",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "Вже зроблено",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "Привіт, Супергерою!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Спробуй",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "Наше нове БЕЗКОШТОВНЕ розширення для Chrome!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Забудь",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Робити легко",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Я хочу спробувати",
+    "description": "I want Try"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Показувати додаткове контекстне меню"
+  },
+  "showContextMenuDscr": {
+    "message": "Це налаштування додає пункт до меню правою кнопкою миші. Воно може містити додаткові інструменти для копіювання тексту або пропозиції щодо інших наших продуктів, пов'язаних з текстом, таких як AiNBar"
+  }
+}

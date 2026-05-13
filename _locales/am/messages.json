@@ -1,0 +1,68 @@
+{
+  "ext_name": { "message": "ቅዳ + ፍቀድ", "description": "The name of app." },
+  "ext_desc": {
+    "message": "መቅዳት ፍቀድ። የቅጂ ጥበቃን ያስወግዱ። ነፃ ፣ ቀላል። የጽሑፍ ቅጂን፣ የአውድ ምናሌን፣ የቀኝ መዳፊት ቁልፍን አንቃ። ምርጫን ያብሩ።",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "አመሰግናለሁ", "description": "Thank You" },
+  "done": { "message": "ተከናውኗል", "description": "Done" },
+  "donate": { "message": "ድጋፍ", "description": "Donate" },
+  "featureRequests": {
+    "message": "የባህሪ ጥያቄ",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "ደረጃ ይስጡን።", "description": "Rate Us" },
+  "send": { "message": "ላክ", "description": "Send" },
+  "email": { "message": "ኢ-ሜይል", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "ከድጋፍ ቡድኑ ምላሽ መቀበል ከፈለጉ ይሙሉ።",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "ዝርዝሮች", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "በዝርዝር ግለጽ። ከዚያ ችግርዎን በተሻለ ሁኔታ መረዳት እንችላለን.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "ድህረገፅ", "description": "web site" },
+  "close": { "message": "ገጠመ", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ወደ ምርት ገጽ ይሂዱ",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "ሃይ ሱፐርማን!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"መገልበጥ ፍቀድ +\" ሊረዳህ አልቻለም? ገቢር አድርገውታል፣ ነገር ግን በድህረ ገጹ ላይ መቅዳት አይሰራም...😥 አትጨነቅ። ጥያቄ አስገባ። በተቻለ ፍጥነት ለማስተካከል እንሞክራለን!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "ልክ ያልሆነ የኢሜይል ቅርጸት።",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "ለዚህ ቅጥያ ደረጃ ይስጡት።",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "አስቀድሜ ደረጃ ሰጥቻለሁ",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "እባክዎን ደረጃ ይስጡን።",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "መጥፎ", "description": "Bad" },
+  "okay": { "message": "ጥሩ", "description": "Okay" },
+  "good": { "message": "ጥሩ", "description": "Good" },
+  "great": { "message": "ድንቅ!", "description": "Excellent!" },
+  "lovedIt": { "message": "በጣም ወደድኩት!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "ተጨማሪ የአውድ ምናሌ አሳይ"
+  },
+  "showContextMenuDscr": {
+    "message": "ይህ ቅንብር በቀኝ-ጠቅታ ምናሌ ላይ ንጥል ያክላል። ተጨማሪ ጽሑፍ-መቅጃ መሣሪያዎችን ወይም እንደ AiNBar ላሉ ሌሎች ከጽሑፍ ጋር የተያያዙ ምርቶቻችን ጥቆማዎችን ሊይዝ ይችላል"
+  }
+}

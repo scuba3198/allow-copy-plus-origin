@@ -1,0 +1,262 @@
+{
+  "ext_name": {
+    "message": "Разрешить копирование +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Разрешить копирование. Снять защиту от копирования. Бесплатно, легко. Включить копирование текста, контекстное меню, правая кнопка мыши. Включите выделение.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Спасибо", "description": "Thank You" },
+  "done": { "message": "Готово", "description": "Done" },
+  "donate": { "message": "Поддержать", "description": "Donate" },
+  "featureRequests": {
+    "message": "Запрос функционала",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Оцените нас", "description": "Rate Us" },
+  "send": { "message": "Отправить", "description": "Send" },
+  "email": { "message": "Электронная почта", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Заполните, если хотите получить ответ от службы поддержки.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Подробности", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Опишите подробно. Тогда мы сможем лучше понять Вашу проблему.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Веб-сайт", "description": "web site" },
+  "close": { "message": "Закрыть", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Перейти на страницу продукта",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Привет, Супермен!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄«Allow Copy +» не может вам помочь? Вы активировали его, но копирование на веб-странице не работает...😥 Не волнуйтесь. Отправьте запрос. Мы постараемся исправить это как можно скорее!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Неверный формат электронной почты.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Оцените это расширение",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Я уже оценил",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Пожалуйста, оцените нас",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Плохо", "description": "Bad" },
+  "okay": { "message": "Нормально", "description": "Okay" },
+  "good": { "message": "Хорошо", "description": "Good" },
+  "great": { "message": "Великолепно!", "description": "Excellent!" },
+  "lovedIt": { "message": "Очень понравилось!", "description": "Loved It!" },
+  "copy": { "message": "Копировать", "description": "Copy" },
+
+  "somethingWrongDuringGrapping": {
+    "message": "Упс! \nЧто-то пошло не так при захвате текста.",
+    "description": "Oops! \nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "К сожалению, функция \"захват текста\" ограничена. \nЛимит использования на этот месяц исчерпан.",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "Захват текста",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "Скопировать весь текст в буфер обмена",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "Скопировано!",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "Очистить текст",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "Развернуть",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "Свернуть",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "Извините :( \nЭто бета-функциональность.\nОна может работать некорректно.\nВыключите ее в настройках, если она вам не нравится.",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "Бета",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "Бета-функция",
+    "description": "Beta feature"
+  },
+  "settings": { "message": "настройки", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "Разрешить копирование защищенного текста",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "Эта функция добавляет возможность выбирать/копировать/вставлять текст на сайтах с защитой от копирования. Однако, она может нарушить стандартную функциональность сайта. Если вам не нужна эта функция, вы можете отключить ее.",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "Показать иконку поддержки/помощи",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "Эта настройка показывает иконку в левом нижнем углу экрана. Она может использоваться как индикатор активного/неактивного статуса Allow Copy +. Кроме того, вы можете быстро написать в службу поддержки, используя эту иконку. Если вы хотите скрыть эту иконку, отключите эту опцию.",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "Показать оверлей для выделения текста на изображениях",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "Эта настройка позволяет отображать оверлей на изображениях, который содержит функционал извлечения текста из изображения. Чтобы скрыть оверлей, отключите эту настройку.",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "Настройки успешно обновлены",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Подарок для разработчика Allow Copy +",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "С Рождеством и Новым годом!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "Привет, Герой!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx был хорошим мальчиком на протяжении всего 2023 года!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "Он усердно работал БЕСПЛАТНО, чтобы сделать Allow Copy+ лучше и лучше!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "Давайте сегодня поиграем в Тайного Санту и подарим PiDevEx небольшой рождественский подарок!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Сделать подарок",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "Уже сделано",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "Привет, Супергерой!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Попробуй",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "Наше новое БЕСПЛАТНОЕ расширение для Chrome!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Забудь",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Делай легко",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Хочу попробовать",
+    "description": "Do Easy"
+  },
+  "gptPageBnrTry": {
+    "message": "Попробуйте \"Copy History +\" — сохраняйте и повторно используйте ваши любимые фрагменты текста! 🔥 Легко вставляйте, организовывайте и управляйте записями из буфера обмена.",
+    "description": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease."
+  },
+  "gptPageBnrMore": {
+    "message": "Узнать больше и установить сейчас!",
+    "description": "Learn more and install now!"
+  },
+
+  "donateMsgKey": {
+    "message": "Было ли \"Allow Copy +\" полезно для вас в этом году? Станьте нашим Тайным Санта 🎅 — сделайте небольшой праздничный подарок, чтобы поддержать нашу работу ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Отправить подарок"
+  },
+  "beOurSecretSanta": {
+    "message": "Станьте нашим Тайным Санта"
+  },
+  "itemTangerineName": {
+    "message": "Мандарин"
+  },
+  "itemTangerineSub": {
+    "message": "Витамин C"
+  },
+  "itemHotCocoaName": {
+    "message": "Горячий шоколад"
+  },
+  "itemHotCocoaSub": {
+    "message": "Согрей меня"
+  },
+  "itemPresentName": {
+    "message": "Подарок"
+  },
+  "itemPresentSub": {
+    "message": "Под ёлкой"
+  },
+  "itemChampagneName": {
+    "message": "Шампанское"
+  },
+  "itemChampagneSub": {
+    "message": "Топливо для 2026"
+  },
+
+  "recommendedApps": { "message": "Рекомендуемые приложения от нашей команды" },
+  "testBroDes": {
+    "message": "Онлайн‑помощник для тестов, который помогает быстро находить ответы и быстрее проходить тесты."
+  },
+  "shortcutAiDes": {
+    "message": "Переписывайте, перефразируйте, переводите, исправляйте текст с помощью коротких команд в текстовом поле — каждая команда запускает ваш пользовательский AI‑промпт."
+  },
+  "copyHistoryDes": {
+    "message": "Менеджер буфера обмена — автоматически сохраняет скопированные элементы, облегчая поиск, управление и вставку."
+  },
+  "textFromProDes": {
+    "message": "Извлекайте и копируйте текст откуда угодно на веб‑странице — из изображений, видео и canvas‑элементов."
+  },
+  "aiNBarDes": {
+    "message": "Нативные ИИ-чаты в боковой панели. ChatGPT, Gemini, Claude, Copilot, DeepSeek и Qwen в одном месте. Без API, без оболочек, только чистая мощь ИИ."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Показывать дополнительное контекстное меню"
+  },
+  "showContextMenuDscr": {
+    "message": "Эта настройка добавляет пункт в меню по клику правой кнопкой мыши. Он может содержать дополнительные инструменты для копирования текста или предложения других наших продуктов, связанных с текстом, таких как AiNBar"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "ext_name": {
+    "message": "Consenti Copia +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Consenti la copia. Rimuovi la protezione dalla copia. Gratuito, facile. Abilita la copia del testo, menu contestuale, pulsante destro del mouse. Attiva la selezione.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Grazie", "description": "Thank You" },
+  "done": { "message": "Fatto", "description": "Done" },
+  "donate": { "message": "Supporto", "description": "Donate" },
+  "featureRequests": {
+    "message": "Richiesta di funzionalità",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Valutaci", "description": "Rate Us" },
+  "send": { "message": "Inviare", "description": "Send" },
+  "email": { "message": "E-mail", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Compila se desideri ricevere una risposta dal team di supporto.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Dettagli", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Descrivi in dettaglio. Quindi possiamo capire meglio il tuo problema.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Sito web", "description": "web site" },
+  "close": { "message": "Vicino", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Vai alla pagina del prodotto",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Ehi Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Consenti copia +\" non ti può aiutare? L'hai attivato, ma la copia sulla pagina web non funziona...😥 Non preoccuparti. Invia una richiesta. Cercheremo di risolverlo il prima possibile!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Formato email non valido.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Valuta questa estensione",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Ho già valutato",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Per favore valutaci",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Male", "description": "Bad" },
+  "okay": { "message": "Bene", "description": "Okay" },
+  "good": { "message": "Bene", "description": "Good" },
+  "great": { "message": "Favoloso!", "description": "Excellent!" },
+  "lovedIt": { "message": "Mi è piaciuto molto!", "description": "Loved It!" },
+
+  "ppItemName": {
+    "message": "Regalo per lo sviluppatore di Allow Copy +",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "Buon Natale e Felice Anno Nuovo!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "Ciao, Eroe!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx è stato un bravo ragazzo per tutto l'anno 2023!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "Ha lavorato duramente GRATIS per rendere Allow Copy+ sempre migliore!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "Gioca oggi a essere Babbo Natale segreto e regala a PiDevEx un piccolo regalo di Natale!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Fai un regalo",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "È già fatto",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "Ciao, Supereroe!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Prova",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "La nostra nuova estensione GRATUITA per Chrome!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Dimentica",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Fai Facilmente",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Voglio provare",
+    "description": "I want Try"
+  },
+
+  "donateMsgKey": {
+    "message": "\"Allow Copy +\" ti è stato utile quest'anno? Diventa il nostro Babbo Natale segreto 🎅 — fai un piccolo regalo di Natale per sostenere il nostro lavoro ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Invia regalo"
+  },
+  "beOurSecretSanta": {
+    "message": "Diventa il nostro Babbo Natale segreto"
+  },
+  "itemTangerineName": {
+    "message": "Mandarino"
+  },
+  "itemTangerineSub": {
+    "message": "Boost di vitamina C"
+  },
+  "itemHotCocoaName": {
+    "message": "Cioccolata calda"
+  },
+  "itemHotCocoaSub": {
+    "message": "Tienimi al caldo"
+  },
+  "itemPresentName": {
+    "message": "Regalo"
+  },
+  "itemPresentSub": {
+    "message": "Sotto l’albero"
+  },
+  "itemChampagneName": {
+    "message": "Champagne"
+  },
+  "itemChampagneSub": {
+    "message": "Carburante per il 2026"
+  },
+
+  "recommendedApps": { "message": "App consigliate dal nostro team" },
+  "testBroDes": {
+    "message": "Solver di test online che ti aiuta a trovare risposte rapidamente e completare i test più velocemente."
+  },
+  "shortcutAiDes": {
+    "message": "Riscrivi, riformula, traduci, correggi testo con comandi brevi nella casella di testo — ogni comando attiva il tuo prompt IA personalizzato."
+  },
+  "copyHistoryDes": {
+    "message": "Clipboard Manager — salva automaticamente gli elementi copiati e li rende facili da cercare, gestire e incollare."
+  },
+  "textFromProDes": {
+    "message": "Estrai e copia testo da qualsiasi parte di una pagina web — immagini, video ed elementi canvas."
+  },
+  "aiNBarDes": {
+    "message": "Chat IA native nel pannello laterale. ChatGPT, Gemini, Claude, Copilot, DeepSeek e Qwen in un unico posto. Nessuna API, nessun wrapper, solo pura potenza dell'IA."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Mostra menu contestuale aggiuntivo"
+  },
+  "showContextMenuDscr": {
+    "message": "Questa impostazione aggiunge un elemento al menu del clic destro. Può contenere strumenti aggiuntivi per la copia del testo o suggerimenti per altri nostri prodotti correlati al testo, come AiNBar"
+  }
+}

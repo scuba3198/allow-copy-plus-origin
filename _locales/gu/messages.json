@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Copy + ને મંજૂરી આપો",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "નકલ કરવાની મંજૂરી આપો. નકલ સુરક્ષા દૂર કરો. મફત, સરળ. ટેક્સ્ટ નકલ, સંદર્ભ મેનૂ, જમણું માઉસ બટન સક્ષમ કરો. પસંદગી ચાલુ કરો.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "આભાર", "description": "Thank You" },
+  "done": { "message": "પૂર્ણ", "description": "Done" },
+  "donate": { "message": "આધાર", "description": "Donate" },
+  "featureRequests": {
+    "message": "સુવિધા વિનંતી",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "અમને રેટ કરો", "description": "Rate Us" },
+  "send": { "message": "મોકલો", "description": "Send" },
+  "email": { "message": "ઈ-મેલ", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "જો તમે સપોર્ટ ટીમ તરફથી પ્રતિસાદ મેળવવા માંગતા હોવ તો ભરો.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "વિગતો", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "વિગતવાર વર્ણન કરો. પછી અમે તમારી સમસ્યાને વધુ સારી રીતે સમજી શકીશું.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "વેબ સાઇટ", "description": "web site" },
+  "close": { "message": "બંધ", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ઉત્પાદન પૃષ્ઠ પર જાઓ",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "હે સુપરમેન!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Allow Copy +\" તમને મદદ કરી શક્યું નથી? તમે તેને એક્ટિવેટ કરી દીધું છે, પરંતુ વેબપેજ પર કોપી કરવાનું કામ કરતું નથી...😥 ચિંતા કરશો નહીં. વિનંતી જમા કરો. અમે શક્ય તેટલી વહેલી તકે તેને ઠીક કરવાનો પ્રયાસ કરીશું!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "અમાન્ય ઇમેઇલ ફોર્મેટ.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "આ એક્સ્ટેંશનને રેટ કરો",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "મેં પહેલેથી જ રેટ કર્યું છે",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "કૃપા કરીને અમને રેટ કરો",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "ખરાબ રીતે", "description": "Bad" },
+  "okay": { "message": "દંડ", "description": "Okay" },
+  "good": { "message": "દંડ", "description": "Good" },
+  "great": { "message": "કલ્પિત!", "description": "Excellent!" },
+  "lovedIt": { "message": "મને તે ખૂબ ગમ્યું!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "વધારાનું સંદર્ભ મેનૂ બતાવો"
+  },
+  "showContextMenuDscr": {
+    "message": "આ સેટિંગ રાઇટ-ક્લિક મેનૂમાં એક આઇટમ ઉમેરે છે. તેમાં વધારાના ટેક્સ્ટ-કૉપિ કરવાના સાધનો અથવા AiNBar જેવા અમારા અન્ય ટેક્સ્ટ-સંબંધિત ઉત્પાદનો માટેના સૂચનો હોઈ શકે છે"
+  }
+}

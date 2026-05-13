@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Másolás engedélyezése +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Másolás engedélyezése. Távolítsa el a másolásvédelmet. Ingyenes, könnyű. Szövegmásolás engedélyezése, helyi menü, jobb egérgomb. Kapcsolja be a kijelölést.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Köszönöm", "description": "Thank You" },
+  "done": { "message": "Kész", "description": "Done" },
+  "donate": { "message": "Támogatás", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funkciókérés",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Értékelj minket", "description": "Rate Us" },
+  "send": { "message": "Küld", "description": "Send" },
+  "email": { "message": "Email", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Töltse ki, ha választ szeretne kapni a támogatási csapattól.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Részletek", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Írja le részletesen. Akkor jobban megértjük a problémádat.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Weboldal", "description": "web site" },
+  "close": { "message": "Bezárás", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Ugrás a termékoldalra",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Szia Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Másolás engedélyezése +\" nem tudott segíteni? Aktiváltad, de a weboldalra másolás nem megy...😥 Nyugi. Kérelem benyújtása. Igyekszünk mielőbb kijavítani!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Érvénytelen e-mail formátum.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Értékelje ezt a bővítményt",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "már értékeltem",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Kérjük, értékeljen minket",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Rosszul", "description": "Bad" },
+  "okay": { "message": "Bírság", "description": "Okay" },
+  "good": { "message": "Bírság", "description": "Good" },
+  "great": { "message": "Mesés!", "description": "Excellent!" },
+  "lovedIt": { "message": "Nagyon tetszett!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "További helyi menü megjelenítése"
+  },
+  "showContextMenuDscr": {
+    "message": "Ez a beállítás hozzáad egy elemet a jobb gombbal elérhető menühöz. Tartalmazhat további szövegmásoló eszközöket vagy javaslatokat más, szöveggel kapcsolatos termékeinkhez, például az AiNBar-hoz"
+  }
+}

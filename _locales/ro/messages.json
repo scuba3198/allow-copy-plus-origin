@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Permite copiere +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Permite copierea. Eliminați protecția împotriva copierii. Gratuit, ușor. Activați copierea textului, meniul contextual, butonul dreapta al mouse-ului. Activați selecția.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Mulțumesc", "description": "Thank You" },
+  "done": { "message": "Terminat", "description": "Done" },
+  "donate": { "message": "A sustine", "description": "Donate" },
+  "featureRequests": {
+    "message": "Cerere de caracteristici",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Ne evalua", "description": "Rate Us" },
+  "send": { "message": "Trimite", "description": "Send" },
+  "email": { "message": "E-mail", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Completați dacă doriți să primiți un răspuns de la echipa de asistență.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detalii", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Descrieți în detaliu. Atunci putem înțelege mai bine problema ta.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "site web", "description": "web site" },
+  "close": { "message": "Închide", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Accesați pagina produsului",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hei Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 „Permite copierea +” nu te-a putut ajuta? L-ați activat, dar copierea pe pagina web nu funcționează...😥 Nu vă faceți griji. Trimite o cerere. Vom încerca să o reparăm cât mai curând posibil!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Format de email invalid.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Evaluați această extensie",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Am evaluat deja",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Vă rugăm să ne evaluați",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Prost", "description": "Bad" },
+  "okay": { "message": "Amenda", "description": "Okay" },
+  "good": { "message": "Amenda", "description": "Good" },
+  "great": { "message": "Fabulos!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Mi-a placut foarte mult!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Arată meniul contextual suplimentar"
+  },
+  "showContextMenuDscr": {
+    "message": "Această setare adaugă un element în meniul de clic dreapta. Poate conține instrumente suplimentare de copiere a textului sau sugestii pentru celelalte produse ale noastre legate de text, cum ar fi AiNBar"
+  }
+}

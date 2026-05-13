@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "कॉपी + की अनुमति दें",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "नकल करने दें। प्रतिलिपि सुरक्षा हटाएं। मुफ़्त, आसान। टेक्स्ट कॉपी करना, संदर्भ मेनू, राइट माउस बटन सक्षम करें। चयन चालू करें।",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "धन्यवाद", "description": "Thank You" },
+  "done": { "message": "पूर्ण", "description": "Done" },
+  "donate": { "message": "सहायता", "description": "Donate" },
+  "featureRequests": {
+    "message": "सुविधा का अनुरोध",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "हमें रेटिंग दें", "description": "Rate Us" },
+  "send": { "message": "भेजना", "description": "Send" },
+  "email": { "message": "ईमेल", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "यदि आप सहायता टीम से प्रतिक्रिया प्राप्त करना चाहते हैं तो भरें।",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "विवरण", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "विस्तार से वर्णन कीजिए। तब हम आपकी समस्या को बेहतर ढंग से समझ सकते हैं।",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "वेबसाइट", "description": "web site" },
+  "close": { "message": "बंद करना", "description": "close" },
+  "goToDetailsPage": {
+    "message": "उत्पाद पृष्ठ पर जाएं",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "हे सुपरमैन!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"कॉपी की अनुमति दें +\" आपकी मदद नहीं कर सका? आपने इसे सक्रिय कर दिया है, लेकिन वेबपेज पर कॉपी करना काम नहीं करता...😥 चिंता न करें। एक अनुरोध सबमिट करें। हम इसे जल्द से जल्द ठीक करने की कोशिश करेंगे!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "अमान्य ईमेल प्रारूप।",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "इस एक्सटेंशन को रेट करें",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "मैं पहले ही मूल्यांकन कर चुका हूं",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "कृपया हमें रेट करें",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "बुरी तरह", "description": "Bad" },
+  "okay": { "message": "अच्छा", "description": "Okay" },
+  "good": { "message": "अच्छा", "description": "Good" },
+  "great": { "message": "आश्चर्यजनक!", "description": "Excellent!" },
+  "lovedIt": { "message": "मुझे बहुत अच्छा लगा!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "अतिरिक्त संदर्भ मेनू दिखाएं"
+  },
+  "showContextMenuDscr": {
+    "message": "यह सेटिंग राइट-क्लिक मेनू में एक आइटम जोड़ती है। इसमें अतिरिक्त टेक्स्ट-कॉपी करने वाले टूल या हमारे अन्य टेक्स्ट-संबंधित उत्पादों के सुझाव हो सकते हैं, जैसे कि AiNBar"
+  }
+}

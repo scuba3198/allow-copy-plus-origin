@@ -1,0 +1,71 @@
+{
+  "ext_name": {
+    "message": "Leisti kopijuoti +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Leisti kopijuoti. Pašalinkite apsaugą nuo kopijavimo. Nemokama, lengva. Įjungti teksto kopijavimą, kontekstinį meniu, dešinįjį pelės mygtuką. Įjunkite pasirinkimą.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Ačiū", "description": "Thank You" },
+  "done": { "message": "padaryta", "description": "Done" },
+  "donate": { "message": "Palaikymas", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funkcijos užklausa",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Įvertinkite mus", "description": "Rate Us" },
+  "send": { "message": "Siųsti", "description": "Send" },
+  "email": { "message": "paštas", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Užpildykite, jei norite gauti atsakymą iš palaikymo komandos.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detalės", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Išsamiai aprašykite. Tada galėsime geriau suprasti jūsų problemą.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Interneto svetainė", "description": "web site" },
+  "close": { "message": "Uždaryti", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Eikite į produkto puslapį",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Ei, Supermenai!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 „Leisti kopijuoti +“ negalėjo jums padėti? Jūs jį suaktyvinote, bet kopijavimas tinklalapyje neveikia...😥 Nesijaudinkite. Pateikti prašymą. Stengsimės kuo greičiau sutvarkyti!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Netinkamas el. pašto formatas.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Įvertinkite šį plėtinį",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Jau įvertinau",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Prašome įvertinti mus",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Blogai", "description": "Bad" },
+  "okay": { "message": "gerai", "description": "Okay" },
+  "good": { "message": "gerai", "description": "Good" },
+  "great": { "message": "Nuostabus!", "description": "Excellent!" },
+  "lovedIt": { "message": "Man labai patiko!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "Rodyti papildomą kontekstinį meniu"
+  },
+  "showContextMenuDscr": {
+    "message": "Šis nustatymas prideda elementą į dešiniojo pelės mygtuko paspaudimo meniu. Jame gali būti papildomų teksto kopijavimo įrankių arba pasiūlymų kitiems su tekstu susijusiems mūsų produktams, pvz., AiNBar"
+  }
+}

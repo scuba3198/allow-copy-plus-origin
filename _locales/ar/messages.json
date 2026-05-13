@@ -1,0 +1,151 @@
+{
+  "ext_name": { "message": "السماح بنسخ +", "description": "The name of app." },
+  "ext_desc": {
+    "message": "السماح بالنسخ. قم بإزالة حماية النسخ. مجاني وسهل. تمكين نسخ النص ، قائمة السياق ، زر الماوس الأيمن. قم بتشغيل التحديد.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "شكرًا لك", "description": "Thank You" },
+  "done": { "message": "منتهي", "description": "Done" },
+  "donate": { "message": "يدعم", "description": "Donate" },
+  "featureRequests": {
+    "message": "طلب المواصفات",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "قيمنا", "description": "Rate Us" },
+  "send": { "message": "يرسل", "description": "Send" },
+  "email": { "message": "بريد إلكتروني", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "املأ إذا كنت تريد تلقي رد من فريق الدعم.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "تفاصيل", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "وصف بالتفصيل. ثم يمكننا فهم مشكلتك بشكل أفضل.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "موقع إلكتروني", "description": "web site" },
+  "close": { "message": "يغلق", "description": "close" },
+  "goToDetailsPage": {
+    "message": "انتقل إلى صفحة المنتج",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "يا سوبرمان !!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 لا تستطيع \"السماح بالنسخ\" مساعدتك؟ لقد قمت بتنشيطه ، لكن النسخ على صفحة الويب لا يعمل ... 😥 لا تقلق. تقديم طلب. سنحاول إصلاحه في أسرع وقت ممكن!",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "تنسيق بريد إلكتروني غير صالح.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "قيم هذا الامتداد",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "لقد قيمت بالفعل",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "ارجوك قم بتقييمنا",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "بشكل سيئ", "description": "Bad" },
+  "okay": { "message": "بخير", "description": "Okay" },
+  "good": { "message": "بخير", "description": "Good" },
+  "great": { "message": "خلاب!", "description": "Excellent!" },
+  "lovedIt": { "message": "أحببت ذلك كثيرا جدا!", "description": "Loved It!" },
+  "ppItemName": {
+    "message": "هدية لمطوّر Allow Copy +",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "ميلاد مجيد وعام سعيد!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "مرحبًا، بطل!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "كان PiDevEx صبيًا جيدًا طوال عام 2023!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "عمل بجد مجانًا لتحسين Allow Copy+ باستمرار!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "لنلعب اليوم دور سانتا السري ونهدي PiDevEx هدية صغيرة في عيد الميلاد!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "قدم هدية",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "لقد فعلت بالفعل",
+    "description": "I've already done"
+  },
+
+  "donateMsgKey": {
+    "message": "هل كان \"Allow Copy +\" مفيدًا لك هذا العام؟ كن سانتا سريًا لنا 🎅 — قدم هدية صغيرة لدعم عملنا ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "إرسال هدية"
+  },
+  "beOurSecretSanta": {
+    "message": "كن سانتا سريًا لنا"
+  },
+  "itemTangerineName": {
+    "message": "يوسفي"
+  },
+  "itemTangerineSub": {
+    "message": "زيادة فيتامين C"
+  },
+  "itemHotCocoaName": {
+    "message": "هوت كاكاو"
+  },
+  "itemHotCocoaSub": {
+    "message": "أبقني دافئًا"
+  },
+  "itemPresentName": {
+    "message": "هدية"
+  },
+  "itemPresentSub": {
+    "message": "تحت الشجرة"
+  },
+  "itemChampagneName": {
+    "message": "شمبانيا"
+  },
+  "itemChampagneSub": {
+    "message": "وقود لعام 2026"
+  },
+
+  "recommendedApps": { "message": "تطبيقات موصى بها من فريقنا" },
+  "testBroDes": {
+    "message": "مُحلِّل اختبارات أونلاين يساعدك في العثور على الإجابات بسرعة وإتمام الاختبارات بشكل أسرع."
+  },
+  "shortcutAiDes": {
+    "message": "إعادة كتابة، إعادة صياغة، ترجمة، تصحيح النص بأوامر قصيرة في مربع النص — كل أمر يُشغّل الـ prompt الخاص بك في الذكاء الاصطناعي."
+  },
+  "copyHistoryDes": {
+    "message": "مدير الحافظة — يحفظ تلقائيًا العناصر المنسوخة ويجعل من السهل البحث فيها، إدارتها ولصقها."
+  },
+  "textFromProDes": {
+    "message": "استخراج ونسخ النص من أي مكان على صفحة الويب — الصور، الفيديوهات، وعناصر canvas."
+  },
+  "aiNBarDes": {
+    "message": "دردشات الذكاء الاصطناعي الأصلية في اللوحة الجانبية. ChatGPT و Gemini و Claude و Copilot و DeepSeek و Qwen في مكان واحد. بدون API، بدون غلاف، فقط قوة ذكاء اصطناعي خالصة."
+  },
+
+  "showContextMenuLbl": {
+    "message": "إظهار قائمة سياق إضافية"
+  },
+  "showContextMenuDscr": {
+    "message": "يضيف هذا الإعداد عنصرًا إلى قائمة النقر بزر الماوس الأيمن. قد يحتوي على أدوات إضافية لنسخ النصوص أو اقتراحات لمنتجاتنا الأخرى المتعلقة بالنصوص، مثل AiNBar"
+  }
+}

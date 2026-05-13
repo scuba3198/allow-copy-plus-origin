@@ -1,0 +1,224 @@
+{
+  "ext_name": {
+    "message": "Kopieren zulassen +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Kopieren zulassen. Kopierschutz entfernen. Kostenlos, einfach. Text kopieren aktivieren, Kontextmenü, rechte Maustaste. Auswahl aktivieren.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Danke", "description": "Thank You" },
+  "done": { "message": "Erledigt", "description": "Done" },
+  "donate": { "message": "Unterstützung", "description": "Donate" },
+  "featureRequests": {
+    "message": "Featureanfrage",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Bewerten Sie uns", "description": "Rate Us" },
+  "send": { "message": "Schicken", "description": "Send" },
+  "email": { "message": "Email", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Ausfüllen, wenn Sie eine Antwort vom Support-Team erhalten möchten.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Einzelheiten", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Beschreiben Sie ausführlich. Dann können wir Ihr Problem besser verstehen.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Website", "description": "web site" },
+  "close": { "message": "Schließen", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Gehen Sie zur Produktseite",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hallo Supermann!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Kopieren zulassen +\" konnte dir nicht helfen? Du hast es aktiviert, aber das Kopieren auf der Webseite funktioniert nicht...😥 Keine Sorge. Einen Antrag stellen. Wir werden versuchen, es so schnell wie möglich zu beheben!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Ungültiges Email-Format.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Bewerte diese Verlängerung",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Ich habe bereits bewertet",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Bitte bewerten Sie uns",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Schlecht", "description": "Bad" },
+  "okay": { "message": "Bußgeld", "description": "Okay" },
+  "good": { "message": "Bußgeld", "description": "Good" },
+  "great": { "message": "Fabelhaft!", "description": "Excellent!" },
+  "lovedIt": { "message": "Ich mochte es sehr!", "description": "Loved It!" },
+
+  "somethingWrongDuringGrapping": {
+    "message": "Ups! Beim Extrahieren des Textes ist etwas schief gelaufen.",
+    "description": "Oops! Something went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "Leider ist die Funktion \"Text extrahieren\" begrenzt. Die Nutzungsgrenze für diesen Monat wurde erreicht.",
+    "description": "Sorry, but \"grab text\" feature is limited now. Usage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "Text extrahieren",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "Den gesamten Text in die Zwischenablage kopieren",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "Kopiert!",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "Text löschen",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "Maximieren",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "Minimieren",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "Entschuldigung :( \nDies ist eine Beta-Funktion. Sie könnte fehlerhaft arbeiten. Schalten Sie sie in den Einstellungen aus, wenn Sie sie nicht mögen.",
+    "description": "Sorry :( \nIt is beta functionality. It can work incorrectly. Turn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "Beta",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "Beta-Funktion",
+    "description": "Beta feature"
+  },
+
+  "ppItemName": {
+    "message": "Geschenk für den Allow Copy + Entwickler",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "Frohe Weihnachten und ein glückliches neues Jahr!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "Hallo, Held!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx war das ganze Jahr 2023 über ein braver Junge!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "Er hat hart gearbeitet, um Allow Copy+ immer besser zu machen - und das kostenlos!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "Lass uns heute den Weihnachtsmann spielen und PiDevEx ein kleines Weihnachtsgeschenk geben!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Ein Geschenk machen",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "Ich habe es bereits erledigt",
+    "description": "I've already done"
+  },
+  "heySuperhero": {
+    "message": "Hallo, Superheld!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Versuchen",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "Unsere neue KOSTENLOSE Chrome-Erweiterung!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Vergessen",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Mach es einfach",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Ich möchte es versuchen",
+    "description": "Do Easy"
+  },
+
+  "donateMsgKey": {
+    "message": "War \"Allow Copy +\" dieses Jahr für Sie hilfreich? Sei unser geheimer Weihnachtsmann 🎅 — mach ein kleines Weihnachtsgeschenk zur Unterstützung unserer Arbeit ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Geschenk senden"
+  },
+  "beOurSecretSanta": {
+    "message": "Sei unser geheimer Weihnachtsmann"
+  },
+  "itemTangerineName": {
+    "message": "Mandarine"
+  },
+  "itemTangerineSub": {
+    "message": "Vitamin-C-Booster"
+  },
+  "itemHotCocoaName": {
+    "message": "Heiße Schokolade"
+  },
+  "itemHotCocoaSub": {
+    "message": "Halt mich warm"
+  },
+  "itemPresentName": {
+    "message": "Geschenk"
+  },
+  "itemPresentSub": {
+    "message": "Unter dem Baum"
+  },
+  "itemChampagneName": {
+    "message": "Champagner"
+  },
+  "itemChampagneSub": {
+    "message": "Treibstoff für 2026"
+  },
+
+  "recommendedApps": { "message": "Empfohlene Apps unseres Teams" },
+  "testBroDes": {
+    "message": "Online-Test-Löser, der dir hilft, Antworten schnell zu finden und Tests schneller abzuschließen."
+  },
+  "shortcutAiDes": {
+    "message": "Umschreiben, umformulieren, übersetzen, Text korrigieren mit kurzen Kommandos im Textfeld — jedes Kommando löst dein eigenes KI-Prompt aus."
+  },
+  "copyHistoryDes": {
+    "message": "Zwischenablage-Manager — speichert automatisch deine kopierten Elemente und macht sie einfach zu suchen, verwalten und einzufügen."
+  },
+  "textFromProDes": {
+    "message": "Text überall auf einer Webseite extrahieren und kopieren — aus Bildern, Videos und Canvas-Elementen."
+  },
+  "aiNBarDes": {
+    "message": "Native KI-Chats in der Seitenleiste. ChatGPT, Gemini, Claude, Copilot, DeepSeek und Qwen an einem Ort. Keine API, kein Wrapper, nur pure KI-Power."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Zusätzliches Kontextmenü anzeigen"
+  },
+  "showContextMenuDscr": {
+    "message": "Diese Einstellung fügt dem Rechtsklickmenü ein Element hinzu. Es kann zusätzliche Werkzeuge zum Kopieren von Text oder Vorschläge für unsere anderen textbezogenen Produkte wie AiNBar enthalten"
+  }
+}

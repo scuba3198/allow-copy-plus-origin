@@ -1,0 +1,267 @@
+{
+  "ext_name": {
+    "message": "コピーを許可 +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "コピーを許可します。コピー防止を解除します。無料、簡単。テキストのコピー、コンテキスト メニュー、マウスの右ボタンを有効にします。選択をオンにします。",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "ありがとう", "description": "Thank You" },
+  "done": { "message": "終わり", "description": "Done" },
+  "donate": { "message": "サポート", "description": "Donate" },
+  "featureRequests": {
+    "message": "機能リクエスト",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "私たちを評価してください", "description": "Rate Us" },
+  "send": { "message": "送信", "description": "Send" },
+  "email": { "message": "Eメール", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "サポート チームからの返信を希望する場合は、入力してください。",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "詳細", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "詳細に説明します。そうすれば、問題をよりよく理解できます。",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Webサイト", "description": "web site" },
+  "close": { "message": "近い", "description": "close" },
+  "goToDetailsPage": {
+    "message": "製品ページへ",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "おいスーパーマン！！！",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 「コピーを許可 +」は役に立ちませんか?有効にしましたが、ウェブページでのコピーが機能しません...😥 心配しないでください。リクエストを送信します。できるだけ早く修正できるように努めます!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "メール形式が無効です。",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "この拡張機能を評価してください",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "もう評価した",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "私たちを評価してください",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "ひどく", "description": "Bad" },
+  "okay": { "message": "大丈夫", "description": "Okay" },
+  "good": { "message": "大丈夫", "description": "Good" },
+  "great": { "message": "素晴らしい！", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "とても気に入りました！",
+    "description": "Loved It!"
+  },
+
+  "somethingWrongDuringGrapping": {
+    "message": "おっと！\nテキストの取得中に何かがうまくいかなかったようです。",
+    "description": "Oops!\nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "申し訳ありませんが、「テキストの取得」機能は現在制限されています。今月の使用制限が超過されました。",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "テキストを取得",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "全文をクリップボードにコピー",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "コピーしました！",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "テキストをクリア",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "最大化",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "最小化",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "ごめんなさい:(\nこれはベータ機能です。\n正しく動作しないことがあります。\n好ましくない場合は設定でオフにしてください。",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "ベータ",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "ベータ機能",
+    "description": "Beta feature"
+  },
+  "settings": {
+    "message": "設定",
+    "description": "settings"
+  },
+  "enableProtectedTextToCopyLbl": {
+    "message": "保護されたテキストのコピーを有効にする",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "これは、コピー保護を備えたウェブサイト上でテキストを選択/コピー/貼り付けできる機能を追加するメイン機能です。ただし、ウェブサイトのデフォルト機能が混乱する可能性があります。このメイン機能が必要ない場合は、オフにできます。",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "サポート/ヘルプアイコンを表示する",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "この設定は、画面の左下に跳ね返るアイコンを表示します。これは、Allow Copy +のアクティブ/非アクティブ状態を示すために使用できます。また、このアイコンを使用してサポートにすばやく書き込むこともできます。このアイコンを非表示にする場合は、オフにします。",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "画像からの検出テキストオーバーレイを表示する",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "この設定は、画像にテキスト抽出機能が含まれている場合にオーバーレイを表示するようにします。オーバーレイを非表示にするには、この設定をオフにします。",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "設定が正常に更新されました",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Allow Copy + 開発者への贈り物",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "メリークリスマスとハッピーニューイヤー！",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "こんにちは、ヒーロー！",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx は2023年全体で良い子でした！",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "彼は無料で Allow Copy+ をより良くし続けるために一生懸命働きました！",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "今日はシークレットサンタをしましょう。 PiDevEx に小さなクリスマスプレゼントをしましょう！",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "ギフトを作る",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "もう終わりました",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "こんにちは、スーパーヒーロー！！！",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "試してみる",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "私たちの新しい無料のChrome拡張機能！",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "忘れる",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "簡単に行う",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "試してみたいです",
+    "description": "I want Try"
+  },
+  "gptPageBnrTry": {
+    "message": "「Copy History +」をお試しください — お気に入りのプロンプトを保存して再利用できます！🔥 簡単にクリップボードの項目を挿入、整理、管理しましょう。",
+    "description": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease."
+  },
+  "gptPageBnrMore": {
+    "message": "詳細を確認して今すぐインストール！",
+    "description": "Learn more and install now!"
+  },
+
+  "donateMsgKey": {
+    "message": "今年「Allow Copy +」は役に立ちましたか？私たちのシークレットサンタになりませんか🎅 — 私たちの活動を支援するために小さなホリデーギフトを ✨❤️。"
+  },
+  "sendGiftKey": {
+    "message": "ギフトを送る"
+  },
+  "beOurSecretSanta": {
+    "message": "私たちのシークレットサンタになろう"
+  },
+  "itemTangerineName": {
+    "message": "タンジェリン"
+  },
+  "itemTangerineSub": {
+    "message": "ビタミンC補給"
+  },
+  "itemHotCocoaName": {
+    "message": "ホットココア"
+  },
+  "itemHotCocoaSub": {
+    "message": "暖かくしてね"
+  },
+  "itemPresentName": {
+    "message": "プレゼント"
+  },
+  "itemPresentSub": {
+    "message": "ツリーの下"
+  },
+  "itemChampagneName": {
+    "message": "シャンパン"
+  },
+  "itemChampagneSub": {
+    "message": "2026年へのエネルギー"
+  },
+
+  "recommendedApps": { "message": "チームおすすめのアプリ" },
+  "testBroDes": {
+    "message": "オンラインテストの解答を素早く見つけ、テストをより早く終わらせるためのオンラインテストソルバー。"
+  },
+  "shortcutAiDes": {
+    "message": "テキストボックスで短いコマンドを使って、書き直す・言い換える・翻訳する・訂正する — 各コマンドがカスタム AI プロンプトを起動します。"
+  },
+  "copyHistoryDes": {
+    "message": "クリップボードマネージャー — コピーしたアイテムを自動で保存し、検索・管理・貼り付けを簡単にします。"
+  },
+  "textFromProDes": {
+    "message": "ウェブページのどこからでもテキストを抽出・コピー — 画像、動画、canvas 要素も含む。"
+  },
+  "aiNBarDes": {
+    "message": "サイドパネルでのネイティブAIチャット。ChatGPT、Gemini、Claude、Copilot、DeepSeek、Qwenをひとつの場所で。APIなし、ラッパーなし、純粋なAIパワー。"
+  },
+
+  "showContextMenuLbl": {
+    "message": "追加のコンテキストメニューを表示"
+  },
+  "showContextMenuDscr": {
+    "message": "この設定により、右クリックメニューに項目が追加されます。テキストをコピーするための追加ツールや、AiNBarなどの他のテキスト関連製品の提案が含まれる場合があります"
+  }
+}

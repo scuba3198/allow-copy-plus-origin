@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Tillat Kopier +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Tillat kopiering. Fjern kopibeskyttelsen. Gratis, enkelt. Aktiver tekstkopiering, kontekstmeny, høyre museknapp. Slå på valg.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Takk skal du ha", "description": "Thank You" },
+  "done": { "message": "ferdig", "description": "Done" },
+  "donate": { "message": "Brukerstøtte", "description": "Donate" },
+  "featureRequests": {
+    "message": "Funksjonsforespørsel",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Rangere oss", "description": "Rate Us" },
+  "send": { "message": "Sende", "description": "Send" },
+  "email": { "message": "E-post", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Fyll inn hvis du ønsker å motta svar fra supportteamet.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detaljer", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Beskriv i detalj. Da kan vi bedre forstå problemet ditt.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "nettsted", "description": "web site" },
+  "close": { "message": "Lukk", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Gå til produktsiden",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hei Supermann!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Tillat kopiering +\" kunne ikke hjelpe deg? Du har aktivert den, men kopiering på nettsiden fungerer ikke...😥 Ikke bekymre deg. Send inn en forespørsel. Vi skal prøve å fikse det så fort som mulig!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Ugyldig e-postformat.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Vurder denne utvidelsen",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Jeg har allerede vurdert",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Vennligst ranger oss",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Dårlig", "description": "Bad" },
+  "okay": { "message": "Fint", "description": "Okay" },
+  "good": { "message": "Fint", "description": "Good" },
+  "great": { "message": "Fabelaktig!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Jeg likte det veldig godt!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Vis ekstra kontekstmeny"
+  },
+  "showContextMenuDscr": {
+    "message": "Denne innstillingen legger til et element i høyreklikkmenyen. Den kan inneholde flere verktøy for tekstkopiering eller forslag til våre andre tekstrelaterte produkter, for eksempel AiNBar"
+  }
+}

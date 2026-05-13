@@ -1,0 +1,256 @@
+{
+  "ext_name": { "message": "允许复制 +", "description": "The name of app." },
+  "ext_desc": {
+    "message": "允许复制。删除复制保护。免费，简单。启用文本复制、上下文菜单、鼠标右键。开启选择。",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "谢谢", "description": "Thank You" },
+  "done": { "message": "完毕", "description": "Done" },
+  "donate": { "message": "支持", "description": "Donate" },
+  "featureRequests": {
+    "message": "功能要求",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "评价我们", "description": "Rate Us" },
+  "send": { "message": "发送", "description": "Send" },
+  "email": { "message": "电子邮件", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "如果您想收到支持团队的回复，请填写。",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "细节", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "详细描述。然后我们可以更好地了解您的问题。",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "网站", "description": "web site" },
+  "close": { "message": "关闭", "description": "close" },
+  "goToDetailsPage": {
+    "message": "进入产品页面",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "嘿超人！！！",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 “允许复制 +” 无法帮助您？你已经激活了，但是在网页上复制是行不通的...😥别担心。提交申请。我们会尽快修复它！😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "电子邮件格式无效。",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "评价这个扩展",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "我已经评价了",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": { "message": "请评价我们", "description": "Please, rate us" },
+  "bad": { "message": "严重", "description": "Bad" },
+  "okay": { "message": "美好的", "description": "Okay" },
+  "good": { "message": "美好的", "description": "Good" },
+  "great": { "message": "极好！", "description": "Excellent!" },
+  "lovedIt": { "message": "我很喜欢它！", "description": "Loved It!" },
+  "copy": { "message": "複製", "description": "Copy" },
+
+  "somethingWrongDuringGrapping": {
+    "message": "哎呀！\n抓取文本时出现了问题。",
+    "description": "Oops! \nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "抱歉，\"抓取文本\"功能现在受到限制。\n本月的使用限制已经超过。",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "抓取文本",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "复制全文到剪贴板",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "已复制！",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "清除文本",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "最大化",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "最小化",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "抱歉:（\n这是测试功能。\n可能会工作不正常。\n如果您不喜欢它，请在设置中关闭它。",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "测试版",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "测试功能",
+    "description": "Beta feature"
+  },
+
+  "settings": { "message": "设置", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "启用受保护的文本复制",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "这是添加在带有复制保护的网站上选择/复制/粘贴文本能力的主要功能。但它可能会干扰网站的默认功能。如果您不需要此主要功能，可以将其关闭。",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "显示支持/帮助图标",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "此设置会在屏幕底部/左侧显示弹出式图标。它可以用作 Allow Copy+ 活动/非活动状态的指示器。您也可以使用此图标快速向支持部门写信。如果要隐藏此图标，请将其关闭。",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "显示从图像叠加层检测文本",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "此设置启用了在包含从图像提取文本功能的图像上显示叠加层的功能。要隐藏叠加层，请关闭此设置。",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "设置已成功更新",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Allow Copy + 开发者的礼物",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "圣诞快乐和新年快乐！",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "你好，英雄！",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "在整个2023年里，PiDevEx一直是个好孩子！",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "他为了免费不断改进 Allow Copy+ 而努力工作！",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "今天让我们玩成圣诞老人，给PiDevEx一个小圣诞礼物吧！",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "制作礼物",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "我已经完成了",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "嗨，超级英雄！！！",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "尝试",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "我们的新免费Chrome扩展！",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "忘记",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "轻松做",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "我想尝试",
+    "description": "I want Try"
+  },
+  "gptPageBnrTry": {
+    "message": "尝试 \"Copy History +\" — 保存并重用您最喜爱的提示！🔥 快速插入、组织和管理剪贴板条目。",
+    "description": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease."
+  },
+  "gptPageBnrMore": {
+    "message": "了解更多并立即安装！",
+    "description": "Learn more and install now!"
+  },
+
+  "donateMsgKey": {
+    "message": "今年“Allow Copy +”对你有帮助吗？成为我们的神秘圣诞老人 🎅 — 送一份小小的节日礼物支持我们的工作 ✨❤️。"
+  },
+  "sendGiftKey": {
+    "message": "发送礼物"
+  },
+  "beOurSecretSanta": {
+    "message": "成为我们的神秘圣诞老人"
+  },
+  "itemTangerineName": {
+    "message": "橘子"
+  },
+  "itemTangerineSub": {
+    "message": "维生素C补充"
+  },
+  "itemHotCocoaName": {
+    "message": "热可可"
+  },
+  "itemHotCocoaSub": {
+    "message": "保持温暖"
+  },
+  "itemPresentName": {
+    "message": "礼物"
+  },
+  "itemPresentSub": {
+    "message": "在树下"
+  },
+  "itemChampagneName": {
+    "message": "香槟"
+  },
+  "itemChampagneSub": {
+    "message": "2026年的能量"
+  },
+  "recommendedApps": { "message": "我们团队推荐的应用" },
+  "testBroDes": {
+    "message": "在线测试工具，帮助你快速找到答案并更快完成测试。"
+  },
+  "shortcutAiDes": {
+    "message": "在文本框中使用快捷命令重写、改写、翻译、校正文本 — 每个命令都会触发你的定制 AI 提示。"
+  },
+  "copyHistoryDes": {
+    "message": "剪贴板管理器 — 自动保存你复制的内容，使其易于搜索、管理和粘贴。"
+  },
+  "textFromProDes": {
+    "message": "从网页的任何地方提取并复制文本 — 包括图片、视频和 canvas 元素。"
+  },
+  "aiNBarDes": {
+    "message": "侧边栏原生 AI 聊天。ChatGPT、Gemini、Claude、Copilot、DeepSeek 和 Qwen 齐聚一处。无 API，无封装，纯粹的 AI 之力。"
+  },
+
+  "showContextMenuLbl": {
+    "message": "显示额外上下文菜单"
+  },
+  "showContextMenuDscr": {
+    "message": "此设置在右键菜单中添加一个项目。它可能包含额外的文本复制工具或对我们其他文本相关产品（如 AiNBar）的建议"
+  }
+}

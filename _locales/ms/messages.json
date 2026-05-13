@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Benarkan Salin +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Benarkan penyalinan. Alih keluar perlindungan salinan. Percuma, mudah. Dayakan penyalinan teks, menu konteks, butang kanan tetikus. Hidupkan pemilihan.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Terima kasih", "description": "Thank You" },
+  "done": { "message": "selesai", "description": "Done" },
+  "donate": { "message": "Sokongan", "description": "Donate" },
+  "featureRequests": {
+    "message": "Permintaan Ciri",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Nilaikan kami", "description": "Rate Us" },
+  "send": { "message": "Hantar", "description": "Send" },
+  "email": { "message": "E-mel", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Isikan jika anda ingin menerima jawapan daripada pasukan sokongan.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Butiran", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Huraikan secara terperinci. Kemudian kami boleh lebih memahami masalah anda.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "laman web", "description": "web site" },
+  "close": { "message": "tutup", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Pergi ke halaman produk",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hey Superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Benarkan Salin +\" tidak dapat membantu anda? Anda telah mengaktifkannya, tetapi menyalin pada halaman web tidak berfungsi...😥 Jangan risau. Hantar permintaan. Kami akan cuba membaikinya secepat mungkin!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Format e-mel tidak sah.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Nilaikan sambungan ini",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Saya sudah menilai",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Sila nilaikan kami",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "teruk", "description": "Bad" },
+  "okay": { "message": "baik", "description": "Okay" },
+  "good": { "message": "baik", "description": "Good" },
+  "great": { "message": "Hebat!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Saya sangat sukakannya!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Tunjukkan Menu Konteks Tambahan"
+  },
+  "showContextMenuDscr": {
+    "message": "Tetapan ini menambah item pada menu klik kanan. Ia mungkin mengandungi alat menyalin teks tambahan atau cadangan untuk produk berkaitan teks kami yang lain, seperti AiNBar"
+  }
+}

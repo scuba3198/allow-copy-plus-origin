@@ -1,0 +1,253 @@
+{
+  "ext_name": {
+    "message": "Kopyalamaya İzin Ver +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Kopyalamaya izin ver. Kopya korumasını kaldırın. Ücretsiz, kolay. Metin kopyalamayı, içerik menüsünü, sağ fare düğmesini etkinleştirin. Seçimi açın.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Teşekkür ederim", "description": "Thank You" },
+  "done": { "message": "Tamamlandı", "description": "Done" },
+  "donate": { "message": "Destek", "description": "Donate" },
+  "featureRequests": {
+    "message": "Özellik isteği",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Bizi değerlendirin", "description": "Rate Us" },
+  "send": { "message": "Göndermek", "description": "Send" },
+  "email": { "message": "e-posta", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Destek ekibinden yanıt almak istiyorsanız doldurun.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detaylar", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "ayrıntılı olarak açıklayın. O zaman sorununuzu daha iyi anlayabiliriz.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "İnternet sitesi", "description": "web site" },
+  "close": { "message": "Kapalı", "description": "close" },
+  "goToDetailsPage": {
+    "message": "ürün sayfasına git",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Ey Süpermen!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Kopyalamaya İzin Ver +\" size yardımcı olamadı mı? Etkinleştirdiniz ama web sayfasında kopyalama çalışmıyor...😥 Merak etmeyin. Bir istek gönderin. En kısa sürede düzeltmeye çalışacağız!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Geçersiz e-posta formatı.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Bu uzantıyı derecelendirin",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "zaten puan verdim",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Lütfen bizi değerlendirin",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Kötü", "description": "Bad" },
+  "okay": { "message": "İyi", "description": "Okay" },
+  "good": { "message": "İyi", "description": "Good" },
+  "great": { "message": "Efsanevi!", "description": "Excellent!" },
+  "lovedIt": { "message": "Bunu çok sevdim!", "description": "Loved It!" },
+  "copy": { "message": "Kopyalamak", "description": "Copy" },
+  "somethingWrongDuringGrapping": {
+    "message": "Hata! \nMetin alınırken bir sorun oluştu.",
+    "description": "Oops! \nSomething went wrong while grabbing the text."
+  },
+  "grabLimitExceeded": {
+    "message": "Maalesef, \"metin yakalama\" işlevi sınırlıdır. \nBu ay için kullanım limiti aşıldı.",
+    "description": "Sorry, but \"grab text\" feature is limited now. \nUsage limit for this month has been exceeded."
+  },
+  "grabTextTtl": {
+    "message": "Metin Yakala",
+    "description": "Grab Text"
+  },
+  "copyTextToClipboardTtl": {
+    "message": "Tüm metni panoya kopyala",
+    "description": "Copy full text to clipboard"
+  },
+  "copiedTtl": {
+    "message": "Kopyalandı!",
+    "description": "Copied!"
+  },
+  "clearTextTtl": {
+    "message": "Metni Temizle",
+    "description": "Clear Text"
+  },
+  "maximizeTtl": {
+    "message": "Büyüt",
+    "description": "Maximize"
+  },
+  "minimizeTtl": {
+    "message": "Küçült",
+    "description": "Minimize"
+  },
+  "sorryForBetaFuncsMsg": {
+    "message": "Üzgünüz :( \nBu beta özelliktir.\nDüzgün çalışmayabilir.\nBeğenmezseniz ayarlarda kapatın.",
+    "description": "Sorry :( \nIt is beta functionality.\nIt can work incorrectly.\nTurn off in setting if you dislike it."
+  },
+  "beta": {
+    "message": "Beta",
+    "description": "Beta"
+  },
+  "betaFeature": {
+    "message": "Beta Özelliği",
+    "description": "Beta feature"
+  },
+  "settings": { "message": "ayarlar", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "Korunan metinleri kopyalamayı etkinleştir",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "Kopya koruması olan web sitelerinde metin seçme/kopyalama/yapıştırma yeteneği ekleyen ana özelliktir. Ancak, web sitesinin varsayılan işlevselliğini bozabilir. Bu ana işlevselliği gerektirmiyorsanız, devre dışı bırakabilirsiniz.",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "Destek/Yardım simgesini göster",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "Bu ayar, ekranınızın alt/sol konumunda sıçrayan simgenin gösterilmesini sağlar. Allow Copy + 'ın etkin/pasif durum göstergesi olarak kullanılabilir. Ayrıca bu simgeyi kullanarak hızlıca destekle iletişime geçebilirsiniz. Bu simgeyi gizlemek istiyorsanız devre dışı bırakın.",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "Resim üzerindeki metin algılama ekran örtüsünü göster",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "Bu ayar, resimdeki metni çıkarma işlevini içeren resimlerde bir örtü görüntülenmesini etkinleştirir. Örtüyü gizlemek için bu ayarı kapatın.",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "Ayar başarıyla güncellendi",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Allow Copy + geliştirici için hediye",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "Mutlu Noeller ve Yeni Yıl!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "Merhaba, Kahraman!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx, 2023 boyunca iyi bir çocuktu!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "Allow Copy+'ı her geçen gün daha iyi yapmak için BEDAVA çalıştı!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "Hadi bugün Gizli Noel Baba oynayalım ve PiDevEx'e küçük bir Noel hediyesi verelim!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "Hediye Yap",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "Zaten Yapıldı",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "Merhaba, Süperkahraman!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "Dene",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "Yeni BEDAVA Chrome uzantımız!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "Unut",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "Kolayca yap",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "Istiyorum denemek",
+    "description": "Do Easy"
+  },
+
+  "donateMsgKey": {
+    "message": "\"Allow Copy +\" bu yıl size yardımcı oldu mu? Bizim Gizli Noel Baba'mız olun 🎅 — çalışmalarımızı desteklemek için küçük bir tatil hediyesi verin ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "Hediye Gönder"
+  },
+  "beOurSecretSanta": {
+    "message": "Bizim Gizli Noel Baba'mız olun"
+  },
+  "itemTangerineName": {
+    "message": "Mandalina"
+  },
+  "itemTangerineSub": {
+    "message": "C vitamini desteği"
+  },
+  "itemHotCocoaName": {
+    "message": "Sıcak Kakao"
+  },
+  "itemHotCocoaSub": {
+    "message": "Beni sıcak tut"
+  },
+  "itemPresentName": {
+    "message": "Hediye"
+  },
+  "itemPresentSub": {
+    "message": "Çam ağacının altında"
+  },
+  "itemChampagneName": {
+    "message": "Şampanya"
+  },
+  "itemChampagneSub": {
+    "message": "2026 için enerji"
+  },
+
+  "recommendedApps": { "message": "Ekibimizin Önerdiği Uygulamalar" },
+  "testBroDes": {
+    "message": "Soruları çevrimiçi çözen araç — cevapları hızlıca bulmanı ve testleri daha çabuk tamamlamanı sağlar."
+  },
+  "shortcutAiDes": {
+    "message": "Kısa komutlarla metni yeniden yaz, değiştir, çevir, düzelt — her komut özel AI prompt’unu tetikler."
+  },
+  "copyHistoryDes": {
+    "message": "Panoya yönetici — kopyalanan öğeleri otomatik kaydeder, kolayca arama, yönetim ve yapıştırma imkânı sağlar."
+  },
+  "textFromProDes": {
+    "message": "Web sayfasındaki herhangi bir yerden metin çıkar ve kopyala — resimler, videolar ve canvas öğeleri dahil."
+  },
+  "aiNBarDes": {
+    "message": "Yan Panelde Yerel Yapay Zeka Sohbetleri. ChatGPT, Gemini, Claude, Copilot, DeepSeek ve Qwen tek bir yerde. API yok, sarmalayıcı yok, sadece saf yapay zeka gücü."
+  },
+
+  "showContextMenuLbl": {
+    "message": "Ekstra İçerik Menüsünü Göster"
+  },
+  "showContextMenuDscr": {
+    "message": "Bu ayar sağ tıklama menüsüne bir öğe ekler. Ek metin kopyalama araçları veya AiNBar gibi metinle ilgili diğer ürünlerimiz için öneriler içerebilir"
+  }
+}

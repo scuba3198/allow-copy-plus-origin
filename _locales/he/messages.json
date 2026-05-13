@@ -1,0 +1,68 @@
+{
+  "ext_name": { "message": "אפשר העתק +", "description": "The name of app." },
+  "ext_desc": {
+    "message": "אפשר העתקה. הסר את הגנת העתקה. חינם, קל. אפשר העתקת טקסט, תפריט הקשר, לחצן ימני בעכבר. הפעל את הבחירה.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "תודה", "description": "Thank You" },
+  "done": { "message": "בוצע", "description": "Done" },
+  "donate": { "message": "תמיכה", "description": "Donate" },
+  "featureRequests": {
+    "message": "בקשת תכונה",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "דרג אותנו", "description": "Rate Us" },
+  "send": { "message": "לִשְׁלוֹחַ", "description": "Send" },
+  "email": { "message": "אימייל", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "מלא אם ברצונך לקבל תשובה מצוות התמיכה.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "פרטים", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "תאר בפירוט. אז נוכל להבין טוב יותר את הבעיה שלך.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "אתר אינטרנט", "description": "web site" },
+  "close": { "message": "סגור", "description": "close" },
+  "goToDetailsPage": {
+    "message": "עבור לדף המוצר",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "היי סופרמן!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"אפשר העתק +\" לא יכול לעזור לך? הפעלת את זה, אבל ההעתקה בדף האינטרנט לא עובדת...😥 אל תדאג. להגיש בקשה. נשתדל לתקן את זה בהקדם האפשרי!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "פורמט דוא\"ל לא חוקי.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "דרג את ההרחבה הזו",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "כבר דירגתי",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "אנא דרג אותנו",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "בצורה גרועה", "description": "Bad" },
+  "okay": { "message": "בסדר גמור", "description": "Okay" },
+  "good": { "message": "בסדר גמור", "description": "Good" },
+  "great": { "message": "מהמם!", "description": "Excellent!" },
+  "lovedIt": { "message": "אהבתי מאוד!", "description": "Loved It!" },
+
+  "showContextMenuLbl": {
+    "message": "הצג תפריט הקשר נוסף"
+  },
+  "showContextMenuDscr": {
+    "message": "הגדרה זו מוסיפה פריט לתפריט לחיצה ימנית. הוא עשוי להכיל כלי העתקת טקסט נוספים או הצעות למוצרים אחרים שלנו הקשורים לטקסט, כגון AiNBar"
+  }
+}

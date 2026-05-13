@@ -1,0 +1,219 @@
+{
+  "ext_name": {
+    "message": "복사 허용 +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "복사를 허용합니다. 복사 방지를 제거하십시오. 무료입니다. 텍스트 복사, 컨텍스트 메뉴, 마우스 오른쪽 버튼을 활성화합니다. 선택을 켭니다.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "감사합니다", "description": "Thank You" },
+  "done": { "message": "완료", "description": "Done" },
+  "donate": { "message": "지원하다", "description": "Donate" },
+  "featureRequests": {
+    "message": "기능 요청",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "우리를 평가", "description": "Rate Us" },
+  "send": { "message": "보내다", "description": "Send" },
+  "email": { "message": "이메일", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "지원팀으로부터 응답을 받으려면 입력하십시오.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "세부", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "자세히 기술하십시오. 그러면 문제를 더 잘 이해할 수 있습니다.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "웹 사이트", "description": "web site" },
+  "close": { "message": "닫다", "description": "close" },
+  "goToDetailsPage": {
+    "message": "제품 페이지로 이동",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "야 슈퍼맨!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"복사 허용 +\"가 도움이 되지 않으셨나요? 활성화는 했는데 웹페이지 복사가 안되네요...😥 걱정마세요. 요청을 제출하십시오. 최대한 빨리 수정하도록 노력하겠습니다!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "잘못된 이메일 형식입니다.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "이 확장 프로그램 평가하기",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "나는 이미 평가했다",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "우리를 평가하십시오",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "심하게", "description": "Bad" },
+  "okay": { "message": "괜찮은", "description": "Okay" },
+  "good": { "message": "괜찮은", "description": "Good" },
+  "great": { "message": "굉장한!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "나는 그것을 매우 좋아했다!",
+    "description": "Loved It!"
+  },
+  "settings": { "message": "설정", "description": "settings" },
+  "enableProtectedTextToCopyLbl": {
+    "message": "복사 보호된 텍스트 활성화",
+    "description": "Enable protected text to copy"
+  },
+  "enableProtectedTextToCopyDscr": {
+    "message": "이 기능은 복사 보호 기능이 있는 웹 사이트에서 텍스트 선택 / 복사 / 붙여넣기 기능을 추가합니다. 그러나 기본 기능을 방해할 수 있습니다. 이 기능이 필요하지 않은 경우 비활성화 할 수 있습니다.",
+    "description": "This is the main feature that adds the ability to select/copy/paste text ... description"
+  },
+  "showSupportHelpIconLbl": {
+    "message": "지원/도움말 아이콘 표시",
+    "description": "Show support/help icon"
+  },
+  "showSupportHelpIconDscr": {
+    "message": "이 설정은 화면 하단/왼쪽 위치에 튕기는 아이콘을 표시합니다. 활성/비활성 상태의 지표로 사용할 수 있습니다. 또한이 아이콘을 사용하여 빠르게 지원에 문의할 수 있습니다. 이 아이콘을 숨기려면 비활성화하십시오.",
+    "description": "showSupportHelpIconDscr"
+  },
+  "showDetectTextOverlayLbl": {
+    "message": "이미지 오버레이에서 텍스트 감지 표시",
+    "description": "Show detection text from image overlay"
+  },
+  "showDetectTextOverlayDscr": {
+    "message": "이 설정을 활성화하면 이미지에서 텍스트를 추출하는 기능이 포함 된 이미지 위에 오버레이가 표시됩니다. 오버레이를 숨으려면이 설정을 끄십시오.",
+    "description": "show Detect Text Overlay Dscr"
+  },
+  "successSaveMsg": {
+    "message": "설정이 성공적으로 업데이트되었습니다.",
+    "description": "Setting was successfully updated"
+  },
+  "ppItemName": {
+    "message": "Allow Copy + 개발자를 위한 선물",
+    "description": "Gift for Allow Copy + developer"
+  },
+  "maryChristmas": {
+    "message": "메리 크리스마스와 해피 뉴 이어!",
+    "description": "Merry Christmas and Happy New Year!"
+  },
+  "hiHero": {
+    "message": "안녕, 히어로!",
+    "description": "Hi, Hero!"
+  },
+  "pidevexGoodBoy": {
+    "message": "PiDevEx는 2023년 내내 착한 아이였습니다!",
+    "description": "PiDevEx has been a good boy throughout the entire year of 2023!"
+  },
+  "heWorkHard": {
+    "message": "그는 무료로 Allow Copy+을 계속 개선하기 위해 열심히 일했습니다!",
+    "description": "He worked hard for FREE to make Allow Copy+ better and better!"
+  },
+  "letsPlaySanta": {
+    "message": "오늘은 비밀 선물 교환을 해서 PiDevEx에게 작은 크리스마스 선물을 주도록 합시다!",
+    "description": "Let's play Secret Santa today and give PiDevEx a small Christmas present!"
+  },
+  "makeaGift": {
+    "message": "선물 만들기",
+    "description": "Make a Gift"
+  },
+  "alreadyDone2": {
+    "message": "이미 완료했습니다",
+    "description": "I've already done"
+  },
+
+  "heySuperhero": {
+    "message": "안녕, 슈퍼 히어로!!!",
+    "description": "Hey, Superhero!!!"
+  },
+  "try": {
+    "message": "시도",
+    "description": "Try"
+  },
+  "ourNewFREEChromeExtension": {
+    "message": "우리의 새로운 무료 크롬 확장 프로그램!",
+    "description": "our new FREE chrome extension!"
+  },
+  "forget": {
+    "message": "잊어 버리다",
+    "description": "Forget"
+  },
+  "doEasy": {
+    "message": "쉽게 하다",
+    "description": "Do Easy"
+  },
+  "iWantTry": {
+    "message": "해보고 싶어요",
+    "description": "I want Try"
+  },
+  "gptPageBnrTry": {
+    "message": "\"Copy History +\"를 사용해 보세요 — 좋아하는 프롬프트를 저장하고 재사용하세요! 🔥 클립보드 항목을 빠르게 삽입, 정리 및 관리하세요.",
+    "description": "Try \"Copy History +\" — Save and reuse your favorite prompts! 🔥 Quickly insert, organize, and manage your clipboard entries with ease."
+  },
+  "gptPageBnrMore": {
+    "message": "자세히 알아보고 지금 설치하세요!",
+    "description": "Learn more and install now!"
+  },
+
+  "donateMsgKey": {
+    "message": "올해 \"Allow Copy +\"가 도움이 되었나요? 저희의 시크릿 산타 🎅가 되어 주세요 — 저희 활동을 지원하는 작은 연말 선물을 ✨❤️."
+  },
+  "sendGiftKey": {
+    "message": "선물 보내기"
+  },
+  "beOurSecretSanta": {
+    "message": "저희의 시크릿 산타가 되어 주세요"
+  },
+  "itemTangerineName": {
+    "message": "귤"
+  },
+  "itemTangerineSub": {
+    "message": "비타민 C 보충"
+  },
+  "itemHotCocoaName": {
+    "message": "핫 코코아"
+  },
+  "itemHotCocoaSub": {
+    "message": "따뜻하게 해줘"
+  },
+  "itemPresentName": {
+    "message": "선물"
+  },
+  "itemPresentSub": {
+    "message": "트리 아래"
+  },
+  "itemChampagneName": {
+    "message": "샴페인"
+  },
+  "itemChampagneSub": {
+    "message": "2026년을 위한 에너지"
+  },
+
+  "recommendedApps": { "message": "우리 팀이 추천하는 앱" },
+  "testBroDes": {
+    "message": "온라인 테스트 솔버 — 답변을 빠르게 찾고 테스트를 더 빨리 완료하도록 도와줍니다."
+  },
+  "shortcutAiDes": {
+    "message": "텍스트 상자에서 짧은 명령어로 텍스트를 다시 쓰고, 바꾸고, 번역하고, 교정하세요 — 각 명령이 당신의 커스텀 AI 프롬프트를 실행합니다."
+  },
+  "copyHistoryDes": {
+    "message": "클립보드 관리자 — 복사한 항목을 자동 저장하고, 검색·관리·붙여넣기 쉽게 만들어 줍니다."
+  },
+  "textFromProDes": {
+    "message": "웹페이지 어디에서든 텍스트 추출 및 복사 — 이미지, 동영상, canvas 요소 포함."
+  },
+  "aiNBarDes": {
+    "message": "사이드 패널의 네이티브 AI 채팅. ChatGPT, Gemini, Claude, Copilot, DeepSeek 및 Qwen을 한곳에서. API 없음, 래퍼 없음, 순수한 AI 성능."
+  },
+
+  "showContextMenuLbl": {
+    "message": "추가 컨텍스트 메뉴 표시"
+  },
+  "showContextMenuDscr": {
+    "message": "이 설정은 우클릭 메뉴에 항목을 추가합니다. 추가 텍스트 복사 도구 또는 AiNBar와 같은 당사의 다른 텍스트 관련 제품에 대한 제안이 포함될 수 있습니다"
+  }
+}

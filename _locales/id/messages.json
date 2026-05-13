@@ -1,0 +1,74 @@
+{
+  "ext_name": {
+    "message": "Izinkan Salin +",
+    "description": "The name of app."
+  },
+  "ext_desc": {
+    "message": "Izinkan menyalin. Hapus perlindungan salinan. Gratis, mudah. Aktifkan penyalinan teks, menu konteks, tombol mouse kanan. Aktifkan pilihan.",
+    "description": "The description of app."
+  },
+  "thankYou": { "message": "Terima kasih", "description": "Thank You" },
+  "done": { "message": "Selesai", "description": "Done" },
+  "donate": { "message": "Mendukung", "description": "Donate" },
+  "featureRequests": {
+    "message": "Permintaan fitur",
+    "description": "Feature Requests"
+  },
+  "rateUs": { "message": "Nilai kami", "description": "Rate Us" },
+  "send": { "message": "Mengirim", "description": "Send" },
+  "email": { "message": "Surel", "description": "Email" },
+  "emailFieldDescription": {
+    "message": "Isi jika Anda ingin menerima tanggapan dari tim dukungan.",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "details": { "message": "Detail", "description": "details" },
+  "detailsFieldDescription": {
+    "message": "Jelaskan secara rinci. Maka kami dapat lebih memahami masalah Anda.",
+    "description": "Not required. Describe the problem for a better understanding."
+  },
+  "website": { "message": "Situs web", "description": "web site" },
+  "close": { "message": "Menutup", "description": "close" },
+  "goToDetailsPage": {
+    "message": "Buka halaman produk",
+    "description": "Go to details page."
+  },
+  "welcome": {
+    "message": "Hei superman!!!",
+    "description": "Not required. Fill in an email if you want to get answer from support."
+  },
+  "domainProblemDescription": {
+    "message": "🙄 \"Izinkan Salin +\" tidak dapat membantu Anda? Anda telah mengaktifkannya, tetapi menyalin di halaman web tidak berfungsi...😥 Jangan khawatir. Mengajukan permohonan. Kami akan berusaha memperbaikinya secepat mungkin!😜",
+    "description": "🙄Allow Copy + can't help you? You have activated it but copy haven't work yet...😥 Don't worry, send request and we try to fix it as soon as possible!😜"
+  },
+  "invalidEmailFormat": {
+    "message": "Format email salah.",
+    "description": "Invalid email format!"
+  },
+  "rateThisExtension": {
+    "message": "Beri nilai ekstensi ini",
+    "description": "Rate this extension"
+  },
+  "alreadyDone": {
+    "message": "Saya sudah menilai",
+    "description": "I've already done"
+  },
+  "pleaseRateUs": {
+    "message": "Silakan nilai kami",
+    "description": "Please, rate us"
+  },
+  "bad": { "message": "Dengan buruk", "description": "Bad" },
+  "okay": { "message": "Bagus", "description": "Okay" },
+  "good": { "message": "Bagus", "description": "Good" },
+  "great": { "message": "Sangat menyenangkan!", "description": "Excellent!" },
+  "lovedIt": {
+    "message": "Saya sangat menyukainya!",
+    "description": "Loved It!"
+  },
+
+  "showContextMenuLbl": {
+    "message": "Tampilkan Menu Konteks Ekstra"
+  },
+  "showContextMenuDscr": {
+    "message": "Pengaturan ini menambahkan item ke menu klik kanan. Ini mungkin berisi alat penyalinan teks tambahan atau saran untuk produk terkait teks kami lainnya, seperti AiNBar"
+  }
+}
