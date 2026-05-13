@@ -1,4 +1,4 @@
-# Allow Copy+ Origin 🛡️
+# Allow Copy+ Origin
 
 A privacy-first, ultra-lightweight fork of the "Allow Copy +" extension.
 
