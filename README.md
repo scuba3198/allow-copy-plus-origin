@@ -18,6 +18,11 @@ This is a sanitized version of the popular "Allow Copy +" extension. While the o
 - **No Background Redirects:** `setUninstallURL` and `onInstalled` redirects removed.
 - **Localized Only:** Operations are strictly local using `chrome.storage.local`.
 
+## Enhancements in Origin Version
+- **Paste Protection Bypass:** Intercepts `input` events and uses `requestAnimationFrame` to prevent sites from instantly reverting pasted text (defeats Method 14).
+- **Selection Visibility Fix:** Overrides aggressive CSS that tries to hide text selection by forcing selection highlights to be visible (defeats Method 12).
+- **Context Menu Paste:** Paste operations are now supported via the extension's bypass context menu.
+
 ## Installation (Chromium Browsers)
 1. Download the `allow-copy-plus-origin.zip` from the [Latest Release](https://github.com/scuba3198/allow-copy-plus-origin/releases).
 2. Extract the ZIP file to a folder on your computer.
