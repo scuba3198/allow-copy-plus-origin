@@ -42,7 +42,7 @@
         <input type="file" id="import-websites-file" style="display: none;" accept=".json">
       </div>
     `;
-    container.appendChild(panel);
+    container.parentNode.insertBefore(panel, container.nextSibling);
 
     setupHandlers();
     refreshWebsitesList();
@@ -167,7 +167,7 @@
     if (!domain) return;
     
     // Simple sanitization & scheme stripping
-    let cleanDomain = domain.toLowerCase().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+    let cleanDomain = domain.toLowerCase().replace(/^(https?:\/\/)?/, '').split('/')[0];
     
     // Domain regex check
     const domainRegex = /^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/;
@@ -192,7 +192,7 @@
 
   function sanitizeAndValidateDomain(domain) {
     if (typeof domain !== 'string') return null;
-    const cleanDomain = domain.trim().toLowerCase().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+    const cleanDomain = domain.trim().toLowerCase().replace(/^(https?:\/\/)?/, '').split('/')[0];
     const domainRegex = /^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/;
     if (domainRegex.test(cleanDomain)) {
       return cleanDomain;
