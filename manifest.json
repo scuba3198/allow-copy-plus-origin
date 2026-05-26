@@ -3,7 +3,7 @@
 
   "name": "Allow Copy+ Origin",
   "description": "__MSG_ext_desc__",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "manifest_version": 3,
   "default_locale": "en",
   "background": {
