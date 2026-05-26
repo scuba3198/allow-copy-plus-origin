@@ -68,6 +68,20 @@
         }
       });
     }
+
+    const exportBtn = document.getElementById('export-websites-btn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', handleExport);
+    }
+
+    const importBtn = document.getElementById('import-websites-btn');
+    const importFile = document.getElementById('import-websites-file');
+    if (importBtn && importFile) {
+      importBtn.addEventListener('click', () => {
+        importFile.click();
+      });
+      importFile.addEventListener('change', handleImportFile);
+    }
   }
 
   function showToast(message, isSuccess = true) {
@@ -174,5 +188,151 @@
       if (addInput) addInput.value = '';
       refreshWebsitesList();
     });
+  }
+
+  function sanitizeAndValidateDomain(domain) {
+    if (typeof domain !== 'string') return null;
+    const cleanDomain = domain.trim().toLowerCase().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+    const domainRegex = /^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/;
+    if (domainRegex.test(cleanDomain)) {
+      return cleanDomain;
+    }
+    return null;
+  }
+
+  function handleExport() {
+    if (Object.keys(allDomains).length === 0) {
+      showToast('No domains to export', false);
+      return;
+    }
+    const dataStr = JSON.stringify(allDomains, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'allow-copy-websites.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('Domains exported successfully');
+  }
+
+  function handleImportFile(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const parsed = JSON.parse(event.target.result);
+        const importedDomains = {};
+
+        if (Array.isArray(parsed)) {
+          parsed.forEach(item => {
+            const clean = sanitizeAndValidateDomain(item);
+            if (clean) {
+              importedDomains[clean] = new Date().toISOString();
+            }
+          });
+        } else if (parsed && typeof parsed === 'object') {
+          Object.keys(parsed).forEach(key => {
+            const clean = sanitizeAndValidateDomain(key);
+            if (clean) {
+              const val = parsed[key];
+              const date = (typeof val === 'string' && !isNaN(Date.parse(val))) ? val : new Date().toISOString();
+              importedDomains[clean] = date;
+            }
+          });
+        } else {
+          showToast('Invalid file format. Expected JSON array or object.', false);
+          return;
+        }
+
+        if (Object.keys(importedDomains).length === 0) {
+          showToast('No valid domains found in the selected file', false);
+          return;
+        }
+
+        showImportOptionsModal(importedDomains, file.name);
+      } catch (err) {
+        showToast('Failed to parse JSON file', false);
+      } finally {
+        e.target.value = '';
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function showImportOptionsModal(importedDomains, fileName) {
+    const existing = document.querySelector('.modal-overlay');
+    if (existing) existing.remove();
+
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+
+    const modalBox = document.createElement('div');
+    modalBox.className = 'modal-box';
+
+    const count = Object.keys(importedDomains).length;
+
+    modalBox.innerHTML = `
+      <h3 class="modal-title">Import Allowed Websites</h3>
+      <p class="modal-text">
+        Found <strong>${count}</strong> website(s) in <strong>${escapeHtml(fileName)}</strong>.<br><br>
+        Do you want to merge these websites with your existing list, or overwrite it completely?
+      </p>
+      <div class="modal-actions">
+        <button id="import-cancel-btn" class="btn btn-secondary">Cancel</button>
+        <button id="import-overwrite-btn" class="btn btn-outline" style="border-color: #ff4444; color: #ff4444;">Overwrite List</button>
+        <button id="import-merge-btn" class="btn btn-primary">Merge Lists</button>
+      </div>
+    `;
+
+    overlay.appendChild(modalBox);
+    document.body.appendChild(overlay);
+
+    const cancelBtn = overlay.querySelector('#import-cancel-btn');
+    const overwriteBtn = overlay.querySelector('#import-overwrite-btn');
+    const mergeBtn = overlay.querySelector('#import-merge-btn');
+
+    const closeModal = () => {
+      overlay.remove();
+    };
+
+    cancelBtn.addEventListener('click', closeModal);
+
+    // Cancel on clicking outside the modal box
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeModal();
+      }
+    });
+
+    overwriteBtn.addEventListener('click', () => {
+      chrome.storage.sync.set({ [DOMAINS_KEY]: importedDomains }, () => {
+        showToast('Website list overwritten successfully');
+        refreshWebsitesList();
+        closeModal();
+      });
+    });
+
+    mergeBtn.addEventListener('click', () => {
+      const mergedDomains = { ...allDomains, ...importedDomains };
+      chrome.storage.sync.set({ [DOMAINS_KEY]: mergedDomains }, () => {
+        const addedCount = Object.keys(mergedDomains).length - Object.keys(allDomains).length;
+        showToast(`Merged successfully. Added ${addedCount} new website(s)`);
+        refreshWebsitesList();
+        closeModal();
+      });
+    });
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
   }
 })();
