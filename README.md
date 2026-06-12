@@ -14,7 +14,7 @@
 
 **Allow Copy+ Origin** is a sanitized, high-performance Manifest V3 Chrome Extension designed to bypass website blocks on text selection, copy/paste shortcuts, dragging, and right-click context menus. 
 
-This project completely removes the telemetry, bloatware, tracking, and promotional code found in other extensions. By executing the core business logic (subdomain matching, config parsing, and DOM list rendering) inside local WebAssembly, and using strictly-typed TypeScript wrappers for browser bindings, it achieves near-zero CPU overhead and zero data leakage.
+This project completely removes the telemetry, bloatware, tracking, and promotional code found in the original extension. By executing the core business logic (subdomain matching, config parsing, and DOM list rendering) inside local WebAssembly, and using strictly-typed TypeScript wrappers for browser bindings, it achieves near-zero CPU overhead and zero data leakage.
 
 > [!NOTE]
 > All matching decisions, formatting routines, and HTML generation run locally in your browser inside a sandboxed WebAssembly module. No external network requests are ever made.
