@@ -16,9 +16,20 @@ export function add_domain(domain: string, current_domains_json: string): string
 export function delete_domain(domain: string, current_domains_json: string): string;
 
 /**
+ * Evaluates a Chrome tab update event and decides what actions the background script should take.
+ *
+ * Returns a serialized `TabAction` object to JavaScript.
+ */
+export function evaluate_tab_update(status: string, host: string, domains_json: string, settings_json: string): any;
+
+/**
+ * Pretty-prints the domains list to JSON for exporting.
+ */
+export function export_domains_json(domains_json: string): string;
+
+/**
  * Converts a domain name into a safe CSS class name.
  * Replaces all dots with underscores.
- * E.g. "google.com" -> "google_com"
  */
 export function get_host_class(host: string): string;
 
@@ -29,6 +40,13 @@ export function get_host_class(host: string): string;
  * Returns the updated domains JSON string, or a descriptive error message.
  */
 export function import_domains(imported_json: string, current_domains_json: string, mode: string): string;
+
+/**
+ * Generates the HTML list items representation for allowed websites.
+ *
+ * Performs sorting and query filtering inside WebAssembly to offload JavaScript UI construction.
+ */
+export function render_domains_list_html(domains_json: string, filter_text: string): string;
 
 /**
  * Sanitizes a raw domain string by stripping protocols and paths,
@@ -50,18 +68,19 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
-    readonly add_domain: (a: number, b: number, c: number, d: number) => [number, number, number, number];
-    readonly delete_domain: (a: number, b: number, c: number, d: number) => [number, number, number, number];
-    readonly get_host_class: (a: number, b: number) => [number, number];
-    readonly import_domains: (a: number, b: number, c: number, d: number, e: number, f: number) => [number, number, number, number];
-    readonly sanitize_and_validate_domain: (a: number, b: number) => [number, number];
+    readonly add_domain: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly delete_domain: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly evaluate_tab_update: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => number;
+    readonly export_domains_json: (a: number, b: number, c: number) => void;
+    readonly get_host_class: (a: number, b: number, c: number) => void;
+    readonly import_domains: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => void;
+    readonly render_domains_list_html: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly sanitize_and_validate_domain: (a: number, b: number, c: number) => void;
     readonly should_bypass: (a: number, b: number, c: number, d: number, e: number, f: number) => number;
-    readonly __wbindgen_externrefs: WebAssembly.Table;
-    readonly __wbindgen_malloc: (a: number, b: number) => number;
-    readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
-    readonly __externref_table_dealloc: (a: number) => void;
-    readonly __wbindgen_free: (a: number, b: number, c: number) => void;
-    readonly __wbindgen_start: () => void;
+    readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
+    readonly __wbindgen_export: (a: number, b: number) => number;
+    readonly __wbindgen_export2: (a: number, b: number, c: number, d: number) => number;
+    readonly __wbindgen_export3: (a: number, b: number, c: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

@@ -1,4 +1,4 @@
-import init, { should_bypass, add_domain, delete_domain } from './pkg/allow_copy_plus_origin.js';
+import init, { evaluate_tab_update, add_domain, delete_domain } from './pkg/allow_copy_plus_origin.js';
 
 const DOMAINS_KEY = "DOMAINS_KEY";
 const SETTINGS_KEY = "SETTINGS_KEY";
@@ -68,13 +68,14 @@ const updateTabState = async (tab) => {
   const domainsJson = JSON.stringify(domains);
   const settingsJson = JSON.stringify(settings);
 
-  const active = should_bypass(host, domainsJson, settingsJson);
-  const iconPath = active ? "/images/32-on.png" : "/images/32.png";
-  chrome.action.setIcon({ path: iconPath, tabId: tab.id });
+  const actionObj = evaluate_tab_update("complete", host, domainsJson, settingsJson);
+  if (actionObj) {
+    chrome.action.setIcon({ path: actionObj.icon, tabId: tab.id });
 
-  const [activeTab] = await new Promise(r => chrome.tabs.query({ active: true, currentWindow: true }, r));
-  if (activeTab?.id === tab.id) {
-    updateContextMenu(active && !settings.hideContextMenu);
+    const [activeTab] = await new Promise(r => chrome.tabs.query({ active: true, currentWindow: true }, r));
+    if (activeTab?.id === tab.id) {
+      updateContextMenu(actionObj.showMenu && !settings.hideContextMenu);
+    }
   }
 };
 
@@ -112,7 +113,9 @@ const toggleBypassForTab = async (tab) => {
   const domainsJson = JSON.stringify(domains);
   const settingsJson = JSON.stringify(settings);
 
-  const active = should_bypass(host, domainsJson, settingsJson);
+  // We evaluate status in complete state to see if it is currently active
+  const actionObj = evaluate_tab_update("complete", host, domainsJson, settingsJson);
+  const active = actionObj ? actionObj.showMenu : false;
   let updatedDomainsJson;
 
   try {
@@ -180,24 +183,24 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   const domainsJson = JSON.stringify(domains);
   const settingsJson = JSON.stringify(settings);
 
-  const active = should_bypass(host, domainsJson, settingsJson);
+  // Evaluate action entirely in Rust
+  const actionObj = evaluate_tab_update(changeInfo.status ?? "", host, domainsJson, settingsJson);
+  if (!actionObj) return;
 
-  if (changeInfo.status === "loading") {
+  chrome.action.setIcon({ path: actionObj.icon, tabId: tabId });
+  updateContextMenu(actionObj.showMenu && !settings.hideContextMenu);
+
+  if (actionObj.action === "inject_main") {
     chrome.scripting.executeScript({
       target: { tabId: tabId, allFrames: true },
       files: ["inject_main.js"],
       world: "MAIN",
       injectImmediately: true
     }).catch(() => {});
-
-    chrome.action.setIcon({
-      path: active ? "/images/32-on.png" : "/images/32.png",
-      tabId: tabId
-    });
-  } else if (changeInfo.status === "complete") {
-    if (active) {
-      applyBypassToTab(tab, true);
-    }
+  } else if (actionObj.action === "inject_isolated_and_css") {
+    applyBypassToTab(tab, true);
+  } else if (actionObj.action === "remove_bypass") {
+    applyBypassToTab(tab, false);
   }
 });
 

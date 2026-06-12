@@ -1,7 +1,9 @@
 import init, {
   add_domain,
   delete_domain,
-  import_domains
+  import_domains,
+  render_domains_list_html,
+  export_domains_json
 } from '../pkg/allow_copy_plus_origin.js';
 
 const DOMAINS_KEY = "DOMAINS_KEY";
@@ -58,7 +60,6 @@ const showToast = (message, isSuccess = true) => {
   toast.innerText = message;
   document.body.appendChild(toast);
 
-  // Trigger reflow for transition animation
   toast.getBoundingClientRect();
   toast.style.opacity = '1';
 
@@ -85,44 +86,15 @@ const refreshWebsitesList = () => {
 };
 
 /**
- * Renders the domain list UI.
+ * Renders the domain list UI using Rust Wasm HTML generator.
  * @param {string} filterText - Search query to filter list.
  */
 const renderDomainsList = (filterText = '') => {
   const listContainer = document.getElementById('websites-list');
   if (!listContainer) return;
   
-  listContainer.innerHTML = '';
-  const domains = Object.keys(allDomains).filter(d => d.includes(filterText)).sort();
-
-  if (domains.length === 0) {
-    const emptyMsg = document.createElement('div');
-    emptyMsg.className = 'empty-list-message';
-    emptyMsg.innerText = filterText ? 'No matching websites found' : 'No websites allowed yet';
-    listContainer.appendChild(emptyMsg);
-    return;
-  }
-
-  domains.forEach(domain => {
-    const item = document.createElement('div');
-    item.className = 'website-item';
-    
-    const domainSpan = document.createElement('span');
-    domainSpan.className = 'website-domain';
-    domainSpan.innerText = domain;
-    item.appendChild(domainSpan);
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.className = 'website-delete-btn';
-    deleteBtn.innerHTML = '&#x1F5D1;'; // Trash icon
-    deleteBtn.title = 'Remove domain';
-    deleteBtn.addEventListener('click', () => {
-      handleDeleteDomain(domain);
-    });
-    item.appendChild(deleteBtn);
-
-    listContainer.appendChild(item);
-  });
+  const currentJson = JSON.stringify(allDomains);
+  listContainer.innerHTML = render_domains_list_html(currentJson, filterText);
 };
 
 /**
@@ -177,7 +149,8 @@ const handleExport = () => {
     showToast('No domains to export', false);
     return;
   }
-  const dataStr = JSON.stringify(allDomains, null, 2);
+  const currentJson = JSON.stringify(allDomains);
+  const dataStr = export_domains_json(currentJson);
   const blob = new Blob([dataStr], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -286,8 +259,20 @@ const updateSettings = (key, value) => {
  * Binds DOM triggers to interactive methods.
  */
 const setupHandlers = () => {
+  // Website list search
   document.getElementById('websites-search')?.addEventListener('input', (e) => {
     renderDomainsList(e.target.value.trim().toLowerCase());
+  });
+
+  // Dynamic event delegation on website list to catch delete button clicks
+  document.getElementById('websites-list')?.addEventListener('click', (e) => {
+    const deleteBtn = e.target.closest('.website-delete-btn');
+    if (deleteBtn) {
+      const domain = deleteBtn.getAttribute('data-domain');
+      if (domain) {
+        handleDeleteDomain(domain);
+      }
+    }
   });
 
   const addBtn = document.getElementById('add-domain-btn');
