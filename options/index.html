@@ -2,14 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title id="options-page-title">Allow Copy + extension Options</title>
-  <style>
-    .option_row:nth-of-type(n+2) { display: none !important; }
-    .footer, .ads, .test-bro-bnr { display: none !important; }
-  </style>
+  <title id="options-page-title">Allow Copy+ Options</title>
   <link rel="stylesheet" href="options.css" />
-  <script defer src="../286.3c74f770181d98232ef3.1778046625212.js"></script>
-  <script defer src="options.js"></script>
+  <script type="module" src="options.js" defer></script>
 </head>
-<body id="root"></body>
+<body class="options-body">
+  <div class="options-container">
+    <!-- Header Title -->
+    <header class="options-header">
+      <h1 id="ext-title" class="ext-title">Allow Copy+ <span class="accent-text">Origin</span></h1>
+      <p id="ext-desc-subtitle" class="ext-subtitle">Settings & Allowed Websites</p>
+    </header>
+
+    <!-- Settings Panel (Original Toggles) -->
+    <div id="settings-panel">
+      <div class="panel-header">
+        <h2 class="panel-title" id="settings-title">General Settings</h2>
+      </div>
+      
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-label" id="bypass-label">Enable protected text to copy</span>
+          <span class="setting-description" id="bypass-desc">This is the main feature that adds the ability to select/copy/paste text on websites with copy protection.</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-bypass">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-label" id="context-label">Enable Context Menu</span>
+          <span class="setting-description" id="context-desc">Adds a 'Copy' item to the right-click menu when text is selected.</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-context">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Custom Websites Panel (Populated dynamically by options.js) -->
+    <div id="custom-websites-panel">
+      <div class="panel-header">
+        <h2 class="panel-title">Allowed Websites</h2>
+        <span id="websites-count" class="panel-count">0</span>
+      </div>
+      <div class="search-wrapper">
+        <input type="text" id="websites-search" class="search-input" placeholder="Search domains...">
+      </div>
+      <div id="websites-list" class="websites-list-container">
+        <!-- Websites list items go here -->
+      </div>
+      <div class="add-domain-wrapper">
+        <input type="text" id="add-domain-input" class="add-input" placeholder="Manually add domain (e.g. example.com)">
+        <button id="add-domain-btn" class="btn btn-primary">Add</button>
+      </div>
+      <div class="actions-row">
+        <button id="export-websites-btn" class="btn btn-outline">Export List</button>
+        <button id="import-websites-btn" class="btn btn-primary">Import List</button>
+        <input type="file" id="import-websites-file" style="display: none;" accept=".json">
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Confirmation Modal Overlay -->
+  <div id="import-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <h3 class="modal-title">Import Allowed Websites</h3>
+      <p class="modal-text" id="import-modal-text">
+        Found <strong id="import-count">0</strong> website(s) in <strong id="import-filename">file.json</strong>.<br><br>
+        Do you want to merge these websites with your existing list, or overwrite it completely?
+      </p>
+      <div class="modal-actions">
+        <button id="import-cancel-btn" class="btn btn-secondary">Cancel</button>
+        <button id="import-overwrite-btn" class="btn btn-outline" style="border-color: #ff4444; color: #ff4444;">Overwrite List</button>
+        <button id="import-merge-btn" class="btn btn-primary">Merge Lists</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
