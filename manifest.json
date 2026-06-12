@@ -1,13 +1,12 @@
 {
-
-
   "name": "Allow Copy+ Origin",
   "description": "__MSG_ext_desc__",
-  "version": "3.0.9",
+  "version": "3.1.0",
   "manifest_version": 3,
   "default_locale": "en",
   "background": {
-    "service_worker": "285.3c74f770181d98232ef3.1778046625212.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "options_page": "/options/index.html",
   "permissions": [
@@ -33,14 +32,7 @@
     "48": "/images/48.png",
     "128": "/images/128.png"
   },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "images/*"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ]
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
 }

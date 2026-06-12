@@ -1,46 +1,76 @@
-# Allow Copy+ Origin
+<p align="center">
+  <img src="images/128.png" width="128" alt="Allow Copy+ Origin Logo">
+</p>
 
-A privacy-first, ultra-lightweight fork of the "Allow Copy +" extension.
+<h1 align="center">Allow Copy+ Origin</h1>
 
-## What is this?
-This is a sanitized version of the popular "Allow Copy +" extension. While the original tool is excellent at bypassing copy restrictions on websites, it contained several "features" that compromised user privacy and added unnecessary bloat:
-- **Telemetry & Tracking:** Constant communication with the developer's servers.
-- **Promotional Injections:** Banners and context menu items promoting other products.
-- **OCR/Beta Features:** Sending image data to external servers for text extraction.
-- **Forced Redirects:** Intrusive welcome/donate/uninstall pages.
-
-**Allow Copy+ Origin** removes all of the above, leaving only the core functionality in a strictly local, offline-capable package.
-
-## Key Sanitization Features
-- **Zero Network Dependency:** All telemetry endpoints redirected to `127.0.0.1`.
-- **Privacy Hardened:** OCR (Text-from-image) and Support modules neutralized.
-- **No Promotion:** All banners, cross-promotions, and holiday "gifts" stripped.
-- **No Background Redirects:** `setUninstallURL` and `onInstalled` redirects removed.
-- **Localized Only:** Operations are strictly local using `chrome.storage.local`.
-
-## Enhancements in Origin Version
-- **Paste Protection Bypass:** Intercepts `input` events and uses `requestAnimationFrame` to prevent sites from instantly reverting pasted text.
-- **Selection Visibility Fix:** Overrides aggressive CSS that tries to hide text selection by forcing selection highlights to be visible.
-- **Context Menu Paste:** Paste operations are now supported via the extension's bypass context menu.
-
-## Installation (Chromium Browsers)
-1. Download the `allow-copy-plus-origin.zip` from the [Latest Release](https://github.com/scuba3198/allow-copy-plus-origin/releases).
-2. Extract the ZIP file to a folder on your computer.
-3. Open your browser and navigate to `chrome://extensions/`.
-4. Enable **"Developer mode"** (toggle in the top right).
-5. Click **"Load unpacked"** and select the extracted folder.
-
-## Differences from Original
-| Feature | Original Extension | Origin Version |
-| :--- | :--- | :--- |
-| Core Copy Bypass | ✅ Included | ✅ Included |
-| Telemetry/Tracking | ❌ Active | ✅ Removed |
-| Promotional Banners | ❌ Present | ✅ Stripped |
-| OCR Image Sending | ❌ Active | ✅ Neutralized |
-| Uninstall Surveys | ❌ Forced | ✅ Removed |
-
-## Credits
-Original code by Petr Dev. This fork is maintained for those who value privacy and a distraction-free browsing experience.
+<p align="center">
+  <strong>A privacy-first, ultra-lightweight bypass for text selection and copy restrictions, written in Rust WebAssembly.</strong>
+</p>
 
 ---
-*Built with ❤️ for a cleaner web.*
+
+## Overview
+
+**Allow Copy+ Origin** is a sanitized, high-performance browser extension designed to bypass website restrictions on text selection, copy, cut, paste, and right-click context menus. 
+
+This extension is built with privacy and performance as its core principles. The background engine has been completely rewritten in Rust and compiled to WebAssembly (Wasm) to run locally within the extension context. It contains no telemetry, no analytics, no external network requests, and no promotional injections.
+
+> [!NOTE]
+> All domain matching, JSON parsing, configuration checks, and sanitization logic run inside local WebAssembly, ensuring maximum execution speed and zero data leakage.
+
+---
+
+## Features
+
+- **Rust WebAssembly Core**: Highly optimized matching engine and domain manager compiled from Rust.
+- **Zero Network Footprint**: Completely self-contained. No analytics endpoints, tracking scripts, or external OCR servers.
+- **Early MAIN World Interceptor**: Overrides `EventTarget.prototype.addEventListener` at `document_start` before page scripts can register copy blockers.
+- **Dynamic CSS Injection**: Restores selection highlighting and bypasses transparent blocking overlays.
+- **Wildcard Subdomain Matching**: If a parent domain (e.g. `example.com`) is allowed, all subdomains (e.g. `sub.example.com`) are automatically bypassed.
+- **Clean Original UI**: Integrates with the extension's original options manager using `chrome.storage.sync` to manage allowed websites.
+
+---
+
+## Installation
+
+### For Chromium Browsers (Chrome, Edge, Brave, Vivaldi)
+
+1. Download or clone this repository to a folder on your computer.
+2. Open your browser and navigate to `chrome://extensions/`.
+3. Enable **Developer mode** (toggle switch in the top right corner).
+4. Click **Load unpacked** in the top left corner.
+5. Select the root folder of this project.
+
+---
+
+## Developer Guide
+
+### Prerequisites
+
+To build the extension from source, you will need the Rust toolchain and the `wasm-bindgen` CLI tool installed.
+
+```bash
+# Install Rust (via rustup)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install the WebAssembly compilation target
+rustup target add wasm32-unknown-unknown
+
+# Install the wasm-bindgen CLI tool (must match the crate version 0.2.123)
+cargo install --version 0.2.123 wasm-bindgen-cli
+```
+
+### Building the Project
+
+Run the following commands in the root directory to compile the Rust code and generate the JavaScript WebAssembly bindings:
+
+```bash
+# 1. Compile the library to Wasm target
+cargo build --target wasm32-unknown-unknown --release
+
+# 2. Generate the bindings wrapper in the pkg directory
+wasm-bindgen --target web --out-dir pkg target/wasm32-unknown-unknown/release/allow_copy_plus_origin.wasm
+```
+
+After building, the extension is ready to be loaded via `chrome://extensions/` using the **Load unpacked** option.

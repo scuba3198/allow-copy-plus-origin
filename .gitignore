@@ -2,3 +2,5 @@ scratch/
 *.zip
 .antigravity/
 node_modules/
+target/
+

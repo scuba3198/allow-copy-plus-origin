@@ -1,0 +1,86 @@
+/* Force text selection on all elements */
+html,
+body,
+body:not(.web_whatsapp_com) *,
+html body:not(.web_whatsapp_com) *,
+html body.ds *,
+html body:not(.web_whatsapp_com) div *,
+html body:not(.web_whatsapp_com) span *,
+html body p *,
+html body h1 *,
+html body h2 *,
+html body h3 *,
+html body h4 *,
+html body h5 *,
+html body:not(.web_whatsapp_com) *:not(input):not(textarea):not([contenteditable=""]):not([contenteditable="true"]),
+html body:not(.web_whatsapp_com) *[class]:not(input):not(textarea):not([contenteditable=""]):not([contenteditable="true"]),
+html body:not(.web_whatsapp_com) *[id]:not(input):not(textarea):not([contenteditable=""]):not([contenteditable="true"]) {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Force selection highlights to be visible (Blue background, white text) */
+::selection {
+  background-color: #3297fd !important;
+  color: #ffffff !important;
+}
+::-moz-selection {
+  background-color: #3297fd !important;
+  color: #ffffff !important;
+}
+
+html body *:not(input):not(textarea)::selection,
+body *:not(input):not(textarea)::selection,
+html body div *:not(input):not(textarea)::selection,
+html body span *:not(input):not(textarea)::selection,
+html body p *:not(input):not(textarea)::selection,
+html body h1 *:not(input):not(textarea)::selection,
+html body h2 *:not(input):not(textarea)::selection,
+html body h3 *:not(input):not(textarea)::selection,
+html body h4 *:not(input):not(textarea)::selection,
+html body h5 *:not(input):not(textarea)::selection {
+  background-color: #3297fd !important;
+  color: #ffffff !important;
+}
+
+/* Site-specific compatibility overrides */
+.www_linkedin_com .sa-assessment-flow__card.sa-assessment-quiz .sa-assessment-quiz__scroll-content .sa-assessment-quiz__response .sa-question-multichoice__item.sa-question-basic-multichoice__item .sa-question-multichoice__input.sa-question-basic-multichoice__input.ember-checkbox.ember-view {
+  width: 40px;
+}
+.www_instagram_com ._aagw {
+  display: none !important;
+}
+.web_telegram_org .emoji-animation-container {
+  display: none !important;
+}
+html body.web_telegram_org .bubbles-group > .bubbles-group-avatar-container:not(input):not(textarea):not([contenteditable=""]):not([contenteditable="true"]),
+html body.web_telegram_org .custom-emoji-renderer:not(input):not(textarea):not([contenteditable=""]):not([contenteditable="true"]) {
+  pointer-events: none !important;
+}
+.ladno_ru [style*="position: absolute; left: 0; right: 0; top: 0; bottom: 0;"] {
+  display: none !important;
+}
+.mycomfyshoes_fr #fader.fade-out {
+  display: none !important;
+}
+.www_mindmeister_com .kr-view {
+  z-index: -1 !important;
+}
+.www_newvision_co_ug .v-snack:not(.v-snack--absolute) {
+  z-index: -1 !important;
+}
+.derstarih_com .bs-sks {
+  z-index: -1 !important;
+}
+
+/* Disable pointer events on transparent layout blockers */
+html body .alc_unlock-pseudo-before::before,
+html body .alc_unlock-pseudo-after::after,
+.fluidImageOverlay,
+.image-overlay,
+.sqs-image-overlay,
+.image-slide-overlay {
+  pointer-events: none !important;
+}

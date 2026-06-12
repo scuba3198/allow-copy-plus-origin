@@ -1,0 +1,24 @@
+[package]
+name = "allow_copy_plus_origin"
+version = "3.1.0"
+edition = "2021"
+authors = ["Antigravity"]
+description = "A privacy-first, ultra-lightweight bypass for text selection and copy restrictions, written in Rust WebAssembly."
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.123"
+serde = { version = "1.0", features = ["derive"] }
+serde-wasm-bindgen = "0.6.5"
+regex = "1.11.1"
+serde_json = "1.0.138"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
