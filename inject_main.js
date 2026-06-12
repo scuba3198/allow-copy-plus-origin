@@ -8,7 +8,11 @@
   if (window[marker]) return;
   window[marker] = { attachedListeners: [] };
 
-  // Whitelist of domains that use highly aggressive event-level blockers
+  /**
+   * List of domains known for using highly aggressive event-level blockers.
+   * On these domains, the script overrides addEventListener and removeEventListener.
+   * @type {Set<string>}
+   */
   const targetDomains = new Set([
     "jusbrasil.com.br", "jusbrasil.com", "app.littleexits.com", 
     "lx9t5cgtsl.feishu.cn", "feishu.cn", "alllhealth.com", 
@@ -23,6 +27,10 @@
     "nubedelectura.com", "missov.ma"
   ]);
 
+  /**
+   * Overrides EventTarget addEventListener/removeEventListener to prevent target pages
+   * from attaching blocking select/copy event handlers.
+   */
   const initOverride = () => {
     const registry = window[marker];
     const copyEvents = new Set(["copy", "cut", "paste", "selectstart", "contextmenu", "dragstart", "keydown"]);
@@ -79,6 +87,10 @@
       initOverride();
     }
 
+    /**
+     * Intercepts window-level copy/select events at the capture phase to block page-level locks.
+     * @param {Event} e - The captured event.
+     */
     const captureBlocker = (e) => {
       if (document.body && document.body.classList.contains(hostClass)) {
         if (e.type === "keydown" || e.type === "keyup") {

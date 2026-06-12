@@ -8,7 +8,9 @@
   if (window[marker]) return;
   window[marker] = true;
 
-  // Add the class to body to enable CSS rules
+  /**
+   * Applies the host-specific class to document.body to enable stylesheet rules.
+   */
   const addBodyClass = () => {
     if (document.body) {
       document.body.classList.add(hostClass);
@@ -21,7 +23,7 @@
     document.addEventListener("DOMContentLoaded", addBodyClass);
   }
 
-  // Event handler overrides & caching
+  // Event properties that are commonly overridden by websites to block selection/copy
   const eventProps = [
     "ondragstart", "onselectstart", "oncontextmenu", "onkeydown", 
     "oncopy", "oncut", "onmousedown", "onmouseup", "onmousemove", 
@@ -30,6 +32,11 @@
 
   const backupHandlers = new Map();
 
+  /**
+   * Clears inline/direct blocker event handlers assigned directly as element properties.
+   * Caches them in backupHandlers to restore during cleanup.
+   * @param {HTMLElement} el - The DOM element.
+   */
   const clearDirectHandlers = (el) => {
     eventProps.forEach(prop => {
       try {
@@ -44,6 +51,9 @@
     });
   };
 
+  /**
+   * Restores cached inline/direct event handlers on elements.
+   */
   const restoreDirectHandlers = () => {
     backupHandlers.forEach((handlers, el) => {
       try {
@@ -57,8 +67,13 @@
     backupHandlers.clear();
   };
 
-  // Draggable overrides
   const backupDraggables = new Map();
+
+  /**
+   * Temporarily removes the "draggable" attribute from elements.
+   * Caches the attribute value to restore during cleanup.
+   * @param {HTMLElement} el - The DOM element.
+   */
   const removeDraggable = (el) => {
     try {
       if (el.hasAttribute && el.hasAttribute("draggable")) {
@@ -68,6 +83,9 @@
     } catch (e) {}
   };
 
+  /**
+   * Restores the original "draggable" attributes to modified elements.
+   */
   const restoreDraggables = () => {
     backupDraggables.forEach((val, el) => {
       try {
@@ -77,8 +95,13 @@
     backupDraggables.clear();
   };
 
-  // user-select / pointer-events dynamic fix
   const backupStyles = new Map();
+
+  /**
+   * Enforces CSS selectability and pointer interaction on text-bearing elements.
+   * Caches original styling configurations to restore during cleanup.
+   * @param {HTMLElement} el - The DOM element.
+   */
   const fixStyling = (el) => {
     if (!el.tagName || !el.childNodes) return;
     
@@ -115,6 +138,9 @@
     }
   };
 
+  /**
+   * Restores original select and pointer styling attributes to elements.
+   */
   const restoreStyling = () => {
     backupStyles.forEach((styles, el) => {
       try {
@@ -131,7 +157,11 @@
     backupStyles.clear();
   };
 
-  // Element processor
+  /**
+   * Iterates through an element's handlers, styling, and children to clear copy locks.
+   * Recursively processes elements inside Shadow DOMs.
+   * @param {HTMLElement} el - The DOM element to process.
+   */
   const processElement = (el) => {
     if (el.nodeType !== Node.ELEMENT_NODE) return;
     
@@ -148,14 +178,16 @@
     removeDraggable(el);
     fixStyling(el);
 
-    // Recursively handle elements inside shadow roots
     if (el.shadowRoot) {
       el.shadowRoot.querySelectorAll("*").forEach(processElement);
       observeMutations(el.shadowRoot);
     }
   };
 
-  // Event handlers to intercept and cancel blockings
+  /**
+   * Captures selection/copy events and cancels event propagation to preempt page locks.
+   * @param {Event} e - The fired event.
+   */
   const preventBypass = (e) => {
     if (e.type === "keydown" || e.type === "keyup") {
       if (!e.ctrlKey && !e.metaKey) return;
@@ -172,12 +204,18 @@
     "mousedown", "mouseup", "mousemove", "keypress", "keyup", "selectionchange"
   ];
 
+  /**
+   * Registers capturing event listeners on document to intercept blocking behavior.
+   */
   const registerListeners = () => {
     eventsToBlock.forEach(ev => {
       document.addEventListener(ev, preventBypass, { capture: true, passive: false });
     });
   };
 
+  /**
+   * Unregisters capturing event listeners from document.
+   */
   const unregisterListeners = () => {
     eventsToBlock.forEach(ev => {
       document.removeEventListener(ev, preventBypass, { capture: true });
@@ -191,6 +229,11 @@
 
   // Mutation observer to handle dynamically loaded elements
   const observers = [];
+
+  /**
+   * Configures and starts a MutationObserver on a target node to bypass new element blocks.
+   * @param {Node} target - The target node (document or shadow root).
+   */
   const observeMutations = (target) => {
     try {
       const observer = new MutationObserver((mutations) => {
@@ -223,7 +266,12 @@
 
   observeMutations(document);
 
-  // Listen for deactivation messages from background
+  /**
+   * Event listener callback to process deactivation signals.
+   * @param {Object} msg - Message payload.
+   * @param {Object} sender - Sender metadata.
+   * @param {Function} sendResponse - Response callback.
+   */
   const messageListener = (msg, sender, sendResponse) => {
     if (msg.type === "deactivate") {
       cleanup();
@@ -235,18 +283,19 @@
     chrome.runtime.onMessage.addListener(messageListener);
   }
 
+  /**
+   * Performs cleanup by disconnecting observers, removing listeners,
+   * restoring styles and custom attributes, and deleting global variables.
+   */
   const cleanup = () => {
-    // Disconnect observers
     observers.forEach(obs => obs.disconnect());
     observers.length = 0;
 
-    // Restore changes
     unregisterListeners();
     restoreDirectHandlers();
     restoreDraggables();
     restoreStyling();
 
-    // Remove body class
     if (document.body) {
       document.body.classList.remove(hostClass);
     }

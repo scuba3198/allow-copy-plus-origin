@@ -6,16 +6,23 @@ const CONTEXT_MENU_ID = "allow-copy-context-menu";
 
 let wasmInitialized = false;
 
-// Initialize WebAssembly
+/**
+ * Initializes the WebAssembly module if it hasn't been initialized already.
+ * @returns {Promise<void>}
+ */
 const initWasm = async () => {
   if (wasmInitialized) return;
   await init();
   wasmInitialized = true;
 };
 
-// Helper: Extract host from Tab
+/**
+ * Extracts the host domain name from a tab's URL.
+ * @param {chrome.tabs.Tab} tab - The Chrome tab object.
+ * @returns {string} The host domain name (e.g. "example.com"), or an empty string.
+ */
 const getTabHost = (tab) => {
-  if (!tab || !tab.url) return "";
+  if (!tab?.url) return "";
   try {
     const url = new URL(tab.url);
     if (url.protocol.startsWith("http")) {
@@ -25,12 +32,15 @@ const getTabHost = (tab) => {
   return "";
 };
 
-// Get settings and allowed domains from storage
+/**
+ * Retrieves the domains and settings config objects from storage.
+ * @returns {Promise<{domains: Object, settings: Object}>} Resolved settings and domains list.
+ */
 const getStorageData = async () => {
   return new Promise((resolve) => {
     chrome.storage.sync.get([DOMAINS_KEY, SETTINGS_KEY], (res) => {
-      const domains = res[DOMAINS_KEY] || {};
-      const settings = res[SETTINGS_KEY] || {
+      const domains = res[DOMAINS_KEY] ?? {};
+      const settings = res[SETTINGS_KEY] ?? {
         allowProtectedTextToCopy: true,
         hideContextMenu: false
       };
@@ -39,9 +49,13 @@ const getStorageData = async () => {
   });
 };
 
-// Update active state (Icon & Context Menu) for a specific Tab
+/**
+ * Updates the visual status (active icon/context menu) of a tab based on bypass state.
+ * @param {chrome.tabs.Tab} tab - The Chrome tab object.
+ * @returns {Promise<void>}
+ */
 const updateTabState = async (tab) => {
-  if (!tab || !tab.id) return;
+  if (!tab?.id) return;
   
   const host = getTabHost(tab);
   if (!host) {
@@ -58,20 +72,22 @@ const updateTabState = async (tab) => {
   const iconPath = active ? "/images/32-on.png" : "/images/32.png";
   chrome.action.setIcon({ path: iconPath, tabId: tab.id });
 
-  // Update context menu if this is the active tab in current window
   const [activeTab] = await new Promise(r => chrome.tabs.query({ active: true, currentWindow: true }, r));
-  if (activeTab && activeTab.id === tab.id) {
+  if (activeTab?.id === tab.id) {
     updateContextMenu(active && !settings.hideContextMenu);
   }
 };
 
-// Update Chrome Context Menu
+/**
+ * Creates or removes the "Copy" context menu item.
+ * @param {boolean} show - True to display, false to hide.
+ */
 const updateContextMenu = (show) => {
   chrome.contextMenus.removeAll(() => {
     if (show) {
       chrome.contextMenus.create({
         id: CONTEXT_MENU_ID,
-        title: chrome.i18n.getMessage("copy") || "Copy",
+        title: chrome.i18n.getMessage("copy") ?? "Copy",
         contexts: ["selection"]
       }, () => {
         if (chrome.runtime.lastError) {
@@ -82,7 +98,11 @@ const updateContextMenu = (show) => {
   });
 };
 
-// Toggle bypass state for a tab's domain
+/**
+ * Toggles the bypass status of a tab's domain in storage.
+ * @param {chrome.tabs.Tab} tab - The Chrome tab object.
+ * @returns {Promise<void>}
+ */
 const toggleBypassForTab = async (tab) => {
   const host = getTabHost(tab);
   if (!host) return;
@@ -97,16 +117,13 @@ const toggleBypassForTab = async (tab) => {
 
   try {
     if (active) {
-      // It is currently active, so remove it
       updatedDomainsJson = delete_domain(host, domainsJson);
     } else {
-      // It is currently inactive, so add it
       updatedDomainsJson = add_domain(host, domainsJson);
     }
 
     const updatedDomains = JSON.parse(updatedDomainsJson);
     chrome.storage.sync.set({ [DOMAINS_KEY]: updatedDomains }, () => {
-      // Re-evaluate tab state after storage updates
       chrome.tabs.query({}, (tabs) => {
         tabs.forEach(t => {
           if (getTabHost(t) === host) {
@@ -120,32 +137,33 @@ const toggleBypassForTab = async (tab) => {
   }
 };
 
-// Inject or remove bypass scripts and styles
+/**
+ * Injects or removes bypass scripts and styles for a specific tab.
+ * @param {chrome.tabs.Tab} tab - The Chrome tab object.
+ * @param {boolean} enable - True to inject, false to clean up.
+ * @returns {Promise<void>}
+ */
 const applyBypassToTab = async (tab, enable) => {
-  if (!tab || !tab.id) return;
+  if (!tab?.id) return;
   const tabId = tab.id;
 
   if (enable) {
-    // Inject CSS styling
     chrome.scripting.insertCSS({
       target: { tabId: tabId, allFrames: true },
       files: ["inject.css"]
     }).catch(() => {});
 
-    // Inject content scripts
     chrome.scripting.executeScript({
       target: { tabId: tabId, allFrames: true },
       files: ["inject_isolated.js"],
       world: "ISOLATED"
     }).catch(() => {});
   } else {
-    // Remove CSS styling
     chrome.scripting.removeCSS({
       target: { tabId: tabId, allFrames: true },
       files: ["inject.css"]
     }).catch(() => {});
 
-    // Message the isolated script to clean up listeners and element states
     chrome.tabs.sendMessage(tabId, { type: "deactivate" }).catch(() => {});
   }
 
@@ -165,7 +183,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   const active = should_bypass(host, domainsJson, settingsJson);
 
   if (changeInfo.status === "loading") {
-    // Always inject the MAIN world event interceptor early in the loading cycle
     chrome.scripting.executeScript({
       target: { tabId: tabId, allFrames: true },
       files: ["inject_main.js"],
@@ -173,7 +190,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
       injectImmediately: true
     }).catch(() => {});
 
-    // Set correct icon status
     chrome.action.setIcon({
       path: active ? "/images/32-on.png" : "/images/32.png",
       tabId: tabId
@@ -200,7 +216,7 @@ chrome.action.onClicked.addListener((tab) => {
 
 // Context Menu selection clicked
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === CONTEXT_MENU_ID && info.selectionText && tab && tab.id) {
+  if (info.menuItemId === CONTEXT_MENU_ID && info.selectionText && tab?.id) {
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: (text) => {
@@ -233,7 +249,6 @@ chrome.storage.onChanged.addListener(async (changes) => {
 chrome.runtime.onInstalled.addListener(async (details) => {
   const { domains, settings } = await getStorageData();
   
-  // Write default state if not initialized
   if (!settings || Object.keys(settings).length === 0) {
     chrome.storage.sync.set({
       [SETTINGS_KEY]: {
@@ -247,7 +262,6 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     chrome.storage.sync.set({ [DOMAINS_KEY]: {} });
   }
 
-  // Pre-evaluate tab states
   chrome.tabs.query({}, (tabs) => {
     tabs.forEach(tab => updateTabState(tab));
   });
