@@ -231,7 +231,9 @@
     }
   };
 
-  chrome.runtime.onMessage.addListener(messageListener);
+  if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.onMessage) {
+    chrome.runtime.onMessage.addListener(messageListener);
+  }
 
   const cleanup = () => {
     // Disconnect observers
@@ -249,7 +251,13 @@
       document.body.classList.remove(hostClass);
     }
 
-    chrome.runtime.onMessage.removeListener(messageListener);
+    if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.onMessage) {
+      try {
+        chrome.runtime.onMessage.removeListener(messageListener);
+      } catch (e) {
+        // Ignore context invalidation errors
+      }
+    }
     delete window[marker];
   };
 
