@@ -30,21 +30,25 @@
     "onkeypress", "onkeyup", "onselectionchange"
   ];
 
-  const backupHandlers = new Map();
+  // Unique symbols used to store element backups directly on DOM nodes
+  // This ensures they are garbage-collected automatically when nodes are removed
+  const backupHandlersKey = Symbol("allowCopyBackupHandlers");
+  const backupDraggablesKey = Symbol("allowCopyBackupDraggables");
+  const backupStylesKey = Symbol("allowCopyBackupStyles");
 
   /**
    * Clears inline/direct blocker event handlers assigned directly as element properties.
-   * Caches them in backupHandlers to restore during cleanup.
-   * @param {HTMLElement} el - The DOM element.
+   * Stores backup in a Symbol property on the element itself to prevent memory leaks.
+   * @param {HTMLElement|Document} el - The DOM element or document.
    */
   const clearDirectHandlers = (el) => {
     eventProps.forEach(prop => {
       try {
         if (el[prop] !== null && el[prop] !== undefined) {
-          if (!backupHandlers.has(el)) {
-            backupHandlers.set(el, {});
+          if (!el[backupHandlersKey]) {
+            el[backupHandlersKey] = {};
           }
-          backupHandlers.get(el)[prop] = el[prop];
+          el[backupHandlersKey][prop] = el[prop];
           el[prop] = null;
         }
       } catch (e) {}
@@ -52,54 +56,54 @@
   };
 
   /**
-   * Restores cached inline/direct event handlers on elements.
+   * Restores cached inline/direct event handlers on an element.
+   * @param {HTMLElement|Document} el - The DOM element or document.
    */
-  const restoreDirectHandlers = () => {
-    backupHandlers.forEach((handlers, el) => {
-      try {
+  const restoreDirectHandlers = (el) => {
+    try {
+      const handlers = el[backupHandlersKey];
+      if (handlers) {
         eventProps.forEach(prop => {
           if (handlers[prop] !== undefined) {
             el[prop] = handlers[prop];
           }
         });
-      } catch (e) {}
-    });
-    backupHandlers.clear();
+        delete el[backupHandlersKey];
+      }
+    } catch (e) {}
   };
-
-  const backupDraggables = new Map();
 
   /**
    * Temporarily removes the "draggable" attribute from elements.
-   * Caches the attribute value to restore during cleanup.
+   * Stores backup in a Symbol property on the element.
    * @param {HTMLElement} el - The DOM element.
    */
   const removeDraggable = (el) => {
     try {
       if (el.hasAttribute && el.hasAttribute("draggable")) {
-        backupDraggables.set(el, el.getAttribute("draggable"));
+        el[backupDraggablesKey] = el.getAttribute("draggable");
         el.removeAttribute("draggable");
       }
     } catch (e) {}
   };
 
   /**
-   * Restores the original "draggable" attributes to modified elements.
+   * Restores the original "draggable" attributes to a modified element.
+   * @param {HTMLElement} el - The DOM element.
    */
-  const restoreDraggables = () => {
-    backupDraggables.forEach((val, el) => {
-      try {
+  const restoreDraggables = (el) => {
+    try {
+      const val = el[backupDraggablesKey];
+      if (val !== undefined) {
         el.setAttribute("draggable", val);
-      } catch (e) {}
-    });
-    backupDraggables.clear();
+        delete el[backupDraggablesKey];
+      }
+    } catch (e) {}
   };
-
-  const backupStyles = new Map();
 
   /**
    * Enforces CSS selectability and pointer interaction on text-bearing elements.
-   * Caches original styling configurations to restore during cleanup.
+   * Stores backup in a Symbol property on the element.
    * @param {HTMLElement} el - The DOM element.
    */
   const fixStyling = (el) => {
@@ -120,11 +124,11 @@
         const pointerBlocked = pointerEvents === "none";
         
         if (selectBlocked || pointerBlocked) {
-          backupStyles.set(el, {
+          el[backupStylesKey] = {
             userSelect: el.style.userSelect,
             webkitUserSelect: el.style.webkitUserSelect,
             pointerEvents: el.style.pointerEvents
-          });
+          };
 
           if (selectBlocked) {
             el.style.setProperty("user-select", "text", "important");
@@ -139,11 +143,13 @@
   };
 
   /**
-   * Restores original select and pointer styling attributes to elements.
+   * Restores original select and pointer styling attributes to an element.
+   * @param {HTMLElement} el - The DOM element.
    */
-  const restoreStyling = () => {
-    backupStyles.forEach((styles, el) => {
-      try {
+  const restoreStyling = (el) => {
+    try {
+      const styles = el[backupStylesKey];
+      if (styles) {
         if (styles.userSelect) el.style.userSelect = styles.userSelect;
         else el.style.removeProperty("user-select");
 
@@ -152,9 +158,10 @@
 
         if (styles.pointerEvents) el.style.pointerEvents = styles.pointerEvents;
         else el.style.removeProperty("pointer-events");
-      } catch (e) {}
-    });
-    backupStyles.clear();
+
+        delete el[backupStylesKey];
+      }
+    } catch (e) {}
   };
 
   /**
@@ -292,9 +299,24 @@
     observers.length = 0;
 
     unregisterListeners();
-    restoreDirectHandlers();
-    restoreDraggables();
-    restoreStyling();
+
+    // Restore document-level handlers
+    restoreDirectHandlers(document);
+
+    // Scan and restore all DOM elements
+    document.querySelectorAll("*").forEach(el => {
+      restoreDirectHandlers(el);
+      restoreDraggables(el);
+      restoreStyling(el);
+
+      if (el.shadowRoot) {
+        el.shadowRoot.querySelectorAll("*").forEach(subEl => {
+          restoreDirectHandlers(subEl);
+          restoreDraggables(subEl);
+          restoreStyling(subEl);
+        });
+      }
+    });
 
     if (document.body) {
       document.body.classList.remove(hostClass);
