@@ -14,21 +14,21 @@
 
 **Allow Copy+ Origin** is a sanitized, high-performance browser extension designed to bypass website restrictions on text selection, copy, cut, paste, and right-click context menus. 
 
-This extension is built with privacy and performance as its core principles. The background engine has been completely rewritten in Rust and compiled to WebAssembly (Wasm) to run locally within the extension context. It contains no telemetry, no analytics, no external network requests, and no promotional injections.
+This extension is built with privacy and performance as its core principles. Both the background service worker and the options controller have been rewritten to run on a core Rust WebAssembly engine, executing all domain operations locally. It contains no telemetry, no analytics, no external network requests, and no promotional injections.
 
 > [!NOTE]
-> All domain matching, JSON parsing, configuration checks, and sanitization logic run inside local WebAssembly, ensuring maximum execution speed and zero data leakage.
+> All domain matching, HTML list rendering, JSON parsing, and sanitization logic run inside local WebAssembly, ensuring maximum execution speed and zero data leakage.
 
 ---
 
 ## Features
 
-- **Rust WebAssembly Core**: Highly optimized matching engine and domain manager compiled from Rust.
+- **Rust WebAssembly Core**: Highly optimized matching engine, DOM HTML renderer, and domain manager compiled from Rust.
 - **Zero Network Footprint**: Completely self-contained. No analytics endpoints, tracking scripts, or external OCR servers.
 - **Early MAIN World Interceptor**: Overrides `EventTarget.prototype.addEventListener` at `document_start` before page scripts can register copy blockers.
 - **Dynamic CSS Injection**: Restores selection highlighting and bypasses transparent blocking overlays.
 - **Wildcard Subdomain Matching**: If a parent domain (e.g. `example.com`) is allowed, all subdomains (e.g. `sub.example.com`) are automatically bypassed.
-- **Clean Original UI**: Integrates with the extension's original options manager using `chrome.storage.sync` to manage allowed websites.
+- **Clean Original UI**: Restores the original layout of the options page as a static, bloat-free HTML/CSS page that calls the Rust Wasm engine for domain additions, deletions, lists, and backups.
 
 ---
 
