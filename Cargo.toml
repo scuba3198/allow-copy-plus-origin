@@ -1,6 +1,6 @@
 [package]
 name = "allow_copy_plus_origin"
-version = "3.1.0"
+version = "3.1.1"
 edition = "2021"
 authors = ["Antigravity"]
 description = "A privacy-first, ultra-lightweight bypass for text selection and copy restrictions, written in Rust WebAssembly."

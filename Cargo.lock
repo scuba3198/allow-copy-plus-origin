@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "allow_copy_plus_origin"
-version = "3.1.0"
+version = "3.1.1"
 dependencies = [
  "regex",
  "serde",
