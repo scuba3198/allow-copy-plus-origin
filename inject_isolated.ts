@@ -4,19 +4,17 @@ const backupHandlersKey = Symbol("allowCopyBackupHandlers");
 const backupDraggablesKey = Symbol("allowCopyBackupDraggables");
 const backupStylesKey = Symbol("allowCopyBackupStyles");
 
-declare global {
-  interface Element {
-    [backupHandlersKey]?: Record<string, any>;
-    [backupDraggablesKey]?: string | null;
-    [backupStylesKey]?: {
-      userSelect: string;
-      webkitUserSelect: string;
-      pointerEvents: string;
-    };
-  }
-  interface Document {
-    [backupHandlersKey]?: Record<string, any>;
-  }
+interface Element {
+  [backupHandlersKey]?: Record<string, any>;
+  [backupDraggablesKey]?: string | null;
+  [backupStylesKey]?: {
+    userSelect: string;
+    webkitUserSelect: string;
+    pointerEvents: string;
+  };
+}
+interface Document {
+  [backupHandlersKey]?: Record<string, any>;
 }
 
 (function() {
@@ -361,5 +359,3 @@ declare global {
   };
 
 })();
-
-export {};

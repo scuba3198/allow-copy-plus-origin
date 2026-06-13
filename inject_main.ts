@@ -24,23 +24,6 @@
     return (window as any)[marker] as MainRegistry;
   };
 
-  /**
-   * List of domains known for using highly aggressive event-level blockers.
-   * On these domains, the script overrides addEventListener and removeEventListener.
-   */
-  const targetDomains: Set<string> = new Set([
-    "jusbrasil.com.br", "jusbrasil.com", "app.littleexits.com", 
-    "lx9t5cgtsl.feishu.cn", "feishu.cn", "alllhealth.com", 
-    "lms.catchon.jp", "amcatglobal.aspiringminds.com", 
-    "aspiringminds.com", "netacad.com", "bytexl.app", 
-    "abhyas.ai", "school.haoduo.vip", "digitalnttf.com", 
-    "subsiditepatlpg.mypertamina.id", "mypertamina.id", 
-    "ks.cqsdx.cn", "cqsdx.cn", "ime.digiicampus.com", 
-    "digiicampus.com", "app.sophia.org", "sophia.org", 
-    "darkscript.com.br", "darkscript.com", "siiopp.gnr.local", 
-    "gnr.local", "biblioteca.nubedelectura.com", 
-    "nubedelectura.com", "missov.ma"
-  ]);
 
   /**
    * Overrides EventTarget addEventListener/removeEventListener to prevent target pages
@@ -120,10 +103,7 @@
   };
 
   try {
-    const isTarget = Array.from(targetDomains.values()).some(domain => host.includes(domain));
-    if (isTarget) {
-      initOverride();
-    }
+    initOverride();
 
     /**
      * Intercepts window-level copy/select events at the capture phase to block page-level locks.

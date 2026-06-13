@@ -14,16 +14,17 @@
 
 **Allow Copy+ Origin** is a sanitized, high-performance Manifest V3 Chrome Extension designed to bypass website blocks on text selection, copy/paste shortcuts, dragging, and right-click context menus. 
 
-This project completely removes the telemetry, bloatware, tracking, and promotional code found in the original extension. By executing the core business logic (subdomain matching, config parsing, and DOM list rendering) inside local WebAssembly, and using strictly-typed TypeScript wrappers for browser bindings, it achieves near-zero CPU overhead and zero data leakage.
+This project completely removes the telemetry, bloatware, tracking, and promotional code found in the original extension. By executing the core business logic (subdomain matching, target domain classification, config parsing, and DOM list rendering) inside local WebAssembly, and using strictly-typed TypeScript wrappers for browser bindings, it achieves near-zero CPU overhead and zero data leakage.
 
 > [!NOTE]
-> All matching decisions, formatting routines, and HTML generation run locally in your browser inside a sandboxed WebAssembly module. No external network requests are ever made.
+> All matching decisions, target evaluation, formatting routines, and HTML generation run locally in your browser inside a sandboxed WebAssembly module. No external network requests are ever made.
 
 ---
 
 ## Key Features
 
-- **Rust WebAssembly Core**: High-speed matching engine, domain validation, and config parser compiled directly from Rust.
+- **Rust WebAssembly Core**: High-speed matching engine, target domain classification, domain validation, and config parser compiled directly from Rust.
+- **Strict Separation of Concerns**: TypeScript serves strictly as a browser API and DOM interaction glue layer. All decision logic is executed inside the Rust WASM module.
 - **Strict TypeScript Integration**: Fully typed bindings for the background service worker, options manager, and injected content scripts, ensuring robust interop and stability.
 - **Early MAIN World Intercept**: Injects a script at `document_start` to override `EventTarget.prototype.addEventListener` before the host page's scripts can run selection locks.
 - **Zero Telemetry & Tracking**: Completely self-contained. No analytics endpoints, tracking SDKs, or external OCR servers.

@@ -1,3 +1,4 @@
+"use strict";
 // Unique symbols used to store element backups directly on DOM nodes
 // This ensures they are garbage-collected automatically when nodes are removed
 const backupHandlersKey = Symbol("allowCopyBackupHandlers");
@@ -323,4 +324,3 @@ const backupStylesKey = Symbol("allowCopyBackupStyles");
         delete window[marker];
     };
 })();
-export {};
