@@ -23,7 +23,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 ## Enhancements in Origin Version
 
 * **TypeScript Migration:** Source code is fully audited and type-safe under strict compiler controls.
-* **Paste Protection Bypass:** Intercepts input actions and leverages `requestAnimationFrame` to prevent sites from instantly reverting pasted text.
+* **Copy & Drag Bypass:** Intercepts and swallows events restricting standard copy (Ctrl+C), cut (Ctrl+X), selection, and element dragging.
 * **Selection Visibility Fix:** Overrides CSS styles that attempt to hide text highlights.
 * **Overlay clickthroughs:** Automatically resolves Squarespace and typical right-click overlay blocker elements.
 * **Layout-Thrashing Prevention:** Implements a strict asynchronous DOM read/write batching model to prevent forced layout reflows and tab freezes on heavy pages.
