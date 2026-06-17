@@ -74,7 +74,7 @@
 
     const msg = document.createElement("p");
     msg.className = "acp-alert-message";
-    msg.innerHTML = message;
+    msg.textContent = message; // Safe textContent injection to prevent DOM XSS
     dialog.appendChild(msg);
 
     const btn = document.createElement("button");
@@ -115,22 +115,6 @@
     }
   };
 
-  // Reset inline handlers
-  const saveAndClearInlineHandlers = (el: any) => {
-    const events = [
-      "dragstart", "selectstart", "contextmenu", "keydown", "copy", "cut",
-      "mousedown", "mouseup", "mousemove", "keypress", "keyup", "selectionchange"
-    ];
-    events.forEach(evt => {
-      const inlineKey = `on${evt}`;
-      const prevKey = `on${evt}_prev`;
-      if (el[inlineKey]) {
-        el[prevKey] = el[inlineKey];
-        el[inlineKey] = null;
-      }
-    });
-  };
-
   const restoreInlineHandlers = (el: any) => {
     const events = [
       "dragstart", "selectstart", "contextmenu", "keydown", "copy", "cut",
@@ -144,66 +128,6 @@
         delete el[prevKey];
       }
     });
-  };
-
-  // Attach capture-phase event listeners
-  const addCaptureListeners = (el: EventTarget) => {
-    el.addEventListener("selectstart", stopEvent, true);
-    el.addEventListener("contextmenu", stopEvent, true);
-    el.addEventListener("dragstart", stopEvent, true);
-    el.addEventListener("copy", stopEvent, true);
-    el.addEventListener("cut", stopEvent, true);
-    el.addEventListener("mousedown", handleMousedown, true);
-    el.addEventListener("mouseup", stopEvent, true);
-    el.addEventListener("mousemove", stopEvent, true);
-    el.addEventListener("keydown", handleKeydown, true);
-    el.addEventListener("keypress", handleKeydown, true);
-    el.addEventListener("keyup", handleKeydown, true);
-    el.addEventListener("selectionchange", stopEvent, true);
-  };
-
-  const removeCaptureListeners = (el: EventTarget) => {
-    el.removeEventListener("selectstart", stopEvent, true);
-    el.removeEventListener("contextmenu", stopEvent, true);
-    el.removeEventListener("dragstart", stopEvent, true);
-    el.removeEventListener("copy", stopEvent, true);
-    el.removeEventListener("cut", stopEvent, true);
-    el.removeEventListener("mousedown", handleMousedown, true);
-    el.removeEventListener("mouseup", stopEvent, true);
-    el.removeEventListener("mousemove", stopEvent, true);
-    el.removeEventListener("keydown", handleKeydown, true);
-    el.removeEventListener("keypress", handleKeydown, true);
-    el.removeEventListener("keyup", handleKeydown, true);
-    el.removeEventListener("selectionchange", stopEvent, true);
-  };
-
-  // Restore selections and style rules
-  const enableUserSelectOnElement = (el: HTMLElement) => {
-    if (["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME", "CANVAS", "VIDEO", "AUDIO", "IMG", "SVG"].includes(el.tagName)) {
-      return;
-    }
-
-    const hasText = Array.from(el.childNodes).some(
-      node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim() !== ""
-    );
-
-    if (hasText) {
-      const style = window.getComputedStyle(el);
-      const isSelectNone = style.userSelect === "none" && style.opacity !== "0";
-      const isPointerNone = style.pointerEvents === "none" && style.opacity !== "0";
-
-      if (isSelectNone) {
-        el.dataset[USER_SELECT_KEY] = el.style.userSelect || PREV_VAL_CLASS;
-        el.style.setProperty("user-select", "text", "important");
-      }
-      if (isPointerNone) {
-        el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
-        el.style.setProperty("pointer-events", "initial", "important");
-      }
-      if (isSelectNone || isPointerNone) {
-        el.dataset[MARK_KEY] = "1";
-      }
-    }
   };
 
   const restoreUserSelectOnElement = (el: HTMLElement) => {
@@ -233,59 +157,11 @@
     }
   };
 
-  const stripDraggable = (el: HTMLElement) => {
-    if (el.hasAttribute("draggable")) {
-      el.dataset[DRAGGABLE_KEY] = el.getAttribute("draggable") || "true";
-      el.removeAttribute("draggable");
-    }
-  };
-
   const restoreDraggable = (el: HTMLElement) => {
     if (el.dataset[DRAGGABLE_KEY]) {
       el.setAttribute("draggable", el.dataset[DRAGGABLE_KEY]!);
       delete el.dataset[DRAGGABLE_KEY];
     }
-  };
-
-  // Handle transparent overlays blocking right click / selection
-  const makeOverlaysClickThrough = (el: HTMLElement) => {
-    if (!["DIV", "SECTION", "SPAN", "ASIDE", "LI", "MAIN", "ARTICLE", "IMG", "CANVAS"].includes(el.tagName)) {
-      return;
-    }
-    const rect = el.getBoundingClientRect();
-    if (rect.width * rect.height < 1000 || rect.width < 20 || rect.height < 20) return;
-    if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
-
-    const style = window.getComputedStyle(el);
-    if (!["absolute", "fixed", "sticky"].includes(style.position)) return;
-    if (style.pointerEvents === "none" || style.display === "none" || style.visibility === "hidden") return;
-    if (style.cursor === "pointer") return;
-
-    // Detect overlay transparency
-    const isTransparent = style.backgroundColor === "transparent" || 
-      (style.backgroundColor.includes("rgba") && style.backgroundColor.endsWith(", 0)"));
-
-    if (isTransparent) {
-      if (el.querySelector("img, video, input, button, textarea, svg")) return;
-      if (style.borderWidth && parseFloat(style.borderWidth) > 0 && style.borderColor !== "transparent") return;
-      
-      const hasText = (el.innerText?.trim() || "").length > 0;
-      if (!hasText) {
-        // Set pointer-events to none to bypass
-        el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
-        el.style.setProperty("pointer-events", "none", "important");
-        el.dataset[MARK_KEY] = "1";
-      }
-    }
-  };
-
-  // Main processing function for elements
-  const processElement = (el: HTMLElement) => {
-    saveAndClearInlineHandlers(el);
-    addCaptureListeners(el);
-    enableUserSelectOnElement(el);
-    stripDraggable(el);
-    makeOverlaysClickThrough(el);
   };
 
   const revertElement = (el: HTMLElement) => {
@@ -295,34 +171,249 @@
     restoreDraggable(el);
   };
 
+  const removeCaptureListeners = (el: EventTarget) => {
+    el.removeEventListener("selectstart", stopEvent, true);
+    el.removeEventListener("contextmenu", stopEvent, true);
+    el.removeEventListener("dragstart", stopEvent, true);
+    el.removeEventListener("copy", stopEvent, true);
+    el.removeEventListener("cut", stopEvent, true);
+    el.removeEventListener("mousedown", handleMousedown, true);
+    el.removeEventListener("mouseup", stopEvent, true);
+    el.removeEventListener("mousemove", stopEvent, true);
+    el.removeEventListener("keydown", handleKeydown, true);
+    el.removeEventListener("keypress", handleKeydown, true);
+    el.removeEventListener("keyup", handleKeydown, true);
+    el.removeEventListener("selectionchange", stopEvent, true);
+  };
+
+  // Batched operations queues to prevent layout thrashing
+  const pendingElements = new Set<HTMLElement>();
+  let processingScheduled = false;
+
+  const scheduleProcessing = (callback: () => void) => {
+    if (document.hidden) {
+      setTimeout(callback, 0);
+    } else if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(callback);
+    } else {
+      setTimeout(callback, 0);
+    }
+  };
+
+  const queueElementsForProcessing = (elements: HTMLElement[] | NodeListOf<HTMLElement>) => {
+    elements.forEach(el => {
+      if (el && el.nodeType === Node.ELEMENT_NODE) {
+        pendingElements.add(el);
+      }
+    });
+
+    if (!processingScheduled && pendingElements.size > 0) {
+      processingScheduled = true;
+      scheduleProcessing(processPendingElements);
+    }
+  };
+
+  const processPendingElements = () => {
+    const elements = Array.from(pendingElements);
+    pendingElements.clear();
+    processingScheduled = false;
+
+    // Phase 1: Batch reads (No DOM writes in this loop!)
+    const readResults = elements.map(el => {
+      if (!el || !el.tagName) return null;
+
+      const isOverlayCandidate = ["DIV", "SECTION", "SPAN", "ASIDE", "LI", "MAIN", "ARTICLE", "IMG", "CANVAS"].includes(el.tagName);
+      const isSelectionCandidate = !["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME", "CANVAS", "VIDEO", "AUDIO", "IMG", "SVG"].includes(el.tagName);
+
+      let hasText = false;
+      if (isSelectionCandidate) {
+        hasText = Array.from(el.childNodes).some(
+          node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim() !== ""
+        );
+      }
+
+      // Check inline events to save
+      const eventsToSave: string[] = [];
+      const inlineEvents = [
+        "dragstart", "selectstart", "contextmenu", "keydown", "copy", "cut",
+        "mousedown", "mouseup", "mousemove", "keypress", "keyup", "selectionchange"
+      ];
+      inlineEvents.forEach(evt => {
+        const inlineKey = `on${evt}`;
+        if ((el as any)[inlineKey]) {
+          eventsToSave.push(evt);
+        }
+      });
+
+      let isSelectNone = false;
+      let isPointerNone = false;
+      let shouldOverlayClickThrough = false;
+
+      // Avoid window.getComputedStyle if not needed
+      if (isSelectionCandidate && hasText) {
+        const style = window.getComputedStyle(el);
+        isSelectNone = style.userSelect === "none" && style.opacity !== "0";
+        isPointerNone = style.pointerEvents === "none" && style.opacity !== "0";
+      }
+
+      if (isOverlayCandidate) {
+        const style = window.getComputedStyle(el);
+        const position = style.position;
+        // Avoid getBoundingClientRect if position is not positioned
+        if (["absolute", "fixed", "sticky"].includes(position)) {
+          if (style.pointerEvents !== "none" && style.display !== "none" && style.visibility !== "hidden" && style.cursor !== "pointer") {
+            const rect = el.getBoundingClientRect();
+            if (rect.width * rect.height >= 1000 && rect.width >= 20 && rect.height >= 20) {
+              if (rect.bottom >= 0 && rect.top <= window.innerHeight && rect.right >= 0 && rect.left <= window.innerWidth) {
+                const isTransparent = style.backgroundColor === "transparent" || 
+                  (style.backgroundColor.includes("rgba") && style.backgroundColor.endsWith(", 0)"));
+                if (isTransparent) {
+                  const hasInteractives = !!el.querySelector("img, video, input, button, textarea, svg");
+                  const hasBorder = !!(style.borderWidth && parseFloat(style.borderWidth) > 0 && style.borderColor !== "transparent");
+                  const hasTextContent = (el.textContent?.trim() || "").length > 0; // Faster than innerText
+                  
+                  if (!hasInteractives && !hasBorder && !hasTextContent) {
+                    shouldOverlayClickThrough = true;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      const hasDraggable = el.hasAttribute("draggable");
+
+      return {
+        el,
+        eventsToSave,
+        isSelectionCandidate,
+        hasText,
+        isSelectNone,
+        isPointerNone,
+        shouldOverlayClickThrough,
+        hasDraggable
+      };
+    }).filter(Boolean);
+
+    // Phase 2: Batch writes (No DOM reads in this loop!)
+    readResults.forEach(r => {
+      if (!r) return;
+      const el = r.el;
+
+      // Save and clear inline handlers
+      r.eventsToSave.forEach(evt => {
+        const inlineKey = `on${evt}`;
+        const prevKey = `on${evt}_prev`;
+        (el as any)[prevKey] = (el as any)[inlineKey];
+        (el as any)[inlineKey] = null;
+      });
+
+      // Add capture phase listeners
+      el.addEventListener("selectstart", stopEvent, true);
+      el.addEventListener("contextmenu", stopEvent, true);
+      el.addEventListener("dragstart", stopEvent, true);
+      el.addEventListener("copy", stopEvent, true);
+      el.addEventListener("cut", stopEvent, true);
+      el.addEventListener("mousedown", handleMousedown, true);
+      el.addEventListener("mouseup", stopEvent, true);
+      el.addEventListener("mousemove", stopEvent, true);
+      el.addEventListener("keydown", handleKeydown, true);
+      el.addEventListener("keypress", handleKeydown, true);
+      el.addEventListener("keyup", handleKeydown, true);
+      el.addEventListener("selectionchange", stopEvent, true);
+
+      // User select override
+      if (r.isSelectionCandidate && r.hasText) {
+        if (r.isSelectNone) {
+          el.dataset[USER_SELECT_KEY] = el.style.userSelect || PREV_VAL_CLASS;
+          el.style.setProperty("user-select", "text", "important");
+        }
+        if (r.isPointerNone) {
+          el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
+          el.style.setProperty("pointer-events", "initial", "important");
+        }
+        if (r.isSelectNone || r.isPointerNone) {
+          el.dataset[MARK_KEY] = "1";
+        }
+      }
+
+      // Strip draggable attribute
+      if (r.hasDraggable) {
+        el.dataset[DRAGGABLE_KEY] = el.getAttribute("draggable") || "true";
+        el.removeAttribute("draggable");
+      }
+
+      // Make transparent overlay click-through
+      if (r.shouldOverlayClickThrough) {
+        el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
+        el.style.setProperty("pointer-events", "none", "important");
+        el.dataset[MARK_KEY] = "1";
+      }
+    });
+  };
+
   // Set up mutation observer to process dynamically added DOM nodes
   let mutationObserver: MutationObserver | null = null;
 
   const startBypass = () => {
     // Process document and existing body elements
-    saveAndClearInlineHandlers(document);
-    addCaptureListeners(document);
+    const inlineEvents = [
+      "dragstart", "selectstart", "contextmenu", "keydown", "copy", "cut",
+      "mousedown", "mouseup", "mousemove", "keypress", "keyup", "selectionchange"
+    ];
+    inlineEvents.forEach(evt => {
+      const inlineKey = `on${evt}`;
+      const prevKey = `on${evt}_prev`;
+      if ((document as any)[inlineKey]) {
+        (document as any)[prevKey] = (document as any)[inlineKey];
+        (document as any)[inlineKey] = null;
+      }
+    });
+
+    document.addEventListener("selectstart", stopEvent, true);
+    document.addEventListener("contextmenu", stopEvent, true);
+    document.addEventListener("dragstart", stopEvent, true);
+    document.addEventListener("copy", stopEvent, true);
+    document.addEventListener("cut", stopEvent, true);
+    document.addEventListener("mousedown", handleMousedown, true);
+    document.addEventListener("mouseup", stopEvent, true);
+    document.addEventListener("mousemove", stopEvent, true);
+    document.addEventListener("keydown", handleKeydown, true);
+    document.addEventListener("keypress", handleKeydown, true);
+    document.addEventListener("keyup", handleKeydown, true);
+    document.addEventListener("selectionchange", stopEvent, true);
 
     const allElements = document.querySelectorAll("*");
-    allElements.forEach(el => processElement(el as HTMLElement));
+    queueElementsForProcessing(allElements as NodeListOf<HTMLElement>);
 
     // Monitor future DOM changes
     mutationObserver = new MutationObserver(mutations => {
+      const addedElements: HTMLElement[] = [];
+      const changedElements: HTMLElement[] = [];
+
       mutations.forEach(mutation => {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach(node => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const el = node as HTMLElement;
               if (!["STYLE", "SCRIPT"].includes(el.tagName)) {
-                processElement(el);
-                el.querySelectorAll("*").forEach(child => processElement(child as HTMLElement));
+                addedElements.push(el);
+                el.querySelectorAll("*").forEach(child => addedElements.push(child as HTMLElement));
               }
             }
           });
         } else if (mutation.type === "attributes" && mutation.target instanceof HTMLElement) {
-          processElement(mutation.target);
+          changedElements.push(mutation.target);
         }
       });
+
+      if (addedElements.length > 0) {
+        queueElementsForProcessing(addedElements);
+      }
+      if (changedElements.length > 0) {
+        queueElementsForProcessing(changedElements);
+      }
     });
 
     mutationObserver.observe(document, {

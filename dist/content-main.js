@@ -102,5 +102,9 @@
     eventsToBlock.forEach((evt) => {
       window.addEventListener(evt, preventRestrictingEvents, true);
     });
+    try {
+      delete window.initAllowCopyMainWorld;
+    } catch (e) {
+    }
   };
 })();

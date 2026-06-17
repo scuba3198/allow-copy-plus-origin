@@ -131,5 +131,10 @@
     eventsToBlock.forEach(evt => {
       window.addEventListener(evt, preventRestrictingEvents, true);
     });
+
+    // Delete temporary initializer to avoid polluting the page context
+    try {
+      delete (window as any).initAllowCopyMainWorld;
+    } catch (e) {}
   };
 })();

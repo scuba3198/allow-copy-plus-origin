@@ -26,6 +26,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 * **Paste Protection Bypass:** Intercepts input actions and leverages `requestAnimationFrame` to prevent sites from instantly reverting pasted text.
 * **Selection Visibility Fix:** Overrides CSS styles that attempt to hide text highlights.
 * **Overlay clickthroughs:** Automatically resolves Squarespace and typical right-click overlay blocker elements.
+* **Layout-Thrashing Prevention:** Implements a strict asynchronous DOM read/write batching model to prevent forced layout reflows and tab freezes on heavy pages.
 * **Context Menu Copy:** Direct selection copy actions via the custom context menu.
 
 ---
