@@ -2,7 +2,6 @@
 var SETTINGS_KEY = "SETTINGS_KEY";
 var DOMAINS_KEY = "DOMAINS_KEY";
 var DEFAULT_SETTINGS = {
-  allowProtectedTextToCopy: true,
   showSupportIcon: false,
   showDetectTextOverlay: false,
   hideContextMenu: false

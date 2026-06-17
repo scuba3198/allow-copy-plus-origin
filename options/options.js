@@ -2,14 +2,12 @@
 var DOMAINS_KEY = "DOMAINS_KEY";
 var SETTINGS_KEY = "SETTINGS_KEY";
 var DEFAULT_SETTINGS = {
-  allowProtectedTextToCopy: true,
   showSupportIcon: false,
   showDetectTextOverlay: false,
   hideContextMenu: false
 };
 var allDomains = {};
 var currentSettings = { ...DEFAULT_SETTINGS };
-var bypassToggle = document.getElementById("bypass-toggle");
 var contextMenuToggle = document.getElementById("context-menu-toggle");
 var searchInput = document.getElementById("websites-search");
 var addInput = document.getElementById("add-domain-input");
@@ -45,7 +43,6 @@ function escapeHtml(str) {
 async function loadConfig() {
   const settingsStorage = await chrome.storage.sync.get(SETTINGS_KEY);
   currentSettings = settingsStorage[SETTINGS_KEY] || { ...DEFAULT_SETTINGS };
-  bypassToggle.checked = currentSettings.allowProtectedTextToCopy;
   contextMenuToggle.checked = currentSettings.hideContextMenu;
   const domainsStorage = await chrome.storage.sync.get(DOMAINS_KEY);
   allDomains = domainsStorage[DOMAINS_KEY] || {};
@@ -57,7 +54,6 @@ function updateCountAndList() {
   renderDomainsList(searchInput.value.trim().toLowerCase());
 }
 async function saveSettings() {
-  currentSettings.allowProtectedTextToCopy = bypassToggle.checked;
   currentSettings.hideContextMenu = contextMenuToggle.checked;
   await chrome.storage.sync.set({ [SETTINGS_KEY]: currentSettings });
   showToast("Settings saved successfully.");
@@ -198,7 +194,6 @@ function hideImportModal() {
   tempImportDomains = {};
 }
 function setupEventListeners() {
-  bypassToggle.addEventListener("change", saveSettings);
   contextMenuToggle.addEventListener("change", saveSettings);
   searchInput.addEventListener("input", () => {
     renderDomainsList(searchInput.value.trim().toLowerCase());

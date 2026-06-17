@@ -6,14 +6,12 @@ const SETTINGS_KEY = "SETTINGS_KEY";
 const DOMAINS_KEY = "DOMAINS_KEY";
 
 interface ExtensionSettings {
-  allowProtectedTextToCopy: boolean;
   showSupportIcon: boolean;
   showDetectTextOverlay: boolean;
   hideContextMenu: boolean;
 }
 
 const DEFAULT_SETTINGS: ExtensionSettings = {
-  allowProtectedTextToCopy: true,
   showSupportIcon: false,
   showDetectTextOverlay: false,
   hideContextMenu: false

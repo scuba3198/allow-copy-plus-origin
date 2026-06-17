@@ -6,14 +6,12 @@ const DOMAINS_KEY = "DOMAINS_KEY";
 const SETTINGS_KEY = "SETTINGS_KEY";
 
 interface ExtensionSettings {
-  allowProtectedTextToCopy: boolean;
   showSupportIcon: boolean;
   showDetectTextOverlay: boolean;
   hideContextMenu: boolean;
 }
 
 const DEFAULT_SETTINGS: ExtensionSettings = {
-  allowProtectedTextToCopy: true,
   showSupportIcon: false,
   showDetectTextOverlay: false,
   hideContextMenu: false
@@ -23,7 +21,6 @@ let allDomains: Record<string, string> = {};
 let currentSettings: ExtensionSettings = { ...DEFAULT_SETTINGS };
 
 // UI Elements
-const bypassToggle = document.getElementById("bypass-toggle") as HTMLInputElement;
 const contextMenuToggle = document.getElementById("context-menu-toggle") as HTMLInputElement;
 const searchInput = document.getElementById("websites-search") as HTMLInputElement;
 const addInput = document.getElementById("add-domain-input") as HTMLInputElement;
@@ -77,7 +74,6 @@ async function loadConfig() {
   const settingsStorage = await chrome.storage.sync.get(SETTINGS_KEY);
   currentSettings = settingsStorage[SETTINGS_KEY] || { ...DEFAULT_SETTINGS };
   
-  bypassToggle.checked = currentSettings.allowProtectedTextToCopy;
   contextMenuToggle.checked = currentSettings.hideContextMenu;
 
   // Load Domains
@@ -95,7 +91,6 @@ function updateCountAndList() {
 
 // Sync settings back to Chrome storage
 async function saveSettings() {
-  currentSettings.allowProtectedTextToCopy = bypassToggle.checked;
   currentSettings.hideContextMenu = contextMenuToggle.checked;
   await chrome.storage.sync.set({ [SETTINGS_KEY]: currentSettings });
   showToast("Settings saved successfully.");
@@ -270,7 +265,6 @@ function hideImportModal() {
 
 // Setup Event Handlers
 function setupEventListeners() {
-  bypassToggle.addEventListener("change", saveSettings);
   contextMenuToggle.addEventListener("change", saveSettings);
 
   searchInput.addEventListener("input", () => {
