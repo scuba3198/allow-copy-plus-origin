@@ -2,14 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title id="options-page-title">Allow Copy + extension Options</title>
-  <style>
-    .option_row:nth-of-type(n+2) { display: none !important; }
-    .footer, .ads, .test-bro-bnr { display: none !important; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="options-page-title">Allow Copy+ Origin - Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="options.css" />
-  <script defer src="../286.3c74f770181d98232ef3.1778046625212.js"></script>
   <script defer src="options.js"></script>
 </head>
-<body id="root"></body>
+<body>
+  <main class="options-container">
+    <header class="app-header">
+      <div class="logo-area">
+        <img src="../images/48.png" alt="Allow Copy+ Origin Logo" class="app-logo" />
+        <div class="title-meta">
+          <h1>Allow Copy+ Origin</h1>
+          <span class="version-badge">v3.0.9</span>
+        </div>
+      </div>
+      <p class="tagline">Sanitized, local-only, privacy-focused clipboard utility.</p>
+    </header>
+
+    <section class="card settings-card">
+      <div class="card-header">
+        <h2>Extension Settings</h2>
+      </div>
+      <div class="settings-list">
+        <div class="setting-row">
+          <div class="setting-info">
+            <span class="setting-label">Enable Copy/Paste Bypass</span>
+            <span class="setting-desc">Inject bypass rules and enable copying/dragging on allowed websites.</span>
+          </div>
+          <label class="switch-toggle" id="bypass-toggle-label">
+            <input type="checkbox" id="bypass-toggle" />
+            <span class="slider-round"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <span class="setting-label">Hide Selection Context Menu</span>
+            <span class="setting-desc">Remove the custom 'Copy (Bypassed)' context menu item when selecting text.</span>
+          </div>
+          <label class="switch-toggle" id="context-menu-toggle-label">
+            <input type="checkbox" id="context-menu-toggle" />
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="card websites-card" id="custom-websites-panel">
+      <div class="panel-header">
+        <div class="title-count">
+          <h2>Allowed Websites</h2>
+          <span id="websites-count" class="panel-count">0</span>
+        </div>
+        <div class="search-wrapper">
+          <input type="text" id="websites-search" class="search-input" placeholder="Search domains..." />
+        </div>
+      </div>
+
+      <div id="websites-list" class="websites-list-container">
+        <!-- Dynanically populated allowed domains list -->
+      </div>
+
+      <div class="add-domain-wrapper">
+        <input type="text" id="add-domain-input" class="add-input" placeholder="Manually add domain (e.g. example.com)" />
+        <button id="add-domain-btn" class="btn btn-primary">Add</button>
+      </div>
+
+      <div class="actions-row">
+        <button id="export-websites-btn" class="btn btn-outline">Export List</button>
+        <button id="import-websites-btn" class="btn btn-primary">Import List</button>
+        <input type="file" id="import-websites-file" style="display: none;" accept=".json" />
+      </div>
+    </section>
+
+    <footer class="options-footer">
+      <p>Cleaned fork of Allow Copy+. Operations strictly local under MIT license.</p>
+    </footer>
+  </main>
+
+  <!-- Choice Modal Overlay -->
+  <div id="import-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+      <h3 class="modal-title">Import Allowed Websites</h3>
+      <p class="modal-text" id="modal-text-content">
+        Found websites in JSON file.
+        Do you want to merge these websites with your existing list, or overwrite it completely?
+      </p>
+      <div class="modal-actions">
+        <button id="import-cancel-btn" class="btn btn-secondary">Cancel</button>
+        <button id="import-overwrite-btn" class="btn btn-danger">Overwrite List</button>
+        <button id="import-merge-btn" class="btn btn-primary">Merge Lists</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

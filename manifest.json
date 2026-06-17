@@ -7,7 +7,7 @@
   "manifest_version": 3,
   "default_locale": "en",
   "background": {
-    "service_worker": "285.3c74f770181d98232ef3.1778046625212.js"
+    "service_worker": "dist/background.js"
   },
   "options_page": "/options/index.html",
   "permissions": [

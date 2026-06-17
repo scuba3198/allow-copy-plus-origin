@@ -1,1 +1,0 @@
-console.log("Allow Copy+ Origin: OCR Module Neutralized");
