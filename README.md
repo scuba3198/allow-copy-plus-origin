@@ -9,7 +9,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 **Allow Copy+ Origin** removes all bloat, keeps processing strictly offline, and updates the core engine in TypeScript.
 
 > [!NOTE]
-> All network dependency endpoints have been completely removed or redirected to `127.0.0.1`. The extension operates strictly locally using `chrome.storage.sync`.
+> All telemetry tracking, OCR, and promotional network endpoints have been completely removed. The extension operates strictly locally, persisting configuration via `chrome.storage.sync`.
 
 ---
 
