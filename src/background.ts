@@ -95,7 +95,10 @@ async function isBypassEnabledForDomain(domain: string): Promise<boolean> {
 // Update Extension Action Icon
 function updateActionIcon(enabled: boolean, tabId: number) {
   const iconPath = enabled ? "/images/32-on.png" : "/images/32.png";
-  chrome.action.setIcon({ path: iconPath, tabId });
+  chrome.action.setIcon({ path: iconPath, tabId }, () => {
+    // Accessing chrome.runtime.lastError clears the warning if the tab was closed
+    const err = chrome.runtime.lastError;
+  });
 }
 
 // Register or remove context menu items

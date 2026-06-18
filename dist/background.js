@@ -78,7 +78,9 @@ async function isBypassEnabledForDomain(domain) {
 }
 function updateActionIcon(enabled, tabId) {
   const iconPath = enabled ? "/images/32-on.png" : "/images/32.png";
-  chrome.action.setIcon({ path: iconPath, tabId });
+  chrome.action.setIcon({ path: iconPath, tabId }, () => {
+    const err = chrome.runtime.lastError;
+  });
 }
 async function updateContextMenu() {
   chrome.contextMenus.removeAll(async () => {
