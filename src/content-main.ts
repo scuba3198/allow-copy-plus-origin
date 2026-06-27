@@ -163,29 +163,34 @@
             
             // Detect element-boundary transitions and insert spaces or newlines accordingly
             if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
-              const lastParent = lastNode.parentElement;
-              const currentParent = currentNode.parentElement;
-              if (lastParent && currentParent && lastParent !== currentParent) {
-                const lastDisplay = window.getComputedStyle(lastParent).display;
-                const currentDisplay = window.getComputedStyle(currentParent).display;
-                
-                // Exclude inline-block, inline-flex, and inline-grid so they aren't parsed as blocks
-                const isBlock = (display: string) => {
-                  return (display.includes('block') && display !== 'inline-block') ||
-                         (display.includes('flex') && display !== 'inline-flex') ||
-                         (display.includes('grid') && display !== 'inline-grid') ||
-                         display === 'table' || display === 'table-row';
-                };
-
-                const isBlockTransition = isBlock(lastDisplay) || isBlock(currentDisplay);
-                
-                if (isBlockTransition) {
-                  parts.push('\n');
-                } else {
-                  parts.push(' '); // Standard inline word separation
+              const getClosestBlockAncestor = (node: Node): Element | null => {
+                let parent = node.parentElement;
+                while (parent && parent !== document.body && parent !== document.documentElement) {
+                  const display = window.getComputedStyle(parent).display;
+                  const isBlock = (display.includes('block') && display !== 'inline-block') ||
+                                  (display.includes('flex') && display !== 'inline-flex') ||
+                                  (display.includes('grid') && display !== 'inline-grid') ||
+                                  display === 'table' || display === 'table-row';
+                  if (isBlock) return parent;
+                  parent = parent.parentElement;
                 }
+                return null;
+              };
+
+              const lastBlock = getClosestBlockAncestor(lastNode);
+              const currentBlock = getClosestBlockAncestor(currentNode);
+
+              if (lastBlock !== currentBlock) {
+                // Moving between different block containers (like paragraphs)
+                parts.push('\n\n');
               } else {
-                parts.push(' ');
+                const lastParent = lastNode.parentElement;
+                const currentParent = currentNode.parentElement;
+                if (lastParent && currentParent && lastParent !== currentParent) {
+                  parts.push(' '); // Standard inline word separation
+                } else {
+                  parts.push(' ');
+                }
               }
             }
             

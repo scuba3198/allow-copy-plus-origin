@@ -126,22 +126,28 @@
             }
             const extracted = nodeText.substring(startIdx, endIdx);
             if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
-              const lastParent = lastNode.parentElement;
-              const currentParent = currentNode.parentElement;
-              if (lastParent && currentParent && lastParent !== currentParent) {
-                const lastDisplay = window.getComputedStyle(lastParent).display;
-                const currentDisplay = window.getComputedStyle(currentParent).display;
-                const isBlock = (display) => {
-                  return display.includes("block") && display !== "inline-block" || display.includes("flex") && display !== "inline-flex" || display.includes("grid") && display !== "inline-grid" || display === "table" || display === "table-row";
-                };
-                const isBlockTransition = isBlock(lastDisplay) || isBlock(currentDisplay);
-                if (isBlockTransition) {
-                  parts.push("\n");
+              const getClosestBlockAncestor = (node) => {
+                let parent = node.parentElement;
+                while (parent && parent !== document.body && parent !== document.documentElement) {
+                  const display = window.getComputedStyle(parent).display;
+                  const isBlock = display.includes("block") && display !== "inline-block" || display.includes("flex") && display !== "inline-flex" || display.includes("grid") && display !== "inline-grid" || display === "table" || display === "table-row";
+                  if (isBlock) return parent;
+                  parent = parent.parentElement;
+                }
+                return null;
+              };
+              const lastBlock = getClosestBlockAncestor(lastNode);
+              const currentBlock = getClosestBlockAncestor(currentNode);
+              if (lastBlock !== currentBlock) {
+                parts.push("\n\n");
+              } else {
+                const lastParent = lastNode.parentElement;
+                const currentParent = currentNode.parentElement;
+                if (lastParent && currentParent && lastParent !== currentParent) {
+                  parts.push(" ");
                 } else {
                   parts.push(" ");
                 }
-              } else {
-                parts.push(" ");
               }
             }
             parts.push(extracted);
