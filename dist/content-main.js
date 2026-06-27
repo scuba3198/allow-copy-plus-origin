@@ -85,12 +85,98 @@
         originalRemoveEventListener.call(this, type, listener, options);
       };
     }
+    const handleCopy = (e) => {
+      const clipEvent = e;
+      const selection = window.getSelection();
+      if (!selection || selection.isCollapsed) return;
+      try {
+        const range = selection.getRangeAt(0);
+        const container = range.commonAncestorContainer;
+        const rootNode = container.nodeType === Node.ELEMENT_NODE ? container : container.parentElement || document.body;
+        const walker = document.createTreeWalker(
+          rootNode,
+          NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
+          {
+            acceptNode: (node) => {
+              if (node.nodeName === "BR") {
+                return NodeFilter.FILTER_ACCEPT;
+              }
+              if (node.nodeType === Node.TEXT_NODE && range.intersectsNode(node)) {
+                return NodeFilter.FILTER_ACCEPT;
+              }
+              return NodeFilter.FILTER_SKIP;
+            }
+          }
+        );
+        const parts = [];
+        let lastNode = null;
+        let currentNode = walker.nextNode();
+        while (currentNode) {
+          if (currentNode.nodeName === "BR") {
+            parts.push("\n");
+          } else if (currentNode.nodeType === Node.TEXT_NODE) {
+            let nodeText = currentNode.textContent || "";
+            let startIdx = 0;
+            let endIdx = nodeText.length;
+            if (currentNode === range.startContainer) {
+              startIdx = range.startOffset;
+            }
+            if (currentNode === range.endContainer) {
+              endIdx = range.endOffset;
+            }
+            const extracted = nodeText.substring(startIdx, endIdx);
+            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+              const lastParent = lastNode.parentElement;
+              const currentParent = currentNode.parentElement;
+              if (lastParent && currentParent && lastParent !== currentParent) {
+                const lastDisplay = window.getComputedStyle(lastParent).display;
+                const currentDisplay = window.getComputedStyle(currentParent).display;
+                const isBlock = (display) => {
+                  return display.includes("block") && display !== "inline-block" || display.includes("flex") && display !== "inline-flex" || display.includes("grid") && display !== "inline-grid" || display === "table" || display === "table-row";
+                };
+                const isBlockTransition = isBlock(lastDisplay) || isBlock(currentDisplay);
+                if (isBlockTransition) {
+                  parts.push("\n");
+                } else {
+                  parts.push(" ");
+                }
+              } else {
+                parts.push(" ");
+              }
+            }
+            parts.push(extracted);
+            lastNode = currentNode;
+          }
+          currentNode = walker.nextNode();
+        }
+        if (parts.length > 0) {
+          let reconstructed = parts.join("");
+          reconstructed = reconstructed.split("\n").map((line) => {
+            let cleaned = line.replace(/\s+/g, " ");
+            cleaned = cleaned.replace(/\s+([,.;:!?')\]}])/g, "$1");
+            cleaned = cleaned.replace(/([('\[{])\s+/g, "$1");
+            return cleaned.trim();
+          }).join("\n");
+          if (clipEvent.clipboardData) {
+            clipEvent.clipboardData.setData("text/plain", reconstructed);
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }
+      } catch (err) {
+        console.error("ACP: Failed to reconstruct copied text spaces:", err);
+      }
+    };
     const preventRestrictingEvents = (e) => {
       if (document.body.classList.contains(bodyClass)) {
         if (e.type === "keydown" || e.type === "keyup") {
           const keyEvent = e;
           const isShortcut = (keyEvent.ctrlKey || keyEvent.metaKey) && (keyEvent.key === "c" || keyEvent.key === "x" || keyEvent.key === "a");
           if (!isShortcut) return;
+        }
+        if (e.type === "copy") {
+          handleCopy(e);
+          return;
         }
         e.stopPropagation();
         if (e.stopImmediatePropagation) {

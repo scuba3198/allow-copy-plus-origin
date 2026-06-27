@@ -28,6 +28,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 * **Overlay clickthroughs:** Automatically resolves Squarespace and typical right-click overlay blocker elements.
 * **Layout-Thrashing Prevention:** Implements a strict asynchronous DOM read/write batching model to prevent forced layout reflows and tab freezes on heavy pages.
 * **Context Menu Copy:** Direct selection copy actions via the custom context menu.
+* **Intelligent Spaced Text Reconstruction:** Automatically detects visually separated inline word-splitting (common visual copy-protections) and reconstructs the clean text with single spaces before writing to your clipboard.
 
 ---
 
