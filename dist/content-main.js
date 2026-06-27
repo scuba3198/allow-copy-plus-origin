@@ -153,8 +153,8 @@
           let reconstructed = parts.join("");
           reconstructed = reconstructed.split("\n").map((line) => {
             let cleaned = line.replace(/\s+/g, " ");
-            cleaned = cleaned.replace(/\s+([,.;:!?')\]}])/g, "$1");
-            cleaned = cleaned.replace(/([('\[{])\s+/g, "$1");
+            cleaned = cleaned.replace(/\s+([,.;:!?\)\]\}])/g, "$1");
+            cleaned = cleaned.replace(/([\(\[\{])\s+/g, "$1");
             return cleaned.trim();
           }).join("\n");
           if (clipEvent.clipboardData) {
