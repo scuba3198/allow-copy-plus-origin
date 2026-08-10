@@ -25,13 +25,23 @@ assert(main.includes('node.nodeName === "BR" && range.intersectsNode(node)'));
 assert(main.includes("getClosestBlockAncestor"));
 assert(main.includes("if (lastBlock !== currentBlock)"));
 assert(main.includes('parts.push("\\n\\n")'));
+const background = read("src/background.ts");
+const actionClick = background.slice(
+  background.indexOf("chrome.action.onClicked.addListener"),
+  background.indexOf("// Context Menu Clicks")
+);
+const requestIndex = actionClick.indexOf("chrome.permissions.request");
+const firstAwait = actionClick.indexOf("await");
+assert(requestIndex !== -1 && (firstAwait === -1 || requestIndex < firstAwait));
+assert(actionClick.includes("const activeTab = tab"));
+assert(actionClick.includes("domains[hostname] && hasAccess"));
+assert(actionClick.includes("if (!permission.granted)"));
 assert(!read("src/background.ts").includes("allFrames"));
 assert(read("src/background.ts").includes("permissions.request"));
 assert(read("src/background.ts").includes("SYNC_MIGRATED_KEY"));
 assert(read("src/background.ts").includes("storage.sync.remove"));
 assert(read("src/background.ts").includes("DisableDomain"));
 assert(read("src/background.ts").includes("tabs.query({ url"));
-assert(read("src/background.ts").includes("lastFocusedWindow"));
 assert(read("options/options.ts").includes("requestDomainAccess"));
 assert(read("options/options.ts").includes('type: "DisableDomain"'));
 assert(read("src/content-isolate.ts").includes("ACP_TEARDOWN"));

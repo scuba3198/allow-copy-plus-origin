@@ -40,7 +40,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 
 ### GitHub Releases ZIP
 
-1. Download and extract `allow-copy-plus-origin-v3.0.11.zip` from the repository's **Releases** page.
+1. Download and extract `allow-copy-plus-origin-v3.0.12.zip` from the repository's **Releases** page.
 2. Follow steps 2–4 above, selecting the extracted directory.
 
 ## Development and Building

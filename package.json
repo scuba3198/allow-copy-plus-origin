@@ -1,6 +1,6 @@
 {
   "name": "allow-copy-plus-origin",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "A privacy-first, ultra-lightweight fork of the Allow Copy + extension rewritten in TypeScript.",
   "main": "dist/background.js",
   "scripts": {

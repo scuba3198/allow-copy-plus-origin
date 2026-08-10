@@ -214,31 +214,53 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   } catch (e) {
   }
 });
-chrome.action.onClicked.addListener(async (tab) => {
-  const activeTab = tab.id && tab.url ? tab : (await chrome.tabs.query({ active: true, lastFocusedWindow: true }))[0];
+chrome.action.onClicked.addListener((tab) => {
+  const activeTab = tab;
   if (!activeTab?.id || !activeTab.url) return;
   const hostname = getCleanHostname(activeTab.url);
   if (!hostname) return;
-  const storage = await chrome.storage.local.get(DOMAINS_KEY);
-  const domains = storage[DOMAINS_KEY] || {};
-  const hasAccess = await hasHostAccess(hostname);
-  if (domains[hostname] && hasAccess) {
-    if (!await disableDomain(hostname)) {
-      updateActionIcon(true, activeTab.id);
-      return;
-    }
+  const storagePromise = chrome.storage.local.get(DOMAINS_KEY);
+  const hasAccessPromise = hasHostAccess(hostname);
+  let permissionPromise;
+  try {
+    permissionPromise = chrome.permissions.request({ origins: [getHostPermissionPattern(hostname)] }).then(
+      (granted) => ({ granted }),
+      (error) => ({ granted: false, error })
+    );
+  } catch (error) {
+    console.error(`ACP: Permission request failed for ${hostname}:`, error);
     updateActionIcon(false, activeTab.id);
-  } else {
-    const granted = await chrome.permissions.request({ origins: [getHostPermissionPattern(hostname)] });
-    if (!granted) {
-      updateActionIcon(false, activeTab.id);
-      return;
-    }
-    if (!domains[hostname]) domains[hostname] = (/* @__PURE__ */ new Date()).toISOString();
-    await chrome.storage.local.set({ [DOMAINS_KEY]: domains });
-    await evaluateTabState(activeTab);
+    return;
   }
-  await updateContextMenu();
+  (async () => {
+    const [storage, hasAccess] = await Promise.all([storagePromise, hasAccessPromise]);
+    const domains = storage[DOMAINS_KEY] || {};
+    if (domains[hostname] && hasAccess) {
+      if (!await disableDomain(hostname)) {
+        updateActionIcon(true, activeTab.id);
+        return;
+      }
+      updateActionIcon(false, activeTab.id);
+    } else {
+      const permission = await permissionPromise;
+      if (!permission.granted) {
+        if (permission.error) {
+          console.error(`ACP: Permission request failed for ${hostname}:`, permission.error);
+        } else {
+          console.warn(`ACP: Permission request denied for ${hostname}`);
+        }
+        updateActionIcon(false, activeTab.id);
+        return;
+      }
+      if (!domains[hostname]) domains[hostname] = (/* @__PURE__ */ new Date()).toISOString();
+      await chrome.storage.local.set({ [DOMAINS_KEY]: domains });
+      await evaluateTabState(activeTab);
+    }
+    await updateContextMenu();
+  })().catch((error) => {
+    console.error(`ACP: Action click failed for ${hostname}:`, error);
+    updateActionIcon(false, activeTab.id);
+  });
 });
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "allow-copy-context" && info.selectionText && tab?.id) {
