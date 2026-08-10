@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Allow Copy live check</title>
+<style>
+  #target { user-select: none; font: 32px sans-serif; margin: 80px; }
+  .allow_copy_test #target { user-select: text; }
+</style>
+<button id="toggle">Enable</button>
+<p id="target">COPY_ME_42</p>
+<script>
+  document.addEventListener("copy", event => {
+    event.clipboardData.setData("text/plain", "BLOCKED");
+    event.preventDefault();
+  });
+</script>
+<script src="../dist/content-main.js"></script>
+<script>
+  let enabled = false;
+  toggle.onclick = () => {
+    enabled = !enabled;
+    document.body.classList.toggle("allow_copy_test", enabled);
+    if (enabled) window.initAllowCopyMainWorld(location.hostname, "allow_copy_test");
+    else window.disableAllowCopyMainWorld();
+    toggle.textContent = enabled ? "Disable" : "Enable";
+  };
+</script>

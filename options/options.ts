@@ -17,6 +17,21 @@ const DEFAULT_SETTINGS: ExtensionSettings = {
   hideContextMenu: false
 };
 
+const hostPermission = (domain: string) => `*://${domain}/*`;
+
+async function requestDomainAccess(domains: string[]): Promise<boolean> {
+  const origins = [...new Set(domains)].map(hostPermission);
+  if (origins.length === 0) return true;
+  if (!await chrome.permissions.request({ origins })) return false;
+  const granted = await Promise.all(origins.map(origin => chrome.permissions.contains({ origins: [origin] })));
+  return granted.every(Boolean);
+}
+
+async function disableDomain(domain: string): Promise<boolean> {
+  const response = await chrome.runtime.sendMessage({ type: "DisableDomain", domain });
+  return response?.success === true;
+}
+
 let allDomains: Record<string, string> = {};
 let currentSettings: ExtensionSettings = { ...DEFAULT_SETTINGS };
 
@@ -71,13 +86,13 @@ function escapeHtml(str: string): string {
 // Load configurations from storage
 async function loadConfig() {
   // Load Settings
-  const settingsStorage = await chrome.storage.sync.get(SETTINGS_KEY);
+  const settingsStorage = await chrome.storage.local.get(SETTINGS_KEY);
   currentSettings = settingsStorage[SETTINGS_KEY] || { ...DEFAULT_SETTINGS };
   
   contextMenuToggle.checked = currentSettings.hideContextMenu;
 
   // Load Domains
-  const domainsStorage = await chrome.storage.sync.get(DOMAINS_KEY);
+  const domainsStorage = await chrome.storage.local.get(DOMAINS_KEY);
   allDomains = domainsStorage[DOMAINS_KEY] || {};
 
   updateCountAndList();
@@ -89,10 +104,10 @@ function updateCountAndList() {
   renderDomainsList(searchInput.value.trim().toLowerCase());
 }
 
-// Sync settings back to Chrome storage
+// Save settings locally
 async function saveSettings() {
   currentSettings.hideContextMenu = contextMenuToggle.checked;
-  await chrome.storage.sync.set({ [SETTINGS_KEY]: currentSettings });
+  await chrome.storage.local.set({ [SETTINGS_KEY]: currentSettings });
   showToast("Settings saved successfully.");
 }
 
@@ -132,8 +147,14 @@ function renderDomainsList(filterText = "") {
 // Delete domain
 async function handleDeleteDomain(domain: string) {
   if (allDomains[domain]) {
-    delete allDomains[domain];
-    await chrome.storage.sync.set({ [DOMAINS_KEY]: allDomains });
+    if (!await disableDomain(domain)) {
+      showToast(`Could not remove access for ${domain}.`, false);
+      return;
+    }
+    const nextDomains = { ...allDomains };
+    delete nextDomains[domain];
+    allDomains = nextDomains;
+    await chrome.storage.local.set({ [DOMAINS_KEY]: nextDomains });
     showToast(`Removed ${domain}`);
     updateCountAndList();
   }
@@ -160,8 +181,12 @@ async function handleAddDomain(domain: string) {
     return;
   }
 
-  allDomains[cleanDomain] = new Date().toISOString();
-  await chrome.storage.sync.set({ [DOMAINS_KEY]: allDomains });
+  if (!await requestDomainAccess([cleanDomain])) {
+    showToast("Site access is required to enable this domain.", false);
+    return;
+  }
+  allDomains = { ...allDomains, [cleanDomain]: new Date().toISOString() };
+  await chrome.storage.local.set({ [DOMAINS_KEY]: allDomains });
   showToast(`Added ${cleanDomain}`);
   addInput.value = "";
   updateCountAndList();
@@ -286,8 +311,20 @@ function setupEventListeners() {
   importCancelBtn.addEventListener("click", hideImportModal);
   
   importOverwriteBtn.addEventListener("click", async () => {
-    allDomains = { ...tempImportDomains };
-    await chrome.storage.sync.set({ [DOMAINS_KEY]: allDomains });
+    const importedDomains = { ...tempImportDomains };
+    if (!await requestDomainAccess(Object.keys(importedDomains))) {
+      showToast("Site access was not granted; list unchanged.", false);
+      return;
+    }
+    const nextDomains = { ...importedDomains };
+    for (const domain of Object.keys(allDomains)) {
+      if (!importedDomains[domain] && !await disableDomain(domain)) {
+        const timestamp = allDomains[domain];
+        if (timestamp) nextDomains[domain] = timestamp;
+      }
+    }
+    allDomains = nextDomains;
+    await chrome.storage.local.set({ [DOMAINS_KEY]: nextDomains });
     showToast("Website list overwritten successfully.");
     updateCountAndList();
     hideImportModal();
@@ -295,8 +332,12 @@ function setupEventListeners() {
 
   importMergeBtn.addEventListener("click", async () => {
     const previousCount = Object.keys(allDomains).length;
+    if (!await requestDomainAccess(Object.keys(tempImportDomains))) {
+      showToast("Site access was not granted; list unchanged.", false);
+      return;
+    }
     allDomains = { ...allDomains, ...tempImportDomains };
-    await chrome.storage.sync.set({ [DOMAINS_KEY]: allDomains });
+    await chrome.storage.local.set({ [DOMAINS_KEY]: allDomains });
     const addedCount = Object.keys(allDomains).length - previousCount;
     showToast(`Merged lists successfully. Added ${addedCount} domain(s).`);
     updateCountAndList();

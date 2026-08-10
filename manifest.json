@@ -3,7 +3,7 @@
 
   "name": "Allow Copy+ Origin",
   "description": "__MSG_ext_desc__",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "manifest_version": 3,
   "default_locale": "en",
   "background": {
@@ -13,10 +13,11 @@
   "permissions": [
     "scripting",
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "activeTab"
   ],
-  "host_permissions": [
-    "<all_urls>"
+  "optional_host_permissions": [
+    "*://*/*"
   ],
   "action": {
     "default_icon": {
@@ -31,15 +32,5 @@
     "32": "/images/32.png",
     "48": "/images/48.png",
     "128": "/images/128.png"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "images/*"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ]
+  }
 }

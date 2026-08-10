@@ -14,7 +14,7 @@
   --danger-hover: #ff6666;
   --success: #00c851;
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

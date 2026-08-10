@@ -9,7 +9,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 **Allow Copy+ Origin** removes all bloat, keeps processing strictly offline, and updates the core engine in TypeScript.
 
 > [!NOTE]
-> All telemetry tracking, OCR, and promotional network endpoints have been completely removed. The extension operates strictly locally, persisting configuration via `chrome.storage.sync`.
+> All telemetry tracking, OCR, and promotional network endpoints have been completely removed. The extension operates strictly locally, persisting configuration via `chrome.storage.local`; legacy sync data is read once during upgrade for migration only.
 
 ---
 
@@ -18,17 +18,16 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 * **Zero Network Dependency:** Neutralized OCR (image text extraction) and telemetry modules.
 * **No Promotion:** Removed all injected promotional banners, holiday popups, and cross-promotion items.
 * **No Redirects:** Stripped intrusive welcome, donation, and uninstall surveys.
-* **Strict Privacy:** All domain configurations are persisted locally.
+* **Strict Privacy:** Settings and domain configurations are persisted locally.
+* **Per-site Access:** Site access is requested only when you enable the extension for that site.
 
 ## Enhancements in Origin Version
 
 * **TypeScript Migration:** Source code is fully audited and type-safe under strict compiler controls.
 * **Copy & Drag Bypass:** Intercepts and swallows events restricting standard copy (Ctrl+C), cut (Ctrl+X), selection, and element dragging.
 * **Selection Visibility Fix:** Overrides CSS styles that attempt to hide text highlights.
-* **Overlay clickthroughs:** Automatically resolves Squarespace and typical right-click overlay blocker elements.
-* **Layout-Thrashing Prevention:** Implements a strict asynchronous DOM read/write batching model to prevent forced layout reflows and tab freezes on heavy pages.
 * **Context Menu Copy:** Direct selection copy actions via the custom context menu.
-* **Intelligent Spaced Text Reconstruction:** Automatically detects visually separated inline word-splitting (common visual copy-protections) and reconstructs the clean text with single spaces before writing to your clipboard.
+* **Native Clipboard Preservation:** The extension leaves clipboard contents untouched and only clears page-level copy blockers.
 
 ---
 
@@ -38,6 +37,11 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 2. Open your Chromium-based browser and navigate to `chrome://extensions/`.
 3. Enable **"Developer mode"** in the top-right corner.
 4. Click **"Load unpacked"** and select the extension directory.
+
+### GitHub Releases ZIP
+
+1. Download and extract `allow-copy-plus-origin-v3.0.10.zip` from the repository's **Releases** page.
+2. Follow steps 2–4 above, selecting the extracted directory.
 
 ## Development and Building
 
@@ -56,13 +60,16 @@ npm run build
 
 # Watch for file changes during development
 npm run watch
+
+# Run hardening checks
+npm test
 ```
 
 ### File Structure
 
 * `src/background.ts`: Service worker managing active tabs, context menus, and script injection.
 * `src/content-isolate.ts`: Isolated script that runs in target pages to swallow restriction events.
-* `src/content-main.ts`: Main-world script that overrides event listener registrations on targeted sites.
+* `src/content-main.ts`: Main-world capture handlers that stop page copy-restriction events while enabled.
 * `options/`: Options page files (`index.html`, `options.css`, `options.ts`).
 * `dist/`: Output directory containing compiled JavaScript outputs.
 

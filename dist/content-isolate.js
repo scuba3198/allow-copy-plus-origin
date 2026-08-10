@@ -4,393 +4,22 @@
   const RUN_FLAG = `____CORE_INJECTED_FLAG____${EXT_ID}`;
   if (window[RUN_FLAG]) return;
   window[RUN_FLAG] = true;
-  const PREFIX = "ACP";
-  const PREV_VAL_CLASS = "was-empty";
-  const MARK_KEY = `${PREFIX.toLowerCase()}_mark`;
-  const USER_SELECT_KEY = `${PREFIX.toLowerCase()}_prevUserSelect`;
-  const POINTER_EVENTS_KEY = `${PREFIX.toLowerCase()}_prevPointerEvents`;
-  const DRAGGABLE_KEY = `${PREFIX.toLowerCase()}_prevDraggableAttr`;
-  let pingIntervalId = null;
-  const showAlert = (message) => {
-    document.getElementById("allow-copy-alert-host")?.remove();
-    const host = document.createElement("acp-alert");
-    host.id = "allow-copy-alert-host";
-    const style = document.createElement("style");
-    style.innerHTML = `
-      .acp-alert-overlay {
-        all: unset;
-        z-index: 2147483647;
-        background-color: #ffffff;
-        border-radius: 8px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-height: calc(100% - 20px);
-        max-width: calc(100% - 20px);
-        width: 400px;
-        box-sizing: border-box;
-        padding: 24px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        color: #333333;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .acp-alert-message {
-        font-size: 16px;
-        line-height: 1.5;
-        font-weight: 500;
-      }
-      .acp-alert-btn {
-        align-self: flex-end;
-        font-weight: 600;
-        font-size: 14px;
-        background-color: #ffd76f;
-        border: 1px solid #ffbb09;
-        border-radius: 4px;
-        padding: 8px 16px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-      }
-      .acp-alert-btn:hover {
-        background-color: #ffc93c;
-      }
-    `;
-    host.appendChild(style);
-    const dialog = document.createElement("div");
-    dialog.className = "acp-alert-overlay";
-    const msg = document.createElement("p");
-    msg.className = "acp-alert-message";
-    msg.textContent = message;
-    dialog.appendChild(msg);
-    const btn = document.createElement("button");
-    btn.className = "acp-alert-btn";
-    btn.innerText = "OK";
-    btn.onclick = () => host.remove();
-    dialog.appendChild(btn);
-    host.appendChild(dialog);
-    document.body.appendChild(host);
+  const isEditableTarget = (target) => {
+    const element = target instanceof HTMLElement ? target : null;
+    return !!element && (element.isContentEditable || /^(INPUT|TEXTAREA|SELECT|OPTION)$/.test(element.tagName));
   };
-  const stopEvent = (e) => {
-    e.stopPropagation();
-    if (e.stopImmediatePropagation) {
-      e.stopImmediatePropagation();
-    }
+  const stopEvent = (event) => {
+    event.stopPropagation();
+    event.stopImmediatePropagation?.();
   };
-  const handleMousedown = (e) => {
-    const mouseEvent = e;
-    const target = mouseEvent.target;
-    if (target && ["INPUT", "TEXTAREA", "SELECT", "OPTION"].includes(target.tagName)) {
-      return;
-    }
-    stopEvent(mouseEvent);
+  const handleKeyboard = (event) => {
+    if (isEditableTarget(event.target)) return;
+    const keyEvent = event;
+    const isCopyShortcut = (keyEvent.ctrlKey || keyEvent.metaKey) && ["c", "x", "a"].includes(keyEvent.key.toLowerCase());
+    if (isCopyShortcut) stopEvent(event);
   };
-  const handleKeydown = (e) => {
-    const keyEvent = e;
-    const isCopyCutSelectAll = (keyEvent.ctrlKey || keyEvent.metaKey) && (keyEvent.key === "c" || keyEvent.key === "x" || keyEvent.key === "a" || keyEvent.keyCode === 67 || keyEvent.keyCode === 88 || keyEvent.keyCode === 65);
-    if (!isCopyCutSelectAll) {
-      stopEvent(keyEvent);
-    }
-  };
-  const restoreInlineHandlers = (el) => {
-    const events = [
-      "dragstart",
-      "selectstart",
-      "contextmenu",
-      "keydown",
-      "copy",
-      "cut",
-      "mousedown",
-      "mouseup",
-      "mousemove",
-      "keypress",
-      "keyup",
-      "selectionchange"
-    ];
-    events.forEach((evt) => {
-      const inlineKey = `on${evt}`;
-      const prevKey = `on${evt}_prev`;
-      if (el[prevKey]) {
-        el[inlineKey] = el[prevKey];
-        delete el[prevKey];
-      }
-    });
-  };
-  const restoreUserSelectOnElement = (el) => {
-    if (el.dataset[MARK_KEY]) {
-      const prevSelect = el.dataset[USER_SELECT_KEY];
-      const prevPointer = el.dataset[POINTER_EVENTS_KEY];
-      if (prevSelect) {
-        if (prevSelect === PREV_VAL_CLASS) {
-          el.style.removeProperty("user-select");
-        } else {
-          el.style.userSelect = prevSelect;
-        }
-        delete el.dataset[USER_SELECT_KEY];
-      }
-      if (prevPointer) {
-        if (prevPointer === PREV_VAL_CLASS) {
-          el.style.removeProperty("pointer-events");
-        } else {
-          el.style.pointerEvents = prevPointer;
-        }
-        delete el.dataset[POINTER_EVENTS_KEY];
-      }
-      delete el.dataset[MARK_KEY];
-    }
-  };
-  const restoreDraggable = (el) => {
-    if (el.dataset[DRAGGABLE_KEY]) {
-      el.setAttribute("draggable", el.dataset[DRAGGABLE_KEY]);
-      delete el.dataset[DRAGGABLE_KEY];
-    }
-  };
-  const revertElement = (el) => {
-    restoreInlineHandlers(el);
-    removeCaptureListeners(el);
-    restoreUserSelectOnElement(el);
-    restoreDraggable(el);
-  };
-  const removeCaptureListeners = (el) => {
-    el.removeEventListener("selectstart", stopEvent, true);
-    el.removeEventListener("contextmenu", stopEvent, true);
-    el.removeEventListener("dragstart", stopEvent, true);
-    el.removeEventListener("copy", stopEvent, true);
-    el.removeEventListener("cut", stopEvent, true);
-    el.removeEventListener("mousedown", handleMousedown, true);
-    el.removeEventListener("mouseup", stopEvent, true);
-    el.removeEventListener("mousemove", stopEvent, true);
-    el.removeEventListener("keydown", handleKeydown, true);
-    el.removeEventListener("keypress", handleKeydown, true);
-    el.removeEventListener("keyup", handleKeydown, true);
-    el.removeEventListener("selectionchange", stopEvent, true);
-  };
-  const pendingElements = /* @__PURE__ */ new Set();
-  let processingScheduled = false;
-  const scheduleProcessing = (callback) => {
-    if (document.hidden) {
-      setTimeout(callback, 0);
-    } else if (typeof requestAnimationFrame === "function") {
-      requestAnimationFrame(callback);
-    } else {
-      setTimeout(callback, 0);
-    }
-  };
-  const queueElementsForProcessing = (elements) => {
-    elements.forEach((el) => {
-      if (el && el.nodeType === Node.ELEMENT_NODE) {
-        pendingElements.add(el);
-      }
-    });
-    if (!processingScheduled && pendingElements.size > 0) {
-      processingScheduled = true;
-      scheduleProcessing(processPendingElements);
-    }
-  };
-  const processPendingElements = () => {
-    const elements = Array.from(pendingElements);
-    pendingElements.clear();
-    processingScheduled = false;
-    const readResults = elements.map((el) => {
-      if (!el || !el.tagName) return null;
-      const isOverlayCandidate = ["DIV", "SECTION", "SPAN", "ASIDE", "LI", "MAIN", "ARTICLE", "IMG", "CANVAS"].includes(el.tagName);
-      const isSelectionCandidate = !["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME", "CANVAS", "VIDEO", "AUDIO", "IMG", "SVG"].includes(el.tagName);
-      let hasText = false;
-      if (isSelectionCandidate) {
-        hasText = Array.from(el.childNodes).some(
-          (node) => node.nodeType === Node.TEXT_NODE && node.textContent?.trim() !== ""
-        );
-      }
-      const eventsToSave = [];
-      const inlineEvents = [
-        "dragstart",
-        "selectstart",
-        "contextmenu",
-        "keydown",
-        "copy",
-        "cut",
-        "mousedown",
-        "mouseup",
-        "mousemove",
-        "keypress",
-        "keyup",
-        "selectionchange"
-      ];
-      inlineEvents.forEach((evt) => {
-        const inlineKey = `on${evt}`;
-        if (el[inlineKey]) {
-          eventsToSave.push(evt);
-        }
-      });
-      let isSelectNone = false;
-      let isPointerNone = false;
-      let shouldOverlayClickThrough = false;
-      if (isSelectionCandidate && hasText) {
-        const style = window.getComputedStyle(el);
-        isSelectNone = style.userSelect === "none" && style.opacity !== "0";
-        isPointerNone = style.pointerEvents === "none" && style.opacity !== "0";
-      }
-      if (isOverlayCandidate) {
-        const style = window.getComputedStyle(el);
-        const position = style.position;
-        if (["absolute", "fixed", "sticky"].includes(position)) {
-          if (style.pointerEvents !== "none" && style.display !== "none" && style.visibility !== "hidden" && style.cursor !== "pointer") {
-            const rect = el.getBoundingClientRect();
-            if (rect.width * rect.height >= 1e3 && rect.width >= 20 && rect.height >= 20) {
-              if (rect.bottom >= 0 && rect.top <= window.innerHeight && rect.right >= 0 && rect.left <= window.innerWidth) {
-                const isTransparent = style.backgroundColor === "transparent" || style.backgroundColor.includes("rgba") && style.backgroundColor.endsWith(", 0)");
-                if (isTransparent) {
-                  const hasInteractives = !!el.querySelector("img, video, input, button, textarea, svg");
-                  const hasBorder = !!(style.borderWidth && parseFloat(style.borderWidth) > 0 && style.borderColor !== "transparent");
-                  const hasTextContent = (el.textContent?.trim() || "").length > 0;
-                  if (!hasInteractives && !hasBorder && !hasTextContent) {
-                    shouldOverlayClickThrough = true;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      const hasDraggable = el.hasAttribute("draggable");
-      return {
-        el,
-        eventsToSave,
-        isSelectionCandidate,
-        hasText,
-        isSelectNone,
-        isPointerNone,
-        shouldOverlayClickThrough,
-        hasDraggable
-      };
-    }).filter(Boolean);
-    readResults.forEach((r) => {
-      if (!r) return;
-      const el = r.el;
-      r.eventsToSave.forEach((evt) => {
-        const inlineKey = `on${evt}`;
-        const prevKey = `on${evt}_prev`;
-        el[prevKey] = el[inlineKey];
-        el[inlineKey] = null;
-      });
-      el.addEventListener("selectstart", stopEvent, true);
-      el.addEventListener("contextmenu", stopEvent, true);
-      el.addEventListener("dragstart", stopEvent, true);
-      el.addEventListener("copy", stopEvent, true);
-      el.addEventListener("cut", stopEvent, true);
-      el.addEventListener("mousedown", handleMousedown, true);
-      el.addEventListener("mouseup", stopEvent, true);
-      el.addEventListener("mousemove", stopEvent, true);
-      el.addEventListener("keydown", handleKeydown, true);
-      el.addEventListener("keypress", handleKeydown, true);
-      el.addEventListener("keyup", handleKeydown, true);
-      el.addEventListener("selectionchange", stopEvent, true);
-      if (r.isSelectionCandidate && r.hasText) {
-        if (r.isSelectNone) {
-          el.dataset[USER_SELECT_KEY] = el.style.userSelect || PREV_VAL_CLASS;
-          el.style.setProperty("user-select", "text", "important");
-        }
-        if (r.isPointerNone) {
-          el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
-          el.style.setProperty("pointer-events", "initial", "important");
-        }
-        if (r.isSelectNone || r.isPointerNone) {
-          el.dataset[MARK_KEY] = "1";
-        }
-      }
-      if (r.hasDraggable) {
-        el.dataset[DRAGGABLE_KEY] = el.getAttribute("draggable") || "true";
-        el.removeAttribute("draggable");
-      }
-      if (r.shouldOverlayClickThrough) {
-        el.dataset[POINTER_EVENTS_KEY] = el.style.pointerEvents || PREV_VAL_CLASS;
-        el.style.setProperty("pointer-events", "none", "important");
-        el.dataset[MARK_KEY] = "1";
-      }
-    });
-  };
-  let mutationObserver = null;
-  const startBypass = () => {
-    const inlineEvents = [
-      "dragstart",
-      "selectstart",
-      "contextmenu",
-      "keydown",
-      "copy",
-      "cut",
-      "mousedown",
-      "mouseup",
-      "mousemove",
-      "keypress",
-      "keyup",
-      "selectionchange"
-    ];
-    inlineEvents.forEach((evt) => {
-      const inlineKey = `on${evt}`;
-      const prevKey = `on${evt}_prev`;
-      if (document[inlineKey]) {
-        document[prevKey] = document[inlineKey];
-        document[inlineKey] = null;
-      }
-    });
-    document.addEventListener("selectstart", stopEvent, true);
-    document.addEventListener("contextmenu", stopEvent, true);
-    document.addEventListener("dragstart", stopEvent, true);
-    document.addEventListener("copy", stopEvent, true);
-    document.addEventListener("cut", stopEvent, true);
-    document.addEventListener("mousedown", handleMousedown, true);
-    document.addEventListener("mouseup", stopEvent, true);
-    document.addEventListener("mousemove", stopEvent, true);
-    document.addEventListener("keydown", handleKeydown, true);
-    document.addEventListener("keypress", handleKeydown, true);
-    document.addEventListener("keyup", handleKeydown, true);
-    document.addEventListener("selectionchange", stopEvent, true);
-    const allElements = document.querySelectorAll("*");
-    queueElementsForProcessing(allElements);
-    mutationObserver = new MutationObserver((mutations) => {
-      const addedElements = [];
-      const changedElements = [];
-      mutations.forEach((mutation) => {
-        if (mutation.type === "childList") {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              const el = node;
-              if (!["STYLE", "SCRIPT"].includes(el.tagName)) {
-                addedElements.push(el);
-                el.querySelectorAll("*").forEach((child) => addedElements.push(child));
-              }
-            }
-          });
-        } else if (mutation.type === "attributes" && mutation.target instanceof HTMLElement) {
-          changedElements.push(mutation.target);
-        }
-      });
-      if (addedElements.length > 0) {
-        queueElementsForProcessing(addedElements);
-      }
-      if (changedElements.length > 0) {
-        queueElementsForProcessing(changedElements);
-      }
-    });
-    mutationObserver.observe(document, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["style", "class", "draggable"]
-    });
-  };
-  const stopBypass = () => {
-    if (mutationObserver) {
-      mutationObserver.disconnect();
-      mutationObserver = null;
-    }
-    restoreInlineHandlers(document);
-    removeCaptureListeners(document);
-    const allElements = document.querySelectorAll("*");
-    allElements.forEach((el) => revertElement(el));
-    window[RUN_FLAG] = false;
+  const handleRestrictedEvent = (event) => {
+    if (!isEditableTarget(event.target)) stopEvent(event);
   };
   const executeCopyText = (text) => {
     const textarea = document.createElement("textarea");
@@ -404,16 +33,44 @@
     } catch (err) {
       console.error("ACP: Copy failed", err);
     }
-    document.body.removeChild(textarea);
+    textarea.remove();
+  };
+  const restrictedEvents = ["selectstart", "contextmenu", "dragstart", "copy", "cut"];
+  const TEARDOWN_EVENT = "ACP_TEARDOWN";
+  let pingIntervalId = null;
+  let stopped = false;
+  const startBypass = () => {
+    restrictedEvents.forEach((type) => document.addEventListener(type, handleRestrictedEvent, true));
+    document.addEventListener("keydown", handleKeyboard, true);
+    document.addEventListener("keyup", handleKeyboard, true);
+  };
+  const stopBypass = () => {
+    if (stopped) return;
+    stopped = true;
+    restrictedEvents.forEach((type) => document.removeEventListener(type, handleRestrictedEvent, true));
+    document.removeEventListener("keydown", handleKeyboard, true);
+    document.removeEventListener("keyup", handleKeyboard, true);
+    if (pingIntervalId !== null) {
+      clearInterval(pingIntervalId);
+      pingIntervalId = null;
+    }
+    const body = document.body;
+    const activeClass = body?.dataset["acpActiveClass"];
+    if (body && activeClass) {
+      body.classList.remove(activeClass);
+      delete body.dataset["acpActiveClass"];
+    }
+    document.dispatchEvent(new CustomEvent(TEARDOWN_EVENT));
+    window[RUN_FLAG] = false;
+    try {
+      chrome.runtime.onMessage.removeListener(messageListener);
+    } catch {
+    }
   };
   const messageListener = (message, sender, sendResponse) => {
     switch (message.type) {
       case "Core_Deactivate":
         stopBypass();
-        sendResponse({ success: true });
-        break;
-      case "Core_ShowAlert":
-        showAlert(message.data);
         sendResponse({ success: true });
         break;
       case "CopyByContextMenu":
@@ -424,18 +81,17 @@
     return true;
   };
   chrome.runtime.onMessage.addListener(messageListener);
-  const startPingInterval = () => {
-    pingIntervalId = setInterval(() => {
+  pingIntervalId = setInterval(() => {
+    try {
       chrome.runtime.sendMessage({ type: "PingBgFromActiveTab" }, (response) => {
         const error = chrome.runtime.lastError;
         if (error || !response?.isSuccess) {
-          clearInterval(pingIntervalId);
           stopBypass();
-          chrome.runtime.onMessage.removeListener(messageListener);
         }
       });
-    }, 3e3);
-  };
+    } catch {
+      stopBypass();
+    }
+  }, 3e3);
   startBypass();
-  startPingInterval();
 })();

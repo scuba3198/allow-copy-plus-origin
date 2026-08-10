@@ -1,11 +1,12 @@
 {
   "name": "allow-copy-plus-origin",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "A privacy-first, ultra-lightweight fork of the Allow Copy + extension rewritten in TypeScript.",
   "main": "dist/background.js",
   "scripts": {
     "build": "node build.js",
-    "watch": "node build.js --watch"
+    "watch": "node build.js --watch",
+    "test": "node test/hardening.test.js"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.306",
