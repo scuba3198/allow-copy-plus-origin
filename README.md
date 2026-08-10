@@ -27,7 +27,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 * **Copy & Drag Bypass:** Intercepts and swallows events restricting standard copy (Ctrl+C), cut (Ctrl+X), selection, and element dragging.
 * **Selection Visibility Fix:** Overrides CSS styles that attempt to hide text highlights.
 * **Context Menu Copy:** Direct selection copy actions via the custom context menu.
-* **Native Clipboard Preservation:** The extension leaves clipboard contents untouched and only clears page-level copy blockers.
+* **Native Clipboard Preservation:** The extension leaves clipboard contents untouched and only clears page-level copy blockers, except on `portal.kiec.edu.np`, where visually separated text is reconstructed with spaces when copied.
 
 ---
 
@@ -40,7 +40,7 @@ This is a hardened, open-source version of the popular "Allow Copy +" extension.
 
 ### GitHub Releases ZIP
 
-1. Download and extract `allow-copy-plus-origin-v3.0.10.zip` from the repository's **Releases** page.
+1. Download and extract `allow-copy-plus-origin-v3.0.11.zip` from the repository's **Releases** page.
 2. Follow steps 2–4 above, selecting the extracted directory.
 
 ## Development and Building

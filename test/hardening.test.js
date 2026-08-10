@@ -15,6 +15,16 @@ assert.equal((read("src/background.ts").match(/storage\.sync\.get/g) || []).leng
 assert(!read("options/options.ts").includes("storage.sync"));
 assert(!read("src/content-isolate.ts").includes("MutationObserver"));
 assert(!read("src/content-main.ts").includes("EventTarget.prototype.addEventListener"));
+const main = read("src/content-main.ts");
+assert(main.includes('const KIEC_HOSTNAME = "portal.kiec.edu.np"'));
+assert(main.includes("const isKiecHost = hostname === KIEC_HOSTNAME"));
+assert(main.includes("reconstructKiecCopy(event as ClipboardEvent)"));
+assert(main.includes('event.clipboardData.setData("text/plain", reconstructed)'));
+assert(main.includes("event.type === \"copy\" && isKiecHost"));
+assert(main.includes('node.nodeName === "BR" && range.intersectsNode(node)'));
+assert(main.includes("getClosestBlockAncestor"));
+assert(main.includes("if (lastBlock !== currentBlock)"));
+assert(main.includes('parts.push("\\n\\n")'));
 assert(!read("src/background.ts").includes("allFrames"));
 assert(read("src/background.ts").includes("permissions.request"));
 assert(read("src/background.ts").includes("SYNC_MIGRATED_KEY"));

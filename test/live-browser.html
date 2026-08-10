@@ -4,9 +4,18 @@
 <style>
   #target { user-select: none; font: 32px sans-serif; margin: 80px; }
   .allow_copy_test #target { user-select: text; }
+  #kiec-target { user-select: none; font: 24px sans-serif; margin: 80px; }
+  .allow_copy_test #kiec-target { user-select: text; }
+  #kiec-paragraphs { user-select: none; font: 24px sans-serif; margin: 80px; }
+  .allow_copy_test #kiec-paragraphs { user-select: text; }
 </style>
 <button id="toggle">Enable</button>
+<button id="select-kiec">Select KIEC text</button>
+<button id="select-paragraphs">Select KIEC paragraphs</button>
+<small id="mode"></small>
 <p id="target">COPY_ME_42</p>
+<p id="kiec-target"><span>KIEC</span><span>TEXT</span></p>
+<div id="kiec-paragraphs"><p><span>FIRST</span><em><span>PARA</span></em></p><p><strong>SECOND</strong><span>PARA</span></p></div>
 <script>
   document.addEventListener("copy", event => {
     event.clipboardData.setData("text/plain", "BLOCKED");
@@ -16,11 +25,22 @@
 <script src="../dist/content-main.js"></script>
 <script>
   let enabled = false;
+  const hostname = new URLSearchParams(location.search).get("hostname") || location.hostname;
+  mode.textContent = ` mode: ${hostname || "non-KIEC"}`;
   toggle.onclick = () => {
     enabled = !enabled;
     document.body.classList.toggle("allow_copy_test", enabled);
-    if (enabled) window.initAllowCopyMainWorld(location.hostname, "allow_copy_test");
+    if (enabled) window.initAllowCopyMainWorld(hostname, "allow_copy_test");
     else window.disableAllowCopyMainWorld();
     toggle.textContent = enabled ? "Disable" : "Enable";
   };
+  const selectContents = id => {
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById(id));
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  };
+  document.getElementById("select-kiec").onclick = () => selectContents("kiec-target");
+  document.getElementById("select-paragraphs").onclick = () => selectContents("kiec-paragraphs");
 </script>
